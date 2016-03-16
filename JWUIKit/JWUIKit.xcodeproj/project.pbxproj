@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E231C9935C000FA3176 /* JWUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4446E571C9936F700FA3176 /* JWPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E551C9936F700FA3176 /* JWPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4446E581C9936F700FA3176 /* JWPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E561C9936F700FA3176 /* JWPageView.m */; };
+		C4446E641C99431100FA3176 /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E621C99431100FA3176 /* UIView+Frame.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C4446E651C99431100FA3176 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E631C99431100FA3176 /* UIView+Frame.m */; };
+		C4446E6D1C994B7C00FA3176 /* JWFPSLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E6B1C994B7C00FA3176 /* JWFPSLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4446E6E1C994B7C00FA3176 /* JWFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E6C1C994B7C00FA3176 /* JWFPSLabel.m */; };
+		C4446E711C995E4B00FA3176 /* JWTickLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E6F1C995E4B00FA3176 /* JWTickLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4446E721C995E4B00FA3176 /* JWTickLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E701C995E4B00FA3176 /* JWTickLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C4446E201C9935C000FA3176 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4446E231C9935C000FA3176 /* JWUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWUIKit.h; sourceTree = "<group>"; };
+		C4446E251C9935C000FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4446E551C9936F700FA3176 /* JWPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPageView.h; sourceTree = "<group>"; };
+		C4446E561C9936F700FA3176 /* JWPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPageView.m; sourceTree = "<group>"; };
+		C4446E621C99431100FA3176 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		C4446E631C99431100FA3176 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		C4446E6B1C994B7C00FA3176 /* JWFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFPSLabel.h; sourceTree = "<group>"; };
+		C4446E6C1C994B7C00FA3176 /* JWFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFPSLabel.m; sourceTree = "<group>"; };
+		C4446E6F1C995E4B00FA3176 /* JWTickLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTickLabel.h; sourceTree = "<group>"; };
+		C4446E701C995E4B00FA3176 /* JWTickLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTickLabel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4446E1C1C9935C000FA3176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4446E161C9935C000FA3176 = {
+			isa = PBXGroup;
+			children = (
+				C4446E221C9935C000FA3176 /* JWUIKit */,
+				C4446E211C9935C000FA3176 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4446E211C9935C000FA3176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4446E201C9935C000FA3176 /* JWUIKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4446E221C9935C000FA3176 /* JWUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4446E591C99404B00FA3176 /* Core */,
+				C4446E541C99364100FA3176 /* Widgets */,
+				C4446E231C9935C000FA3176 /* JWUIKit.h */,
+				C4446E251C9935C000FA3176 /* Info.plist */,
+			);
+			path = JWUIKit;
+			sourceTree = "<group>";
+		};
+		C4446E541C99364100FA3176 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				C4446E6B1C994B7C00FA3176 /* JWFPSLabel.h */,
+				C4446E6C1C994B7C00FA3176 /* JWFPSLabel.m */,
+				C4446E6F1C995E4B00FA3176 /* JWTickLabel.h */,
+				C4446E701C995E4B00FA3176 /* JWTickLabel.m */,
+				C4446E551C9936F700FA3176 /* JWPageView.h */,
+				C4446E561C9936F700FA3176 /* JWPageView.m */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		C4446E591C99404B00FA3176 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C4446E621C99431100FA3176 /* UIView+Frame.h */,
+				C4446E631C99431100FA3176 /* UIView+Frame.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C4446E1D1C9935C000FA3176 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */,
+				C4446E6D1C994B7C00FA3176 /* JWFPSLabel.h in Headers */,
+				C4446E711C995E4B00FA3176 /* JWTickLabel.h in Headers */,
+				C4446E571C9936F700FA3176 /* JWPageView.h in Headers */,
+				C4446E641C99431100FA3176 /* UIView+Frame.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C4446E1F1C9935C000FA3176 /* JWUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4446E281C9935C000FA3176 /* Build configuration list for PBXNativeTarget "JWUIKit" */;
+			buildPhases = (
+				C4446E1B1C9935C000FA3176 /* Sources */,
+				C4446E1C1C9935C000FA3176 /* Frameworks */,
+				C4446E1D1C9935C000FA3176 /* Headers */,
+				C4446E1E1C9935C000FA3176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWUIKit;
+			productName = JWUIKit;
+			productReference = C4446E201C9935C000FA3176 /* JWUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4446E171C9935C000FA3176 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jerry Wong";
+				TargetAttributes = {
+					C4446E1F1C9935C000FA3176 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C4446E1A1C9935C000FA3176 /* Build configuration list for PBXProject "JWUIKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C4446E161C9935C000FA3176;
+			productRefGroup = C4446E211C9935C000FA3176 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4446E1F1C9935C000FA3176 /* JWUIKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4446E1E1C9935C000FA3176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4446E1B1C9935C000FA3176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4446E721C995E4B00FA3176 /* JWTickLabel.m in Sources */,
+				C4446E651C99431100FA3176 /* UIView+Frame.m in Sources */,
+				C4446E6E1C994B7C00FA3176 /* JWFPSLabel.m in Sources */,
+				C4446E581C9936F700FA3176 /* JWPageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C4446E261C9935C000FA3176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4446E271C9935C000FA3176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4446E291C9935C000FA3176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JWUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C4446E2A1C9935C000FA3176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JWUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4446E1A1C9935C000FA3176 /* Build configuration list for PBXProject "JWUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4446E261C9935C000FA3176 /* Debug */,
+				C4446E271C9935C000FA3176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4446E281C9935C000FA3176 /* Build configuration list for PBXNativeTarget "JWUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4446E291C9935C000FA3176 /* Debug */,
+				C4446E2A1C9935C000FA3176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4446E171C9935C000FA3176 /* Project object */;
+}
