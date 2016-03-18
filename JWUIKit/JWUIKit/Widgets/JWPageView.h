@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN;
+
 @protocol JWPageViewDataSource, JWPageViewDelegate;
 
 @interface JWPageView : UIView
 
 @property (strong, nonatomic, readonly) UICollectionView *collectionView;
+@property (strong, nonatomic, readonly) UIPageControl *pageControl;
 
-@property (weak, nonatomic) id<JWPageViewDataSource> dataSource;
-@property (weak, nonatomic) id<JWPageViewDelegate> delegate;
+@property (weak, nonatomic, nullable) id<JWPageViewDataSource> dataSource;
+@property (weak, nonatomic, nullable) id<JWPageViewDelegate> delegate;
 
 @property (assign, nonatomic) BOOL cycled;
 @property (assign, nonatomic) BOOL autoPlay;
@@ -30,7 +33,7 @@
 
 - (NSUInteger)numberOfPagesInPageView:(JWPageView *)aPageView;
 
-- (UIView*)pageView:(JWPageView *)aPageView viewAt:(NSUInteger)aIndex reusableView:(__kindof UIView*)reusableView;
+- (UIView*)pageView:(JWPageView *)aPageView viewAt:(NSUInteger)aIndex reusableView:(nullable __kindof UIView*)reusableView;
 
 @end
 
@@ -42,3 +45,5 @@
 - (void)pageView:(JWPageView *)pageView didScrollToIndex:(NSUInteger)aIndex;
 
 @end
+
+NS_ASSUME_NONNULL_END;

@@ -1,8 +1,8 @@
 //
-//  JWFPSLabel.h
+//  JWAnimatedImageView.h
 //  JWUIKit
 //
-//  Created by Jerry on 16/3/16.
+//  Created by Jerry on 16/3/17.
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWFPSLabel : UILabel
-
+@interface JWAnimatedImageView : UIImageView
 
 @end
 

@@ -7,86 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4446E391C9935E300FA3176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E381C9935E300FA3176 /* main.m */; };
-		C4446E3C1C9935E300FA3176 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E3B1C9935E300FA3176 /* AppDelegate.m */; };
-		C4446E3F1C9935E300FA3176 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E3E1C9935E300FA3176 /* ViewController.m */; };
-		C4446E421C9935E300FA3176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4446E401C9935E300FA3176 /* Main.storyboard */; };
-		C4446E441C9935E300FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E431C9935E300FA3176 /* Assets.xcassets */; };
-		C4446E471C9935E300FA3176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4446E451C9935E300FA3176 /* LaunchScreen.storyboard */; };
-		C4446E6A1C99464200FA3176 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4446E691C99464200FA3176 /* JWUIKit.framework */; };
+		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
+		C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* ViewController.swift */; };
+		C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8A1C9A658B00FA3176 /* Assets.xcassets */; };
+		C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */; };
+		C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EA51C9A812500FA3176 /* WidgetsListViewController.swift */; };
+		C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EAB1C9A87F800FA3176 /* LabelsViewController.swift */; };
+		C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */; };
+		C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */; };
+		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
+		C4CD17A21C9BCB0600187997 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17A11C9BCB0600187997 /* JWUIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C4CD17A31C9BCB0600187997 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17A11C9BCB0600187997 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C4CD17A41C9BCB0600187997 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C4CD17A31C9BCB0600187997 /* JWUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		C4446E341C9935E300FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4446E381C9935E300FA3176 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C4446E3A1C9935E300FA3176 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C4446E3B1C9935E300FA3176 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4446E3D1C9935E300FA3176 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C4446E3E1C9935E300FA3176 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C4446E411C9935E300FA3176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C4446E431C9935E300FA3176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C4446E461C9935E300FA3176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C4446E481C9935E300FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4446E691C99464200FA3176 /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../JWUIKit/build/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
+		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4446E851C9A658B00FA3176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4446E8A1C9A658B00FA3176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4446E8D1C9A658B00FA3176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4446E8F1C9A658B00FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4446E991C9A672600FA3176 /* JWUIKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWUIKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4446EA51C9A812500FA3176 /* WidgetsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsListViewController.swift; sourceTree = "<group>"; };
+		C4446EAB1C9A87F800FA3176 /* LabelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsViewController.swift; sourceTree = "<group>"; };
+		C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
+		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
+		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
+		C4CD17A11C9BCB0600187997 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/Jerry/Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C4446E311C9935E300FA3176 /* Frameworks */ = {
+		C4446E7D1C9A658B00FA3176 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4446E6A1C99464200FA3176 /* JWUIKit.framework in Frameworks */,
+				C4CD17A21C9BCB0600187997 /* JWUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C4446E2B1C9935E300FA3176 = {
+		C4446E771C9A658B00FA3176 = {
 			isa = PBXGroup;
 			children = (
-				C4446E361C9935E300FA3176 /* JWUIKitDemo */,
-				C4446E681C99462100FA3176 /* Frameworks */,
-				C4446E351C9935E300FA3176 /* Products */,
+				C4446E821C9A658B00FA3176 /* JWUIKitDemo */,
+				C4446E951C9A65B500FA3176 /* Frameworks */,
+				C4446E811C9A658B00FA3176 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C4446E351C9935E300FA3176 /* Products */ = {
+		C4446E811C9A658B00FA3176 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4446E341C9935E300FA3176 /* JWUIKitDemo.app */,
+				C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4446E361C9935E300FA3176 /* JWUIKitDemo */ = {
+		C4446E821C9A658B00FA3176 /* JWUIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C4446E3A1C9935E300FA3176 /* AppDelegate.h */,
-				C4446E3B1C9935E300FA3176 /* AppDelegate.m */,
-				C4446E3D1C9935E300FA3176 /* ViewController.h */,
-				C4446E3E1C9935E300FA3176 /* ViewController.m */,
-				C4446E401C9935E300FA3176 /* Main.storyboard */,
-				C4446E431C9935E300FA3176 /* Assets.xcassets */,
-				C4446E451C9935E300FA3176 /* LaunchScreen.storyboard */,
-				C4446E481C9935E300FA3176 /* Info.plist */,
-				C4446E371C9935E300FA3176 /* Supporting Files */,
+				C4446E831C9A658B00FA3176 /* AppDelegate.swift */,
+				C4446EA51C9A812500FA3176 /* WidgetsListViewController.swift */,
+				C4446EAB1C9A87F800FA3176 /* LabelsViewController.swift */,
+				C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */,
+				C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */,
+				C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */,
+				C4446E851C9A658B00FA3176 /* ViewController.swift */,
+				C4446E8A1C9A658B00FA3176 /* Assets.xcassets */,
+				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
+				C4446E8F1C9A658B00FA3176 /* Info.plist */,
+				C4446E991C9A672600FA3176 /* JWUIKitDemo-Bridging-Header.h */,
 			);
 			path = JWUIKitDemo;
 			sourceTree = "<group>";
 		};
-		C4446E371C9935E300FA3176 /* Supporting Files */ = {
+		C4446E951C9A65B500FA3176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C4446E381C9935E300FA3176 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C4446E681C99462100FA3176 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C4446E691C99464200FA3176 /* JWUIKit.framework */,
+				C4CD17A11C9BCB0600187997 /* JWUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,13 +108,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C4446E331C9935E300FA3176 /* JWUIKitDemo */ = {
+		C4446E7F1C9A658B00FA3176 /* JWUIKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4446E4B1C9935E300FA3176 /* Build configuration list for PBXNativeTarget "JWUIKitDemo" */;
+			buildConfigurationList = C4446E921C9A658B00FA3176 /* Build configuration list for PBXNativeTarget "JWUIKitDemo" */;
 			buildPhases = (
-				C4446E301C9935E300FA3176 /* Sources */,
-				C4446E311C9935E300FA3176 /* Frameworks */,
-				C4446E321C9935E300FA3176 /* Resources */,
+				C4446E7C1C9A658B00FA3176 /* Sources */,
+				C4446E7D1C9A658B00FA3176 /* Frameworks */,
+				C4446E7E1C9A658B00FA3176 /* Resources */,
+				C4CD17A41C9BCB0600187997 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -108,24 +123,25 @@
 			);
 			name = JWUIKitDemo;
 			productName = JWUIKitDemo;
-			productReference = C4446E341C9935E300FA3176 /* JWUIKitDemo.app */;
+			productReference = C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C4446E2C1C9935E300FA3176 /* Project object */ = {
+		C4446E781C9A658B00FA3176 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jerry Wong";
 				TargetAttributes = {
-					C4446E331C9935E300FA3176 = {
+					C4446E7F1C9A658B00FA3176 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
-			buildConfigurationList = C4446E2F1C9935E300FA3176 /* Build configuration list for PBXProject "JWUIKitDemo" */;
+			buildConfigurationList = C4446E7B1C9A658B00FA3176 /* Build configuration list for PBXProject "JWUIKitDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -133,55 +149,50 @@
 				en,
 				Base,
 			);
-			mainGroup = C4446E2B1C9935E300FA3176;
-			productRefGroup = C4446E351C9935E300FA3176 /* Products */;
+			mainGroup = C4446E771C9A658B00FA3176;
+			productRefGroup = C4446E811C9A658B00FA3176 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C4446E331C9935E300FA3176 /* JWUIKitDemo */,
+				C4446E7F1C9A658B00FA3176 /* JWUIKitDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C4446E321C9935E300FA3176 /* Resources */ = {
+		C4446E7E1C9A658B00FA3176 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4446E471C9935E300FA3176 /* LaunchScreen.storyboard in Resources */,
-				C4446E441C9935E300FA3176 /* Assets.xcassets in Resources */,
-				C4446E421C9935E300FA3176 /* Main.storyboard in Resources */,
+				C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */,
+				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
+				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
+				C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C4446E301C9935E300FA3176 /* Sources */ = {
+		C4446E7C1C9A658B00FA3176 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4446E3F1C9935E300FA3176 /* ViewController.m in Sources */,
-				C4446E3C1C9935E300FA3176 /* AppDelegate.m in Sources */,
-				C4446E391C9935E300FA3176 /* main.m in Sources */,
+				C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */,
+				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
+				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,
+				C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */,
+				C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C4446E401C9935E300FA3176 /* Main.storyboard */ = {
+		C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C4446E411C9935E300FA3176 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C4446E451C9935E300FA3176 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4446E461C9935E300FA3176 /* Base */,
+				C4446E8D1C9A658B00FA3176 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -189,7 +200,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C4446E491C9935E300FA3176 /* Debug */ = {
+		C4446E901C9A658B00FA3176 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -225,14 +236,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		C4446E4A1C9935E300FA3176 /* Release */ = {
+		C4446E911C9A658B00FA3176 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,57 +274,64 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C4446E4C1C9935E300FA3176 /* Debug */ = {
+		C4446E931C9A658B00FA3176 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = JWUIKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWUIKitDemo/JWUIKitDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		C4446E4D1C9935E300FA3176 /* Release */ = {
+		C4446E941C9A658B00FA3176 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = JWUIKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWUIKitDemo/JWUIKitDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4446E2F1C9935E300FA3176 /* Build configuration list for PBXProject "JWUIKitDemo" */ = {
+		C4446E7B1C9A658B00FA3176 /* Build configuration list for PBXProject "JWUIKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4446E491C9935E300FA3176 /* Debug */,
-				C4446E4A1C9935E300FA3176 /* Release */,
+				C4446E901C9A658B00FA3176 /* Debug */,
+				C4446E911C9A658B00FA3176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4446E4B1C9935E300FA3176 /* Build configuration list for PBXNativeTarget "JWUIKitDemo" */ = {
+		C4446E921C9A658B00FA3176 /* Build configuration list for PBXNativeTarget "JWUIKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4446E4C1C9935E300FA3176 /* Debug */,
-				C4446E4D1C9935E300FA3176 /* Release */,
+				C4446E931C9A658B00FA3176 /* Debug */,
+				C4446E941C9A658B00FA3176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C4446E2C1C9935E300FA3176 /* Project object */;
+	rootObject = C4446E781C9A658B00FA3176 /* Project object */;
 }

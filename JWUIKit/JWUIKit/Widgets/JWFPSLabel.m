@@ -8,6 +8,8 @@
 
 #import "JWFPSLabel.h"
 #import <CoreFoundation/CoreFoundation.h>
+//Core
+#import "JWUIKitMacro.h"
 
 #define kSize CGSizeMake(55, 20)
 
@@ -17,39 +19,7 @@
     NSTimeInterval _lastTime;
 }
 
-#pragma mark - LifeCycle
-- (instancetype)init {
-    if (self = [super init]) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        [self setup];
-    }
-
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [self setup];
-    }
-    return self;
-}
-
-- (CGSize)sizeThatFits:(CGSize)size {
-    return kSize;
-}
-
-- (void)dealloc {
-    [_link invalidate];
-}
-
-#pragma mark - Private
-- (void)setup {
+JWUIKitInitialze {
     self.layer.cornerRadius = 5;
     self.clipsToBounds = YES;
     self.textAlignment = NSTextAlignmentCenter;
@@ -62,6 +32,16 @@
     [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    return kSize;
+}
+
+- (void)dealloc {
+    [_link invalidate];
+}
+
+#pragma mark - Private
+
 - (void)tick:(CADisplayLink *)link {
     if (_lastTime == 0) {
         _lastTime = link.timestamp;
@@ -72,7 +52,7 @@
     NSTimeInterval delta = link.timestamp - _lastTime;
     if (delta < 1) return;
     _lastTime = link.timestamp;
-    float fps = _count / (2 * delta);
+    float fps = _count / delta;
     _count = 0;
     
     CGFloat progress = fps / 60.0;

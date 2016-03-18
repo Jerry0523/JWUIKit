@@ -5,6 +5,6 @@
       location = "group:JWUIKit/JWUIKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JWUIKit/../JWUIKitDemo/JWUIKitDemo.xcodeproj">
+      location = "group:JWUIKitDemo/JWUIKitDemo.xcodeproj">
    </FileRef>
 </Workspace>

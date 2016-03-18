@@ -8,28 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E231C9935C000FA3176 /* JWUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4446E571C9936F700FA3176 /* JWPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E551C9936F700FA3176 /* JWPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4446E581C9936F700FA3176 /* JWPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E561C9936F700FA3176 /* JWPageView.m */; };
 		C4446E641C99431100FA3176 /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E621C99431100FA3176 /* UIView+Frame.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4446E651C99431100FA3176 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E631C99431100FA3176 /* UIView+Frame.m */; };
-		C4446E6D1C994B7C00FA3176 /* JWFPSLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E6B1C994B7C00FA3176 /* JWFPSLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4446E6E1C994B7C00FA3176 /* JWFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E6C1C994B7C00FA3176 /* JWFPSLabel.m */; };
-		C4446E711C995E4B00FA3176 /* JWTickLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E6F1C995E4B00FA3176 /* JWTickLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4446E721C995E4B00FA3176 /* JWTickLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E701C995E4B00FA3176 /* JWTickLabel.m */; };
+		C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD178B1C9BCABC00187997 /* JWUIKitMacro.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C4CD17971C9BCACC00187997 /* JWAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD178D1C9BCACC00187997 /* JWAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CD17981C9BCACC00187997 /* JWAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD178E1C9BCACC00187997 /* JWAnimatedImageView.m */; };
+		C4CD17991C9BCACC00187997 /* JWFPSLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD178F1C9BCACC00187997 /* JWFPSLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CD179A1C9BCACC00187997 /* JWFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17901C9BCACC00187997 /* JWFPSLabel.m */; };
+		C4CD179B1C9BCACC00187997 /* JWPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17911C9BCACC00187997 /* JWPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CD179C1C9BCACC00187997 /* JWPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17921C9BCACC00187997 /* JWPageView.m */; };
+		C4CD179D1C9BCACC00187997 /* JWTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17931C9BCACC00187997 /* JWTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CD179E1C9BCACC00187997 /* JWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17941C9BCACC00187997 /* JWTextField.m */; };
+		C4CD179F1C9BCACC00187997 /* JWTickNumberLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17951C9BCACC00187997 /* JWTickNumberLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CD17A01C9BCACC00187997 /* JWTickNumberLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17961C9BCACC00187997 /* JWTickNumberLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C4446E201C9935C000FA3176 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E231C9935C000FA3176 /* JWUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWUIKit.h; sourceTree = "<group>"; };
 		C4446E251C9935C000FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4446E551C9936F700FA3176 /* JWPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPageView.h; sourceTree = "<group>"; };
-		C4446E561C9936F700FA3176 /* JWPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPageView.m; sourceTree = "<group>"; };
 		C4446E621C99431100FA3176 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		C4446E631C99431100FA3176 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		C4446E6B1C994B7C00FA3176 /* JWFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFPSLabel.h; sourceTree = "<group>"; };
-		C4446E6C1C994B7C00FA3176 /* JWFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFPSLabel.m; sourceTree = "<group>"; };
-		C4446E6F1C995E4B00FA3176 /* JWTickLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTickLabel.h; sourceTree = "<group>"; };
-		C4446E701C995E4B00FA3176 /* JWTickLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTickLabel.m; sourceTree = "<group>"; };
+		C4CD178B1C9BCABC00187997 /* JWUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWUIKitMacro.h; sourceTree = "<group>"; };
+		C4CD178D1C9BCACC00187997 /* JWAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWAnimatedImageView.h; sourceTree = "<group>"; };
+		C4CD178E1C9BCACC00187997 /* JWAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWAnimatedImageView.m; sourceTree = "<group>"; };
+		C4CD178F1C9BCACC00187997 /* JWFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFPSLabel.h; sourceTree = "<group>"; };
+		C4CD17901C9BCACC00187997 /* JWFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFPSLabel.m; sourceTree = "<group>"; };
+		C4CD17911C9BCACC00187997 /* JWPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPageView.h; sourceTree = "<group>"; };
+		C4CD17921C9BCACC00187997 /* JWPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPageView.m; sourceTree = "<group>"; };
+		C4CD17931C9BCACC00187997 /* JWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTextField.h; sourceTree = "<group>"; };
+		C4CD17941C9BCACC00187997 /* JWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTextField.m; sourceTree = "<group>"; };
+		C4CD17951C9BCACC00187997 /* JWTickNumberLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTickNumberLabel.h; sourceTree = "<group>"; };
+		C4CD17961C9BCACC00187997 /* JWTickNumberLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTickNumberLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +83,16 @@
 		C4446E541C99364100FA3176 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				C4446E6B1C994B7C00FA3176 /* JWFPSLabel.h */,
-				C4446E6C1C994B7C00FA3176 /* JWFPSLabel.m */,
-				C4446E6F1C995E4B00FA3176 /* JWTickLabel.h */,
-				C4446E701C995E4B00FA3176 /* JWTickLabel.m */,
-				C4446E551C9936F700FA3176 /* JWPageView.h */,
-				C4446E561C9936F700FA3176 /* JWPageView.m */,
+				C4CD178D1C9BCACC00187997 /* JWAnimatedImageView.h */,
+				C4CD178E1C9BCACC00187997 /* JWAnimatedImageView.m */,
+				C4CD178F1C9BCACC00187997 /* JWFPSLabel.h */,
+				C4CD17901C9BCACC00187997 /* JWFPSLabel.m */,
+				C4CD17911C9BCACC00187997 /* JWPageView.h */,
+				C4CD17921C9BCACC00187997 /* JWPageView.m */,
+				C4CD17931C9BCACC00187997 /* JWTextField.h */,
+				C4CD17941C9BCACC00187997 /* JWTextField.m */,
+				C4CD17951C9BCACC00187997 /* JWTickNumberLabel.h */,
+				C4CD17961C9BCACC00187997 /* JWTickNumberLabel.m */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -86,6 +100,7 @@
 		C4446E591C99404B00FA3176 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C4CD178B1C9BCABC00187997 /* JWUIKitMacro.h */,
 				C4446E621C99431100FA3176 /* UIView+Frame.h */,
 				C4446E631C99431100FA3176 /* UIView+Frame.m */,
 			);
@@ -100,10 +115,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */,
-				C4446E6D1C994B7C00FA3176 /* JWFPSLabel.h in Headers */,
-				C4446E711C995E4B00FA3176 /* JWTickLabel.h in Headers */,
-				C4446E571C9936F700FA3176 /* JWPageView.h in Headers */,
+				C4CD17971C9BCACC00187997 /* JWAnimatedImageView.h in Headers */,
+				C4CD179D1C9BCACC00187997 /* JWTextField.h in Headers */,
+				C4CD17991C9BCACC00187997 /* JWFPSLabel.h in Headers */,
+				C4CD179F1C9BCACC00187997 /* JWTickNumberLabel.h in Headers */,
+				C4CD179B1C9BCACC00187997 /* JWPageView.h in Headers */,
 				C4446E641C99431100FA3176 /* UIView+Frame.h in Headers */,
+				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,10 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4446E721C995E4B00FA3176 /* JWTickLabel.m in Sources */,
+				C4CD179C1C9BCACC00187997 /* JWPageView.m in Sources */,
+				C4CD17981C9BCACC00187997 /* JWAnimatedImageView.m in Sources */,
+				C4CD179E1C9BCACC00187997 /* JWTextField.m in Sources */,
+				C4CD17A01C9BCACC00187997 /* JWTickNumberLabel.m in Sources */,
+				C4CD179A1C9BCACC00187997 /* JWFPSLabel.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+Frame.m in Sources */,
-				C4446E6E1C994B7C00FA3176 /* JWFPSLabel.m in Sources */,
-				C4446E581C9936F700FA3176 /* JWPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +301,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JWUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,7 +318,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JWUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

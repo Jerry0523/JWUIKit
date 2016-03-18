@@ -8,10 +8,13 @@
 
 #import "JWPageView.h"
 //Core
+#import "JWUIKitMacro.h"
 #import "UIView+Frame.h"
 
 @interface JWPageView()<UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (strong, nonatomic) UICollectionView *collectionView;
+@property (strong, nonatomic) UIPageControl *pageControl;
 @property (strong, nonatomic) UICollectionViewFlowLayout *flowlayout;
 
 @end
@@ -20,34 +23,17 @@
 
 static NSString *cellIdentifier = @"cellIdentifier";
 
+JWUIKitInitialze {
+    [self addSubview:self.collectionView];
+    [self addSubview:self.pageControl];
+    self.vertical = NO;
+}
+
 #pragma mark - Public
 - (void)reloadData {
+    self.pageControl.currentPage = 0;
+    self.pageControl.numberOfPages = [self collectionView:self.collectionView numberOfItemsInSection:0];
     [self.collectionView reloadData];
-}
-#pragma mark - LifeCycle
-- (instancetype)init {
-    if (self = [super init]) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        [self setup];
-    }
-    return self;
-}
-
-- (void)layoutSubviews {
-    self.flowlayout.itemSize = CGSizeMake(self.w, self.h);
 }
 
 #pragma mark - UICollectionViewDataSource & UICollectionViewDelegate
@@ -92,6 +78,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
     } else {
         idx = contentOffset.x / scrollView.w;
     }
+    
+    self.pageControl.currentPage = idx;
+    
     if ([self.delegate respondsToSelector:@selector(pageView:didScrollToIndex:)]) {
         [self.delegate pageView:self didScrollToIndex:idx];
     }
@@ -107,6 +96,11 @@ static NSString *cellIdentifier = @"cellIdentifier";
     self.flowlayout.scrollDirection = vertical ? UICollectionViewScrollDirectionVertical : UICollectionViewScrollDirectionHorizontal;
 }
 
+- (void)setDataSource:(id<JWPageViewDataSource>)dataSource {
+    _dataSource = dataSource;
+    [self reloadData];
+}
+
 - (UICollectionViewFlowLayout*)flowlayout {
     if (!_flowlayout) {
         _flowlayout = [[UICollectionViewFlowLayout alloc] init];
@@ -116,21 +110,33 @@ static NSString *cellIdentifier = @"cellIdentifier";
     return _flowlayout;
 }
 
-#pragma mark - Private
-- (void)setup {
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowlayout];
-    _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self addSubview:_collectionView];
-    
-    _collectionView.pagingEnabled = YES;
-    _collectionView.showsVerticalScrollIndicator = NO;
-    _collectionView.showsHorizontalScrollIndicator = NO;
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
-    _collectionView.backgroundColor = [UIColor clearColor];
-    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
-    
-    self.vertical = NO;
+- (UICollectionView*)collectionView {
+    if (!_collectionView) {
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowlayout];
+        _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        _collectionView.pagingEnabled = YES;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor clearColor];
+        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
+    }
+    return _collectionView;
+}
+
+- (UIPageControl*)pageControl {
+    if (!_pageControl) {
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.h - 30, self.w, 30)];
+        _pageControl.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    }
+    return _pageControl;
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    self.flowlayout.itemSize = CGSizeMake(self.w, self.h);
 }
 
 @end
