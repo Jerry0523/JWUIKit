@@ -21,5 +21,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWTextField.h>
 #import <JWUIKit/JWAnimatedImageView.h>
 
+#import "UIView+JWIndex.h"
+
 
 

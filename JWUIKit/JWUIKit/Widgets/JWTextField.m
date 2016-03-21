@@ -9,7 +9,7 @@
 #import "JWTextField.h"
 //Core
 #import "JWUIKitMacro.h"
-#import "UIView+Frame.h"
+#import "UIView+JWFrame.h"
 
 @implementation JWTextField
 

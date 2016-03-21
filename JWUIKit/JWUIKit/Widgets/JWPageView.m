@@ -9,7 +9,7 @@
 #import "JWPageView.h"
 //Core
 #import "JWUIKitMacro.h"
-#import "UIView+Frame.h"
+#import "UIView+JWFrame.h"
 
 @interface JWPageView()<UICollectionViewDelegate, UICollectionViewDataSource>
 

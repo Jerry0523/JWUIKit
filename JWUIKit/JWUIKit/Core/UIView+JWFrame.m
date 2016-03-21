@@ -1,14 +1,14 @@
 //
-//  UIView+Frame.m
+//  UIView+JWFrame.m
 //  JWUIKit
 //
 //  Created by Jerry on 16/3/16.
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import "UIView+Frame.h"
+#import "UIView+JWFrame.h"
 
-@implementation UIView (Frame)
+@implementation UIView (JWFrame)
 
 - (CGFloat)x {
     return CGRectGetMinX(self.frame);

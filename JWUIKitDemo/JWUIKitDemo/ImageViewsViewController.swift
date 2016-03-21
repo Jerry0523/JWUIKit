@@ -21,7 +21,7 @@ class ImageViewsViewController: UIViewController, UICollectionViewDataSource {
         collectionViewFlowlayout.minimumLineSpacing = 20
         collectionViewFlowlayout.minimumInteritemSpacing = 20
         collectionViewFlowlayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
-        let cellWidth = (CGRectGetWidth(self.view.frame) - 20 * 3) * 0.5
+        let cellWidth = (min(CGRectGetHeight(self.view.frame), CGRectGetWidth(self.view.frame)) - 20 * 3) * 0.5
         collectionViewFlowlayout.itemSize = CGSizeMake(cellWidth, cellWidth)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: collectionViewFlowlayout)
@@ -29,6 +29,7 @@ class ImageViewsViewController: UIViewController, UICollectionViewDataSource {
         collectionView.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.backgroundColor = UIColor(white: 240.0 / 255.0, alpha: 1.0)
         self.view.addSubview(collectionView)
+        collectionView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         collectionView.dataSource = self
         
         let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: collectionView, action: "reloadData")
@@ -41,7 +42,7 @@ class ImageViewsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

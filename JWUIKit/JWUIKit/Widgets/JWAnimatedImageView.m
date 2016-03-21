@@ -9,11 +9,14 @@
 #import "JWAnimatedImageView.h"
 //Core
 #import "JWUIKitMacro.h"
-#import "UIView+Frame.h"
+#import "UIView+JWFrame.h"
+#import "UIImage+JWSub.h"
 
 @interface JWAnimatedImageView()
 
 @property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIVisualEffectView *effectView;
+
 
 @end
 
@@ -68,6 +71,12 @@ JWUIKitInitialze {
                 break;
             }
                 
+            case JWAnimatedImageViewAnimationBox: {
+                animation = nil;
+                [self beginBoxAnimation];
+                break;
+            }
+                
             default:
                 animation = nil;
                 break;
@@ -87,9 +96,20 @@ JWUIKitInitialze {
     return _imageView;
 }
 
+- (UIVisualEffectView*)effectView {
+    if (!_effectView) {
+        _effectView = [UIVisualEffectView new];
+        _effectView.frame = self.bounds;
+        _effectView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    }
+    return _effectView;
+}
+
 - (void)setImage:(UIImage *)image {
     self.imageView.image = image;
-    [self beginAnimation];
+    if (!self.disableActions) {
+        [self beginAnimation];
+    }
 }
 
 - (UIImage*)image {
@@ -126,9 +146,8 @@ JWUIKitInitialze {
 }
 
 - (CABasicAnimation*)rollOverAnimation {
-    CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform"];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
     animation.duration = self.duration;
-    animation.damping = 16.0;
     
     animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI , 0, 1, 0)];
     animation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
@@ -136,7 +155,54 @@ JWUIKitInitialze {
 }
 
 - (void)beginBlurAnimation {
+    if (!self.effectView.superview) {
+        [self addSubview:self.effectView];
+    }
+    self.effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    [UIView animateWithDuration:self.duration animations:^{
+        self.effectView.effect = nil;
+    } completion:^(BOOL finished) {
+        [self.effectView removeFromSuperview];
+    }];
+}
+
+- (void)beginBoxAnimation {
+    UIImage *sourceImage = self.imageView.image;
+    if (!sourceImage) {
+        return;
+    }
+    self.imageView.hidden = YES;
     
+    CGFloat sliceWidth = round(self.imageView.w / 3.0);
+    CGFloat sliceHeight = round(self.imageView.h / 3.0);
+    
+    NSMutableArray *slicesSourceRectArray = @[].mutableCopy;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            CGRect sliceRect = CGRectMake(i * sliceWidth, j * sliceHeight, sliceWidth, sliceHeight);
+            [slicesSourceRectArray addObject:[NSValue valueWithCGRect:sliceRect]];
+        }
+    }
+    NSArray *indexArray = @[@(0), @(1), @(2), @(5), @(8), @(7), @(6), @(3), @(4)];
+    NSMutableArray *slicesRectArray = @[].mutableCopy;
+    for (NSNumber *idx in indexArray) {
+        [slicesRectArray addObject:slicesSourceRectArray[idx.integerValue]];
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *imagesArray = @[].mutableCopy;
+        for (NSValue *rectValue in slicesRectArray) {
+            UIImage *subImage = [sourceImage getSubImage:rectValue.CGRectValue];
+            [imagesArray addObject:subImage];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [imagesArray enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
+                UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+                imageView.frame = [slicesRectArray[idx] CGRectValue];
+                [self addSubview:imageView];
+            }];
+        });
+    });
 }
 
 @end

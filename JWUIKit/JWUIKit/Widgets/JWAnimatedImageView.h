@@ -16,7 +16,8 @@ typedef NS_ENUM(NSUInteger, JWAnimatedImageViewAnimation){
     JWAnimatedImageViewAnimationZoom,
     JWAnimatedImageViewAnimationLeft,
     JWAnimatedImageViewAnimationRollOver,
-    JWAnimatedImageViewAnimationBlur
+    JWAnimatedImageViewAnimationBlur,
+    JWAnimatedImageViewAnimationBox
 };
 
 @interface JWAnimatedImageView : UIView
@@ -26,7 +27,9 @@ typedef NS_ENUM(NSUInteger, JWAnimatedImageViewAnimation){
 
 @property (assign, nonatomic) JWAnimatedImageViewAnimation animationStyle;
 @property (strong, nonatomic, nullable) CABasicAnimation *customAnimation;//if set, animationStyle will be ignored.
-@property (assign, nonatomic) NSTimeInterval duration;//default is 0.5
+@property (assign, nonatomic) NSTimeInterval duration;//default is 0.6
+
+@property (assign, nonatomic) BOOL disableActions;//default is NO. By default, animation will be auto played.
 
 - (void)beginAnimation;
 

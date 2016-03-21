@@ -1,5 +1,5 @@
 //
-//  UIView+Frame.h
+//  UIView+JWFrame.h
 //  JWUIKit
 //
 //  Created by Jerry on 16/3/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Frame)
+@interface UIView (JWFrame)
 
 @property (assign, nonatomic) CGFloat x;
 @property (assign, nonatomic) CGFloat y;
