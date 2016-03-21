@@ -48,7 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func initAppreance(){
-        UINavigationBar.appearance().tintColor = UIColor(red: 249.0 / 255.0, green: 147.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
+        let tintColor = UIColor(red: 249.0 / 255.0, green: 147.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = tintColor
+        UITextField.appearance().tintColor = tintColor
     }
 }
 
