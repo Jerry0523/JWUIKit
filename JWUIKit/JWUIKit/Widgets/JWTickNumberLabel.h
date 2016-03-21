@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JWTickNumberLabel : UILabel
 
-@property (assign, nonatomic) CGFloat textValue;
+@property (assign, nonatomic) CGFloat textValue;//value of the label.Call to change the text with animation.
 
 @property (copy, nonatomic, nullable) NSString *prefixString;
 @property (copy, nonatomic, nullable) NSString *suffixString;

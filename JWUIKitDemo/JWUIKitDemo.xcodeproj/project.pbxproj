@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05E35D1E1C9D060B00264270 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E35D1D1C9D060B00264270 /* JWUIKit.framework */; };
 		05E35D1F1C9D060B00264270 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05E35D1D1C9D060B00264270 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
 		C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* ViewController.swift */; };
 		C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8A1C9A658B00FA3176 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		05E35D1D1C9D060B00264270 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/JerryWong/Library/Developer/Xcode/DerivedData/JWUIKit-camodsdqqelogjdvwcxxystygmyi/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
+		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4446E851C9A658B00FA3176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */,
 				C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */,
 				C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */,
+				05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */,
 				C4446E851C9A658B00FA3176 /* ViewController.swift */,
 				C4446E8A1C9A658B00FA3176 /* Assets.xcassets */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,
 				C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */,
 				C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */,
+				05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

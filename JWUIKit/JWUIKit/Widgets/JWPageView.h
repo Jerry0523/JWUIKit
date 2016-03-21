@@ -24,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN;
 @property (assign, nonatomic) BOOL autoPlay;
 @property (assign, nonatomic) BOOL vertical;
 
-
 - (void)reloadData;
 
 @end
