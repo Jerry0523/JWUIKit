@@ -13,7 +13,7 @@ class WidgetsListViewController: UITableViewController {
     let cellIdentifier = "cellIdentifier"
     let data = [["name":"Label", "class":LabelsViewController.classForCoder()],
                 ["name":"TextField", "class":TextFieldsViewController.classForCoder()],
-                ["name":"Image", "class":LabelsViewController.classForCoder()]
+                ["name":"Image", "class":ImageViewsViewController.classForCoder()]
                ]
 
     override func viewDidLoad() {

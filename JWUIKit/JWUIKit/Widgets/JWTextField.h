@@ -21,14 +21,16 @@ typedef NS_ENUM(NSUInteger, JWTextFieldSegmentStyle) {
 @property (strong, nonatomic, nullable) NSArray<__kindof UIView*> *leftViews;
 @property (strong, nonatomic, nullable) NSArray<__kindof UIView*> *rightViews;
 
-@property (assign, nonatomic) CGFloat paddingHorizontal;
+@property (strong, nonatomic, nullable) UIImageView *imageView;//an easy way to set left imageview. It will change leftViews.
 
-@property (assign, nonatomic) JWTextFieldSegmentStyle segmentStyle;
+@property (assign, nonatomic) CGFloat paddingLeft;//an easy way to add left padding. It will insert a space view into leftViews.
 
-@property (strong, nonatomic, nullable) NSSet<NSNumber*> *segmentValues;
-@property (assign, nonatomic) NSUInteger maxTextLength;//default is NSIntegerMax
+@property (strong, nonatomic, nullable) NSSet<NSNumber*> *segmentValues;//a NSSet contains index of the segment logic.
+@property (assign, nonatomic) JWTextFieldSegmentStyle segmentStyle;//a pre-set control to add space by the given format. It will change the segmentValues and keyboardType.
 
-- (NSString*)getRawText;
+@property (assign, nonatomic) NSUInteger maxTextLength;//default is NSIntegerMax.When set, it will limit the length of trimed text.
+
+- (NSString*)getRawText;//return text without segment space
 
 @end
 

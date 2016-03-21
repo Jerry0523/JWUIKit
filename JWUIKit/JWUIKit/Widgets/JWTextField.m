@@ -39,9 +39,9 @@ JWUIKitInitialze {
     self.rightView = containerView;
 }
 
-- (void)setPaddingHorizontal:(CGFloat)paddingHorizontal {
+- (void)setPaddingLeft:(CGFloat)paddingLeft {
     JWTextFieldSpaceView *leftSpaceView = [JWTextFieldSpaceView new];
-    leftSpaceView.space = paddingHorizontal;
+    leftSpaceView.space = paddingLeft;
     
     NSArray *mLeftViews;
     if (self.leftViews) {
@@ -52,18 +52,6 @@ JWUIKitInitialze {
         mLeftViews = @[leftSpaceView];
     }
     self.leftViews = mLeftViews;
-    
-    JWTextFieldSpaceView *rightSpaceView = [JWTextFieldSpaceView new];
-    rightSpaceView.space = paddingHorizontal;
-    NSArray *mRightViews;
-    if (self.rightViews) {
-        NSMutableArray *mutable = [NSMutableArray arrayWithArray:self.rightViews];
-        [mutable insertObject:rightSpaceView atIndex:mutable.count];
-        mRightViews = mutable;
-    } else {
-        mRightViews = @[rightSpaceView];
-    }
-    self.rightViews = mRightViews;
 }
 
 - (void)setSegmentStyle:(JWTextFieldSegmentStyle)segmentStyle {
@@ -98,6 +86,12 @@ JWUIKitInitialze {
 
 - (void)setSegmentValues:(NSSet<NSNumber *> *)segmentValues {
     _segmentValues = segmentValues;
+}
+
+- (void)setImageView:(UIImageView *)imageView {
+    if (imageView) {
+        self.leftViews = @[imageView];
+    }
 }
 
 - (NSString*)getRawText {
