@@ -11,14 +11,10 @@
 @implementation UIImage (JWSub)
 
 -(UIImage*)getSubImage:(CGRect)rect {
-    CGImageRef subImageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextDrawImage(context, CGRectMake(0, 0, CGRectGetWidth(rect), CGRectGetHeight(rect)), subImageRef);
-    UIImage* smallImage = [UIImage imageWithCGImage:subImageRef];
-    UIGraphicsEndImageContext();
-    
-    return smallImage;
+    CGImageRef imageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
+    UIImage *subImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return subImage;
 }
 
 -(UIImage*)scaleToSize:(CGSize)size {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E35D301CA0456600264270 /* UIView+JWIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E35D2E1CA0456600264270 /* UIView+JWIndex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E35D311CA0456600264270 /* UIView+JWIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D2F1CA0456600264270 /* UIView+JWIndex.m */; };
 		C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E231C9935C000FA3176 /* JWUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4446E641C99431100FA3176 /* UIView+JWFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E621C99431100FA3176 /* UIView+JWFrame.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E631C99431100FA3176 /* UIView+JWFrame.m */; };
@@ -21,15 +23,13 @@
 		C4CD179E1C9BCACC00187997 /* JWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17941C9BCACC00187997 /* JWTextField.m */; };
 		C4CD179F1C9BCACC00187997 /* JWTickNumberLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17951C9BCACC00187997 /* JWTickNumberLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4CD17A01C9BCACC00187997 /* JWTickNumberLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17961C9BCACC00187997 /* JWTickNumberLabel.m */; };
-		C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17C51C9FEE2400187997 /* UIImage+JWSub.h */; };
+		C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17C51C9FEE2400187997 /* UIImage+JWSub.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4CD17C81C9FEE2400187997 /* UIImage+JWSub.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17C61C9FEE2400187997 /* UIImage+JWSub.m */; };
-		C4CD17CF1C9FF59D00187997 /* UIView+JWAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17CD1C9FF59D00187997 /* UIView+JWAnimation.h */; };
-		C4CD17D01C9FF59D00187997 /* UIView+JWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17CE1C9FF59D00187997 /* UIView+JWAnimation.m */; };
-		C4CD17D71C9FF70B00187997 /* UIView+JWIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17D51C9FF70B00187997 /* UIView+JWIndex.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4CD17D81C9FF70B00187997 /* UIView+JWIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17D61C9FF70B00187997 /* UIView+JWIndex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E35D2E1CA0456600264270 /* UIView+JWIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWIndex.h"; sourceTree = "<group>"; };
+		05E35D2F1CA0456600264270 /* UIView+JWIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWIndex.m"; sourceTree = "<group>"; };
 		C4446E201C9935C000FA3176 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E231C9935C000FA3176 /* JWUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWUIKit.h; sourceTree = "<group>"; };
 		C4446E251C9935C000FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,10 +48,6 @@
 		C4CD17961C9BCACC00187997 /* JWTickNumberLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTickNumberLabel.m; sourceTree = "<group>"; };
 		C4CD17C51C9FEE2400187997 /* UIImage+JWSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWSub.h"; sourceTree = "<group>"; };
 		C4CD17C61C9FEE2400187997 /* UIImage+JWSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JWSub.m"; sourceTree = "<group>"; };
-		C4CD17CD1C9FF59D00187997 /* UIView+JWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWAnimation.h"; sourceTree = "<group>"; };
-		C4CD17CE1C9FF59D00187997 /* UIView+JWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWAnimation.m"; sourceTree = "<group>"; };
-		C4CD17D51C9FF70B00187997 /* UIView+JWIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWIndex.h"; sourceTree = "<group>"; };
-		C4CD17D61C9FF70B00187997 /* UIView+JWIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWIndex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +113,8 @@
 				C4CD17C61C9FEE2400187997 /* UIImage+JWSub.m */,
 				C4446E621C99431100FA3176 /* UIView+JWFrame.h */,
 				C4446E631C99431100FA3176 /* UIView+JWFrame.m */,
-				C4CD17CD1C9FF59D00187997 /* UIView+JWAnimation.h */,
-				C4CD17CE1C9FF59D00187997 /* UIView+JWAnimation.m */,
-				C4CD17D51C9FF70B00187997 /* UIView+JWIndex.h */,
-				C4CD17D61C9FF70B00187997 /* UIView+JWIndex.m */,
+				05E35D2E1CA0456600264270 /* UIView+JWIndex.h */,
+				05E35D2F1CA0456600264270 /* UIView+JWIndex.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -132,13 +126,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */,
-				C4CD17CF1C9FF59D00187997 /* UIView+JWAnimation.h in Headers */,
 				C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */,
 				C4CD17971C9BCACC00187997 /* JWAnimatedImageView.h in Headers */,
 				C4CD179D1C9BCACC00187997 /* JWTextField.h in Headers */,
 				C4CD17991C9BCACC00187997 /* JWFPSLabel.h in Headers */,
-				C4CD17D71C9FF70B00187997 /* UIView+JWIndex.h in Headers */,
+				C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */,
+				05E35D301CA0456600264270 /* UIView+JWIndex.h in Headers */,
 				C4CD179F1C9BCACC00187997 /* JWTickNumberLabel.h in Headers */,
 				C4CD179B1C9BCACC00187997 /* JWPageView.h in Headers */,
 				C4446E641C99431100FA3176 /* UIView+JWFrame.h in Headers */,
@@ -213,14 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E35D311CA0456600264270 /* UIView+JWIndex.m in Sources */,
 				C4CD179C1C9BCACC00187997 /* JWPageView.m in Sources */,
 				C4CD17C81C9FEE2400187997 /* UIImage+JWSub.m in Sources */,
 				C4CD17981C9BCACC00187997 /* JWAnimatedImageView.m in Sources */,
 				C4CD179E1C9BCACC00187997 /* JWTextField.m in Sources */,
-				C4CD17D01C9FF59D00187997 /* UIView+JWAnimation.m in Sources */,
 				C4CD17A01C9BCACC00187997 /* JWTickNumberLabel.m in Sources */,
 				C4CD179A1C9BCACC00187997 /* JWFPSLabel.m in Sources */,
-				C4CD17D81C9FF70B00187997 /* UIView+JWIndex.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

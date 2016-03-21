@@ -53,7 +53,7 @@ class ImageViewsViewController: UIViewController, UICollectionViewDataSource {
         }
         
         let jwImageView:JWAnimatedImageView = cell.contentView.subviews[0] as! JWAnimatedImageView
-        let animationType = JWAnimatedImageViewAnimation(rawValue: UInt(indexPath.row))
+        let animationType = JWAnimatedImageViewAnimation(rawValue: UInt(indexPath.row + 1))
         jwImageView.animationStyle = animationType!
         jwImageView.image = UIImage(named: "flow0")
         

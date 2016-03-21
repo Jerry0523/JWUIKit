@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
+		05E35D2A1CA0339800264270 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E35D291CA0339800264270 /* JWUIKit.framework */; };
+		05E35D2C1CA0339F00264270 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05E35D291CA0339800264270 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
 		C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* ViewController.swift */; };
 		C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8A1C9A658B00FA3176 /* Assets.xcassets */; };
@@ -17,18 +19,16 @@
 		C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */; };
 		C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */; };
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
-		C4CD17BE1C9FDFAE00187997 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17BD1C9FDFAE00187997 /* JWUIKit.framework */; };
-		C4CD17BF1C9FDFAE00187997 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17BD1C9FDFAE00187997 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C4CD17C01C9FDFAF00187997 /* Embed Frameworks */ = {
+		05E35D2D1CA0339F00264270 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C4CD17BF1C9FDFAE00187997 /* JWUIKit.framework in Embed Frameworks */,
+				05E35D2C1CA0339F00264270 /* JWUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
+		05E35D291CA0339800264270 /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-camodsdqqelogjdvwcxxystygmyi/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4446E851C9A658B00FA3176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
 		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
-		C4CD17BD1C9FDFAE00187997 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/Jerry/Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4CD17BE1C9FDFAE00187997 /* JWUIKit.framework in Frameworks */,
+				05E35D2A1CA0339800264270 /* JWUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 		C4446E951C9A65B500FA3176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C4CD17BD1C9FDFAE00187997 /* JWUIKit.framework */,
+				05E35D291CA0339800264270 /* JWUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 				C4446E7C1C9A658B00FA3176 /* Sources */,
 				C4446E7D1C9A658B00FA3176 /* Frameworks */,
 				C4446E7E1C9A658B00FA3176 /* Resources */,
-				C4CD17C01C9FDFAF00187997 /* Embed Frameworks */,
+				05E35D2D1CA0339F00264270 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, JWAnimatedImageViewAnimation){
     JWAnimatedImageViewAnimationNone,
     JWAnimatedImageViewAnimationFade,
+    JWAnimatedImageViewAnimationRollOver,
     JWAnimatedImageViewAnimationZoom,
     JWAnimatedImageViewAnimationLeft,
-    JWAnimatedImageViewAnimationRollOver,
     JWAnimatedImageViewAnimationBlur,
     JWAnimatedImageViewAnimationBox
 };

@@ -11,6 +11,7 @@
 #import "JWUIKitMacro.h"
 #import "UIView+JWFrame.h"
 #import "UIImage+JWSub.h"
+#import "UIView+JWIndex.h"
 
 @interface JWAnimatedImageView()
 
@@ -173,17 +174,20 @@ JWUIKitInitialze {
     }
     self.imageView.hidden = YES;
     
-    CGFloat sliceWidth = round(self.imageView.w / 3.0);
-    CGFloat sliceHeight = round(self.imageView.h / 3.0);
+    NSUInteger pieceOfSlices = 3;
+    
+    CGFloat sliceWidth = round(self.imageView.w / pieceOfSlices);
+    CGFloat sliceHeight = round(self.imageView.h / pieceOfSlices);
+    CGFloat radio = CGImageGetWidth(self.imageView.image.CGImage) / self.imageView.w;
     
     NSMutableArray *slicesSourceRectArray = @[].mutableCopy;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            CGRect sliceRect = CGRectMake(i * sliceWidth, j * sliceHeight, sliceWidth, sliceHeight);
+    for (int i = 0; i < pieceOfSlices; i++) {
+        for (int j = 0; j < pieceOfSlices; j++) {
+            CGRect sliceRect = CGRectMake(j * sliceWidth, i * sliceHeight, sliceWidth, sliceHeight);
             [slicesSourceRectArray addObject:[NSValue valueWithCGRect:sliceRect]];
         }
     }
-    NSArray *indexArray = @[@(0), @(1), @(2), @(5), @(8), @(7), @(6), @(3), @(4)];
+    NSArray *indexArray = [self circleIndexForRowCount:pieceOfSlices columnCount:pieceOfSlices];
     NSMutableArray *slicesRectArray = @[].mutableCopy;
     for (NSNumber *idx in indexArray) {
         [slicesRectArray addObject:slicesSourceRectArray[idx.integerValue]];
@@ -192,15 +196,40 @@ JWUIKitInitialze {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *imagesArray = @[].mutableCopy;
         for (NSValue *rectValue in slicesRectArray) {
-            UIImage *subImage = [sourceImage getSubImage:rectValue.CGRectValue];
+            CGRect sliceRect = rectValue.CGRectValue;
+            CGRect subRect = CGRectMake(sliceRect.origin.x * radio, sliceRect.origin.y * radio, sliceRect.size.width * radio, sliceRect.size.height * radio);
+            UIImage *subImage = [sourceImage getSubImage:subRect];
             [imagesArray addObject:subImage];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
+            UIView *sliceContainer = [[UIView alloc] initWithFrame:self.bounds];
+            sliceContainer.clipsToBounds = YES;
+            [self addSubview:sliceContainer];
+            
+            CABasicAnimation *fadeAnimation = [self fadeAnimation];
+            NSTimeInterval itemDuration = .15f;
+            CFTimeInterval currentMediaTime = CACurrentMediaTime();
+            
             [imagesArray enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
                 UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+                imageView.alpha = 0;
                 imageView.frame = [slicesRectArray[idx] CGRectValue];
-                [self addSubview:imageView];
+                [sliceContainer addSubview:imageView];
+                [CATransaction begin];
+                CABasicAnimation *mAnimation = fadeAnimation.copy;
+                mAnimation.beginTime = currentMediaTime + itemDuration * idx;
+                mAnimation.duration = itemDuration;
+                mAnimation.fillMode = kCAFillModeForwards;
+                mAnimation.removedOnCompletion = NO;
+                [imageView.layer addAnimation:mAnimation forKey:nil];
+                [CATransaction commit];
             }];
+            
+            dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, itemDuration * imagesArray.count * NSEC_PER_SEC);
+            dispatch_after(time, dispatch_get_main_queue(), ^{
+                [sliceContainer removeFromSuperview];
+                self.imageView.hidden = NO;
+            });
         });
     });
 }
