@@ -3,7 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
+Build/
 DerivedData
 
 ## Various settings
@@ -23,7 +23,7 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 *.xcscheme
-.DS_Store
+*.DS_Store
 
 ## Obj-C/Swift specific
 *.hmap
