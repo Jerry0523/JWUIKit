@@ -32,7 +32,7 @@ class ImageViewsViewController: UIViewController, UICollectionViewDataSource {
         collectionView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         collectionView.dataSource = self
         
-        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: collectionView, action: "reloadData")
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: collectionView, action: #selector(UICollectionView.reloadData))
         self.navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
 

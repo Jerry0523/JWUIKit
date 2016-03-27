@@ -20,6 +20,8 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWPageView.h>
 #import <JWUIKit/JWTextField.h>
 #import <JWUIKit/JWAnimatedImageView.h>
+#import <JWUIKit/JWRadarLoadingView.h>
+#import <JWUIKit/JWSoundLikeLoadingView.h>
 
 #import "UIView+JWIndex.h"
 

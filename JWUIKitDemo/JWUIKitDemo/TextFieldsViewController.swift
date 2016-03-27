@@ -15,7 +15,7 @@ class TextFieldsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "JWUIKitTextFields"
-        let tap = UITapGestureRecognizer(target: self.view, action: "endEditing:")
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
         
         self.setupComplexTextField()

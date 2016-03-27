@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056274A51CA7924D001E4F73 /* JWRadarLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 056274A31CA7924D001E4F73 /* JWRadarLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		056274A61CA7924D001E4F73 /* JWRadarLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056274A41CA7924D001E4F73 /* JWRadarLoadingView.m */; };
+		058329891CA7D34500F87BAF /* JWSoundLikeLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 058329871CA7D34500F87BAF /* JWSoundLikeLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0583298A1CA7D34500F87BAF /* JWSoundLikeLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 058329881CA7D34500F87BAF /* JWSoundLikeLoadingView.m */; };
 		05E35D301CA0456600264270 /* UIView+JWIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E35D2E1CA0456600264270 /* UIView+JWIndex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E35D311CA0456600264270 /* UIView+JWIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D2F1CA0456600264270 /* UIView+JWIndex.m */; };
 		C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E231C9935C000FA3176 /* JWUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056274A31CA7924D001E4F73 /* JWRadarLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRadarLoadingView.h; sourceTree = "<group>"; };
+		056274A41CA7924D001E4F73 /* JWRadarLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRadarLoadingView.m; sourceTree = "<group>"; };
+		058329871CA7D34500F87BAF /* JWSoundLikeLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSoundLikeLoadingView.h; sourceTree = "<group>"; };
+		058329881CA7D34500F87BAF /* JWSoundLikeLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSoundLikeLoadingView.m; sourceTree = "<group>"; };
 		05E35D2E1CA0456600264270 /* UIView+JWIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWIndex.h"; sourceTree = "<group>"; };
 		05E35D2F1CA0456600264270 /* UIView+JWIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWIndex.m"; sourceTree = "<group>"; };
 		C4446E201C9935C000FA3176 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +109,10 @@
 				C4CD17941C9BCACC00187997 /* JWTextField.m */,
 				C4CD17951C9BCACC00187997 /* JWTickNumberLabel.h */,
 				C4CD17961C9BCACC00187997 /* JWTickNumberLabel.m */,
+				056274A31CA7924D001E4F73 /* JWRadarLoadingView.h */,
+				056274A41CA7924D001E4F73 /* JWRadarLoadingView.m */,
+				058329871CA7D34500F87BAF /* JWSoundLikeLoadingView.h */,
+				058329881CA7D34500F87BAF /* JWSoundLikeLoadingView.m */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -134,6 +146,8 @@
 				05E35D301CA0456600264270 /* UIView+JWIndex.h in Headers */,
 				C4CD179F1C9BCACC00187997 /* JWTickNumberLabel.h in Headers */,
 				C4CD179B1C9BCACC00187997 /* JWPageView.h in Headers */,
+				058329891CA7D34500F87BAF /* JWSoundLikeLoadingView.h in Headers */,
+				056274A51CA7924D001E4F73 /* JWRadarLoadingView.h in Headers */,
 				C4446E641C99431100FA3176 /* UIView+JWFrame.h in Headers */,
 				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
 			);
@@ -213,7 +227,9 @@
 				C4CD179E1C9BCACC00187997 /* JWTextField.m in Sources */,
 				C4CD17A01C9BCACC00187997 /* JWTickNumberLabel.m in Sources */,
 				C4CD179A1C9BCACC00187997 /* JWFPSLabel.m in Sources */,
+				056274A61CA7924D001E4F73 /* JWRadarLoadingView.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */,
+				0583298A1CA7D34500F87BAF /* JWSoundLikeLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
