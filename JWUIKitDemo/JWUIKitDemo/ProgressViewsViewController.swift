@@ -8,36 +8,40 @@
 
 import UIKit
 
-class LoadingViewsViewController: UIViewController {
+class ProgressViewsViewController: UIViewController {
     
-    let circleProgressView = JWCircleProgressView(frame: CGRectMake(0, 0, 40, 40))
-    let circleProgressView1 = JWCircleProgressView(frame: CGRectMake(0, 0, 40, 40))
+    @IBOutlet weak var circleProgressView0: JWCircleProgressView!
 
+    @IBOutlet weak var circleProgressView1: JWCircleProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "JWUIKitLoadingViews"
+        self.title = "JWUIKitProgressViews"
+        self.fakeProgress()
         
-        self.view.backgroundColor = UIColor.blackColor()
-        
-        circleProgressView.center = CGPointMake(120, 200)
-        self.view.addSubview(circleProgressView)
-        
-        circleProgressView.progress = 0
-        circleProgressView.style = .Pie
-        
-        circleProgressView1.center = CGPointMake(120, 300)
-        self.view.addSubview(circleProgressView1)
-        
-        circleProgressView1.progress = 0
-        circleProgressView1.style = .Default
-        
-        let tap = UITapGestureRecognizer(target: self, action: "dealWithTap")
-        self.view.addGestureRecognizer(tap)
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(ProgressViewsViewController.reloadProgress))
+        self.navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
     
-    func dealWithTap(){
-        circleProgressView.progress += 0.3;
-        circleProgressView1.progress += 0.3;
+    func fakeProgress() {
+        let randomValue = CGFloat(JWRandom(10, 20)) / 100.0
+        circleProgressView0.progress += randomValue;
+        circleProgressView1.progress += randomValue;
+        
+        if circleProgressView0.progress < 1.0 {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                self .fakeProgress()
+            });
+        }
+    }
+    
+    func reloadProgress() {
+        if circleProgressView0.progress != 1.0 {
+            return;
+        }
+        circleProgressView0.progress = 0;
+        circleProgressView1.progress = 0;
+        self.fakeProgress()
     }
 
     override func didReceiveMemoryWarning() {
