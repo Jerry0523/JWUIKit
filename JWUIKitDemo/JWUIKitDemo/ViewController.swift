@@ -31,13 +31,14 @@ class ViewController: UIViewController, JWPageViewDataSource, JWPageViewDelegate
         return 4
     }
     
-    func pageView(aPageView: JWPageView, viewAt aIndex: UInt, var reusableView: UIView?) -> UIView{
-        if (reusableView == nil) {
+    func pageView(aPageView: JWPageView, viewAt aIndex: UInt, reusableView: UIView?) -> UIView{
+        var mReusableView = reusableView
+        if (mReusableView == nil) {
             let label = UILabel()
             label.textColor = UIColor.whiteColor()
             label.font = UIFont.systemFontOfSize(20.0)
             label.textAlignment = .Center
-            reusableView = label
+            mReusableView = label
         }
         let label: UILabel = reusableView as! UILabel
         label.text = "第\(aIndex)个页面"

@@ -16,7 +16,7 @@ class LabelsViewController: UIViewController {
         super.viewDidLoad()
         self.title = "JWUIKitLabels"
         
-        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "didRefreshAnimation:")
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(LabelsViewController.didRefreshAnimation(_:)))
         self.navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
 

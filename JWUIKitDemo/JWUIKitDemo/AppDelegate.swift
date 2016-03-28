@@ -19,9 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.initAppreance()
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let widgetsListVC = WidgetsListViewController()
-        let navigationController = UINavigationController(rootViewController: widgetsListVC)
-        self.window?.rootViewController = navigationController
+//        let widgetsListVC = WidgetsListViewController()
+//        let navigationController = UINavigationController(rootViewController: widgetsListVC)
+//        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = UIViewController()
+        
+        let radarLoadingView = JWRadarLoadingView(frame: CGRectMake(0, 0, 50, 50))
+        radarLoadingView.center = (self.window?.center)!
+        radarLoadingView.tintColor = UIColor.redColor()
+        radarLoadingView.startAnimating()
+        
+        self.window?.addSubview(radarLoadingView)
+        
+        let soundLikeLoadingView = JWSoundLikeLoadingView(frame: CGRectMake(0, 0, 25, 20))
+        soundLikeLoadingView.center = CGPointMake(radarLoadingView.center.x, radarLoadingView.center.y + 60)
+        soundLikeLoadingView.startAnimating()
+        
+        self.window?.addSubview(soundLikeLoadingView)
+        
         self.window?.makeKeyAndVisible()
         
         return true
