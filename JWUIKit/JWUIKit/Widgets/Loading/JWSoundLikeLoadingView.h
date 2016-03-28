@@ -6,7 +6,9 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface JWSoundLikeLoadingView : UIView
 
@@ -21,3 +23,5 @@
 - (void)stopAnimating;
 
 @end
+
+NS_ASSUME_NONNULL_END

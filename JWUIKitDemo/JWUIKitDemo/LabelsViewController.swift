@@ -27,8 +27,8 @@ class LabelsViewController: UIViewController {
     // MARK: - Actions
     func didRefreshAnimation(sender: UIBarButtonItem) {
         (self.contentView.subviews as NSArray).enumerateObjectsUsingBlock { (subView: AnyObject, index: Int, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
-            if subView.respondsToSelector("reloadData") {
-                subView.performSelector("reloadData")
+            if subView.respondsToSelector(#selector(JWTickNumberLabel.reloadData)) {
+                subView.performSelector(#selector(JWTickNumberLabel.reloadData))
             }
         }
     }

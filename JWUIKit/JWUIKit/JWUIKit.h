@@ -14,13 +14,27 @@ FOUNDATION_EXPORT double JWUIKitVersionNumber;
 //! Project version string for JWUIKit.
 FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 
+//Core
+#import <JWUIKit/JWAlgorithm.h>
 
+//Labels
 #import <JWUIKit/JWFPSLabel.h>
 #import <JWUIKit/JWTickNumberLabel.h>
-#import <JWUIKit/JWPageView.h>
-#import <JWUIKit/JWTextField.h>
+//Images
 #import <JWUIKit/JWAnimatedImageView.h>
+//TextFields
+#import <JWUIKit/JWTextField.h>
+//Progress
 #import <JWUIKit/JWCircleProgressView.h>
+//Loading
+#import <JWUIKit/JWRadarLoadingView.h>
+#import <JWUIKit/JWSoundLikeLoadingView.h>
+//Page
+#import <JWUIKit/JWPageView.h>
+//Shapes
+#import <JWUIKit/JWMicrophoneView.h>
+
+
 
 
 

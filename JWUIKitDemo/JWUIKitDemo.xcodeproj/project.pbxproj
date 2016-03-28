@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
+		C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */; };
+		C4176E231CA8DDA300770F24 /* LoadingViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */; };
+		C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewsController.swift */; };
+		C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E321CA8F47200770F24 /* ShapeViewsController.xib */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
 		C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* ViewController.swift */; };
 		C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8A1C9A658B00FA3176 /* Assets.xcassets */; };
@@ -19,8 +23,8 @@
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
 		C4CD17EE1CA0EAAB00187997 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */; };
 		C4CD17F01CA0EAB700187997 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C4CD17F41CA0EFE100187997 /* LoadingViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* LoadingViewsViewController.swift */; };
-		C4CD17F51CA0EFE100187997 /* LoadingViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CD17F31CA0EFE100187997 /* LoadingViewsViewController.xib */; };
+		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
+		C4CD17F51CA0EFE100187997 /* ProgressViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CD17F31CA0EFE100187997 /* ProgressViewsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
+		C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewsViewController.swift; sourceTree = "<group>"; };
+		C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewsViewController.xib; sourceTree = "<group>"; };
+		C4176E311CA8F47200770F24 /* ShapeViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewsController.swift; sourceTree = "<group>"; };
+		C4176E321CA8F47200770F24 /* ShapeViewsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeViewsController.xib; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4446E851C9A658B00FA3176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +60,8 @@
 		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
 		C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
-		C4CD17F21CA0EFE100187997 /* LoadingViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewsViewController.swift; sourceTree = "<group>"; };
-		C4CD17F31CA0EFE100187997 /* LoadingViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewsViewController.xib; sourceTree = "<group>"; };
+		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
+		C4CD17F31CA0EFE100187997 /* ProgressViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,12 @@
 				C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */,
 				C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */,
 				05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */,
-				C4CD17F21CA0EFE100187997 /* LoadingViewsViewController.swift */,
-				C4CD17F31CA0EFE100187997 /* LoadingViewsViewController.xib */,
+				C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */,
+				C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */,
+				C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */,
+				C4CD17F31CA0EFE100187997 /* ProgressViewsViewController.xib */,
+				C4176E311CA8F47200770F24 /* ShapeViewsController.swift */,
+				C4176E321CA8F47200770F24 /* ShapeViewsController.xib */,
 				C4446E851C9A658B00FA3176 /* ViewController.swift */,
 				C4446E8A1C9A658B00FA3176 /* Assets.xcassets */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
@@ -178,7 +190,9 @@
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
 				C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */,
-				C4CD17F51CA0EFE100187997 /* LoadingViewsViewController.xib in Resources */,
+				C4176E231CA8DDA300770F24 /* LoadingViewsViewController.xib in Resources */,
+				C4CD17F51CA0EFE100187997 /* ProgressViewsViewController.xib in Resources */,
+				C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +205,10 @@
 			files = (
 				C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
-				C4CD17F41CA0EFE100187997 /* LoadingViewsViewController.swift in Sources */,
+				C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */,
+				C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */,
 				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,
+				C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */,
 				C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */,
 				C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */,
 				05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */,

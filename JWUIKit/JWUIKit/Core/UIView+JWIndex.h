@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIView (JWIndex)
 

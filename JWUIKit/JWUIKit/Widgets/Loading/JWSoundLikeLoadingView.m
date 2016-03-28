@@ -8,6 +8,7 @@
 
 #import "JWSoundLikeLoadingView.h"
 //Core
+#import "JWAlgorithm.h"
 #import "JWUIKitMacro.h"
 #import "UIView+JWFrame.h"
 
@@ -16,11 +17,11 @@
 }
 
 JWUIKitInitialze {
-    self.barsCount = 4;
+    self.barsCount = 3;
     self.tintColor = [UIColor redColor];
     self.barsMarginPercent = 0.6f;
     
-    self.duration = 0.5f;
+    self.duration = 0.35f;
 }
 
 - (void)layoutSubviews {
@@ -45,7 +46,6 @@ JWUIKitInitialze {
             barAnimation.beginTime = currentMediaTime + idx * JWRandom(50, 101) * barDuration / 100.0f;
             barAnimation.repeatCount = INFINITY;
             barAnimation.autoreverses = YES;
-            barAnimation.delegate = self;
             
             [bar addAnimation:barAnimation forKey:nil];
         }];
@@ -56,16 +56,10 @@ JWUIKitInitialze {
 }
 
 - (void)stopAnimating {
-    
-}
-
-#pragma mark - CAAnimationDelegate
-- (void)animationDidStart:(CAAnimation *)anim {
-    NSLog(@"aaa");
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    NSLog(@"here");
+    if (_isAnimating) {
+        [_layers makeObjectsPerformSelector:@selector(removeAllAnimations)];
+        _isAnimating = NO;
+    }
 }
 
 #pragma mark - Setter & Getter
@@ -112,6 +106,7 @@ JWUIKitInitialze {
     for (CAShapeLayer *barLayer in _layers) {
         barLayer.strokeColor = self.tintColor.CGColor;
         barLayer.fillColor = [UIColor clearColor].CGColor;
+        barLayer.strokeEnd = 0;
     }
 }
 
@@ -128,10 +123,6 @@ JWUIKitInitialze {
         bar.path = path;
         CGPathRelease(path);
     }];
-}
-
-int JWRandom(int from, int to) {
-    return (int)(from + (arc4random() % (to - from + 1)));
 }
 
 @end

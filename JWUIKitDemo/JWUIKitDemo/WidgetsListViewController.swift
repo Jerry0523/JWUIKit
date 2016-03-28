@@ -14,7 +14,9 @@ class WidgetsListViewController: UITableViewController {
     let data = [["name":"Label", "class":LabelsViewController.classForCoder()],
                 ["name":"TextField", "class":TextFieldsViewController.classForCoder()],
                 ["name":"Image", "class":ImageViewsViewController.classForCoder()],
-                ["name":"Loading", "class":LoadingViewsViewController.classForCoder()]
+                ["name":"Loading", "class":LoadingViewsViewController.classForCoder()],
+                ["name":"Progress", "class":ProgressViewsViewController.classForCoder()],
+                ["name":"Shape", "class":ShapeViewsController.classForCoder()]
                ]
 
     override func viewDidLoad() {

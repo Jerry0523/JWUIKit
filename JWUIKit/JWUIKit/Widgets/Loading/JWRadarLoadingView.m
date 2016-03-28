@@ -18,8 +18,8 @@
 }
 
 JWUIKitInitialze {
-    self.circleAnimationDuration = 0.5f;
-    self.ringAnimationDuration = 0.4f;
+    self.circleAnimationDuration = 0.2f;
+    self.ringAnimationDuration = 0.25f;
     
     self.tintColor = [UIColor colorWithRed:65.0 / 255.0 green:179.0 / 255.0 blue:248.0 / 255.0 alpha:1.0];
     self.ringsCount = 2;
@@ -46,6 +46,8 @@ JWUIKitInitialze {
     centerCircleAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.2f, 0.2f, 1.0)];
     centerCircleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
     [_centerCirclelLayer addAnimation:centerCircleAnimation forKey:nil];
+    
+    _centerCirclelLayer.opacity = 1.0f;
     
     CFTimeInterval currentMediaTime = CACurrentMediaTime();
     
@@ -82,10 +84,10 @@ JWUIKitInitialze {
 - (void)stopAnimating {
     if (_isAnimating) {
         [_centerCirclelLayer removeAllAnimations];
+        _centerCirclelLayer.opacity = 0.0f;
         [_ringLayersArray makeObjectsPerformSelector:@selector(removeAllAnimations)];
         _isAnimating = NO;
     }
-    
 }
 
 #pragma mark - Setter & Getter
@@ -133,6 +135,7 @@ JWUIKitInitialze {
 - (void)setupCircleLayer {
     if (!_centerCirclelLayer) {
         _centerCirclelLayer = [CAShapeLayer layer];
+        _centerCirclelLayer.opacity = 0.0f;
         [self.layer addSublayer:_centerCirclelLayer];
     }
     _centerCirclelLayer.fillColor = _colors[0].CGColor;

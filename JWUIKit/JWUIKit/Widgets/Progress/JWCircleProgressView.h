@@ -6,7 +6,9 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, JWCircleProgressStyle){
     JWCircleProgressStyleDefault,
@@ -18,6 +20,10 @@ typedef NS_ENUM(NSUInteger, JWCircleProgressStyle){
 @property (assign, nonatomic) CGFloat progress;
 @property (assign, nonatomic) JWCircleProgressStyle style;
 
-@property (strong, nonatomic, null_resettable) UIColor *color;//default is white
+@property (assign, nonatomic) BOOL showBackground;//default is YES
+
+@property (strong, nonatomic, nullable) UIColor *tintColor;//default is white
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShapeViewsController" customModule="JWUIKitDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="f6y-YH-kBz" id="7jO-p6-Yb4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" id="f6y-YH-kBz">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-Wg-MJ8" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-i2-xwy" customClass="JWMicrophoneView">
+                            <rect key="frame" x="90" y="214" width="140" height="140"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="X2i-k7-aQb"/>
+                                <constraint firstAttribute="height" constant="140" id="r9I-zI-gWG"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                    <color key="value" red="0.97647058823529409" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="volumn">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="6Sy-i2-xwy" firstAttribute="centerY" secondItem="BJ7-Wg-MJ8" secondAttribute="centerY" id="0sV-jc-jdg"/>
+                        <constraint firstAttribute="height" constant="568" id="Pl4-s5-UOS"/>
+                        <constraint firstItem="6Sy-i2-xwy" firstAttribute="centerX" secondItem="BJ7-Wg-MJ8" secondAttribute="centerX" id="eab-ec-9Vk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="BJ7-Wg-MJ8" firstAttribute="top" secondItem="f6y-YH-kBz" secondAttribute="top" id="Aif-gy-afp"/>
+                <constraint firstAttribute="trailing" secondItem="BJ7-Wg-MJ8" secondAttribute="trailing" id="IB2-bU-rnN"/>
+                <constraint firstItem="BJ7-Wg-MJ8" firstAttribute="centerX" secondItem="f6y-YH-kBz" secondAttribute="centerX" id="oII-q5-7WX"/>
+                <constraint firstItem="BJ7-Wg-MJ8" firstAttribute="leading" secondItem="f6y-YH-kBz" secondAttribute="leading" id="vKG-yA-jMz"/>
+            </constraints>
+            <point key="canvasLocation" x="314" y="356"/>
+        </scrollView>
+    </objects>
+</document>
