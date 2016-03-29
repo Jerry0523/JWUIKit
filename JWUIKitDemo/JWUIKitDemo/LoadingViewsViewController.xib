@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewsViewController" customModule="JWUIKitDemo" customModuleProvider="target">
             <connections>
+                <outlet property="circleLoadingView" destination="k3O-K4-Ig6" id="yHE-bc-EIh"/>
                 <outlet property="radarLoadingView" destination="HZ7-NC-8Km" id="fx6-BW-rB8"/>
                 <outlet property="soundLikeLoadingView" destination="y2U-bF-uw0" id="MZM-wS-pOP"/>
                 <outlet property="view" destination="XYv-dv-IIz" id="opA-TO-9DB"/>
@@ -49,6 +50,21 @@
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="0.09574468085" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTA-qq-h1p">
+                            <rect key="frame" x="150" y="10" width="60" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3O-K4-Ig6" customClass="JWCircleLoadingView">
+                                    <rect key="frame" x="20" y="20" width="20" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                            <color key="value" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.09701906028" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>

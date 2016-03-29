@@ -23,3 +23,7 @@ bool JWVerifyValue(float input, float min, float max) {
 float JWValueConformTo(float input, float min, float max) {
     return MAX(min, MIN(input, max));
 }
+
+double JWRadians(float degrees) {
+    return (degrees * M_PI) / 180.0;
+}

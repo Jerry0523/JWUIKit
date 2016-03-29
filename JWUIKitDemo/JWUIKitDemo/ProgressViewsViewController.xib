@@ -24,7 +24,7 @@
                             <rect key="frame" x="10" y="10" width="60" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtK-eF-nJX" customClass="JWCircleProgressView">
-                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                    <rect key="frame" x="15" y="15" width="30" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="style">
@@ -45,7 +45,7 @@
                             <rect key="frame" x="80" y="10" width="60" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMt-K0-U6I" customClass="JWCircleProgressView">
-                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                    <rect key="frame" x="15" y="15" width="30" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="style">

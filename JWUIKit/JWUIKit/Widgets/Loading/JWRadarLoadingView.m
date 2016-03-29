@@ -21,7 +21,7 @@ JWUIKitInitialze {
     self.circleAnimationDuration = 0.2f;
     self.ringAnimationDuration = 0.25f;
     
-    self.tintColor = [UIColor colorWithRed:65.0 / 255.0 green:179.0 / 255.0 blue:248.0 / 255.0 alpha:1.0];
+    self.tintColor = [UIColor redColor];
     self.ringsCount = 2;
     self.centerCircleRadiusPercent = .3f;
 }
@@ -30,7 +30,8 @@ JWUIKitInitialze {
     [self layoutLayers];
 }
 
-#pragma Public
+#pragma mark - JWLoadingViewProtocol
+
 - (void)startAnimating {
     if (_isAnimating) {
         return ;

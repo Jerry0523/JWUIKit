@@ -28,7 +28,7 @@ JWUIKitInitialze {
     [self layoutBarLayers];
 }
 
-#pragma mark - Public
+#pragma mark - JWLoadingViewProtocol
 - (void)startAnimating {
     if (!_isAnimating) {
         _isAnimating = YES;

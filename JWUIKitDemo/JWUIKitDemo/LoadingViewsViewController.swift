@@ -12,8 +12,11 @@ class LoadingViewsViewController: UIViewController {
 
     @IBOutlet weak var radarLoadingView: JWRadarLoadingView!
     @IBOutlet weak var soundLikeLoadingView: JWSoundLikeLoadingView!
+    @IBOutlet weak var circleLoadingView: JWCircleLoadingView!
     
     override func viewDidLoad() {
+        
+    
         super.viewDidLoad()
         self.title = "JWUIKitLoadingViews"
     }
@@ -21,6 +24,7 @@ class LoadingViewsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         radarLoadingView.startAnimating()
         soundLikeLoadingView.startAnimating()
+        circleLoadingView.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {

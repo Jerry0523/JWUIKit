@@ -28,7 +28,6 @@ JWUIKitInitialze {
 }
 
 - (void)layoutSubviews {
-    _layer.frame = self.bounds;
     [self setupShape];
 }
 
@@ -44,7 +43,15 @@ JWUIKitInitialze {
             CGContextStrokePath(context);
             
         } else if(self.style == JWCircleProgressStylePie) {
-            //do noting
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            CGContextSetLineWidth(context, 1.0);
+            
+            CGContextSetStrokeColorWithColor(context, self.tintColor.CGColor);
+            CGContextBeginPath(context);
+            
+            CGFloat contentWidth = MIN(rect.size.width, rect.size.height) * .5f - 1.0f;
+            CGContextAddArc(context, rect.size.width * .5f, rect.size.height * .5f, contentWidth, 0, M_PI * 2, 0);
+            CGContextStrokePath(context);
         }
     }
 }
@@ -74,10 +81,10 @@ JWUIKitInitialze {
         _style = style;
         if (style == JWCircleProgressStyleDefault) {
             _layer.lineWidth = 4.0f;
-            _layer.lineCap = @"round";
+            _layer.lineCap = kCALineCapRound;
             _layer.strokeEnd = 0;
         } else if(style == JWCircleProgressStylePie) {
-            _layer.lineWidth = 0.0f;
+            _layer.lineWidth = 1.0f;
         }
         [self setupLayerColor];
     }
@@ -104,7 +111,10 @@ JWUIKitInitialze {
         _layer.strokeColor = [UIColor clearColor].CGColor;
     }
 }
+
 - (void)setupShape {
+    _layer.frame = self.bounds;
+    
     CGMutablePathRef path = CGPathCreateMutable();
     if (self.style == JWCircleProgressStylePie) {
         CGPathMoveToPoint(path, NULL, self.w * .5f, self.h * .5f);
