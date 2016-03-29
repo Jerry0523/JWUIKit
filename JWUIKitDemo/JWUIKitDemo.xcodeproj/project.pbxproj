@@ -12,6 +12,8 @@
 		C4176E231CA8DDA300770F24 /* LoadingViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */; };
 		C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewsController.swift */; };
 		C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E321CA8F47200770F24 /* ShapeViewsController.xib */; };
+		C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E601CAA60D400770F24 /* ButtonsViewController.swift */; };
+		C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E611CAA60D400770F24 /* ButtonsViewController.xib */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
 		C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* ViewController.swift */; };
 		C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8A1C9A658B00FA3176 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewsViewController.xib; sourceTree = "<group>"; };
 		C4176E311CA8F47200770F24 /* ShapeViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewsController.swift; sourceTree = "<group>"; };
 		C4176E321CA8F47200770F24 /* ShapeViewsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeViewsController.xib; sourceTree = "<group>"; };
+		C4176E601CAA60D400770F24 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		C4176E611CAA60D400770F24 /* ButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4446E851C9A658B00FA3176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				C4446EA51C9A812500FA3176 /* WidgetsListViewController.swift */,
 				C4446EAB1C9A87F800FA3176 /* LabelsViewController.swift */,
 				C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */,
+				C4176E601CAA60D400770F24 /* ButtonsViewController.swift */,
+				C4176E611CAA60D400770F24 /* ButtonsViewController.xib */,
 				C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */,
 				C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */,
 				05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */,
@@ -186,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */,
 				C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */,
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
@@ -205,6 +212,7 @@
 			files = (
 				C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
+				C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */,
 				C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */,
 				C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */,
 				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,

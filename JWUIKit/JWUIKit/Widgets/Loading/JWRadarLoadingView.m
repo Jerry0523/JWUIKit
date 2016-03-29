@@ -27,6 +27,7 @@ JWUIKitInitialze {
 }
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
     [self layoutLayers];
 }
 

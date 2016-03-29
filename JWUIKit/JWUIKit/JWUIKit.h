@@ -20,6 +20,8 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 //Labels
 #import <JWUIKit/JWFPSLabel.h>
 #import <JWUIKit/JWTickNumberLabel.h>
+//Buttons
+#import <JWUIKit/JWButton.h>
 //Images
 #import <JWUIKit/JWAnimatedImageView.h>
 //TextFields

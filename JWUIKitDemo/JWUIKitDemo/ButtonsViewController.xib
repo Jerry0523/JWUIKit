@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonsViewController" customModule="JWUIKitDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="cEn-NI-JbL" id="rhp-zu-JXk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" id="cEn-NI-JbL">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-qZ-ghU" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N84-sK-65v" customClass="JWButton">
+                            <rect key="frame" x="10" y="10" width="80" height="22"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Default" image="account"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-EV-srM" customClass="JWButton">
+                            <rect key="frame" x="10" y="74" width="100" height="22"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="ImageTop" image="account"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQj-EU-VmU" customClass="JWButton">
+                            <rect key="frame" x="10" y="42" width="113" height="22"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="ImageRight" image="account"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="N84-sK-65v" firstAttribute="top" secondItem="XxH-qZ-ghU" secondAttribute="top" constant="10" id="2Gd-jK-cPZ"/>
+                        <constraint firstItem="AQj-EU-VmU" firstAttribute="leading" secondItem="XxH-qZ-ghU" secondAttribute="leading" constant="10" id="7CG-Nu-Qq3"/>
+                        <constraint firstItem="N84-sK-65v" firstAttribute="leading" secondItem="XxH-qZ-ghU" secondAttribute="leading" constant="10" id="Ec8-xB-3kl"/>
+                        <constraint firstItem="Oa9-EV-srM" firstAttribute="top" secondItem="AQj-EU-VmU" secondAttribute="bottom" constant="10" id="Joj-aU-6nJ"/>
+                        <constraint firstItem="AQj-EU-VmU" firstAttribute="top" secondItem="N84-sK-65v" secondAttribute="bottom" constant="10" id="ME7-po-8Bg"/>
+                        <constraint firstItem="Oa9-EV-srM" firstAttribute="leading" secondItem="XxH-qZ-ghU" secondAttribute="leading" constant="10" id="fPj-Ei-TvW"/>
+                        <constraint firstAttribute="height" constant="568" id="jRH-E3-g2W"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="XxH-qZ-ghU" firstAttribute="leading" secondItem="cEn-NI-JbL" secondAttribute="leading" id="bYc-Hf-Aye"/>
+                <constraint firstItem="XxH-qZ-ghU" firstAttribute="top" secondItem="cEn-NI-JbL" secondAttribute="top" id="fC5-l0-7Yo"/>
+                <constraint firstItem="XxH-qZ-ghU" firstAttribute="centerX" secondItem="cEn-NI-JbL" secondAttribute="centerX" id="rAz-fb-5fS"/>
+                <constraint firstAttribute="trailing" secondItem="XxH-qZ-ghU" secondAttribute="trailing" id="uPZ-sb-f5w"/>
+            </constraints>
+            <point key="canvasLocation" x="228" y="330"/>
+        </scrollView>
+    </objects>
+    <resources>
+        <image name="account" width="21" height="21"/>
+    </resources>
+</document>

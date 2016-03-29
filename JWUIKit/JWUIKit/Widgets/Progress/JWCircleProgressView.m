@@ -28,6 +28,7 @@ JWUIKitInitialze {
 }
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
     [self setupShape];
 }
 

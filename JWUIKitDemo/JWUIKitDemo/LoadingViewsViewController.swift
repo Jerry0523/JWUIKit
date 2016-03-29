@@ -15,8 +15,6 @@ class LoadingViewsViewController: UIViewController {
     @IBOutlet weak var circleLoadingView: JWCircleLoadingView!
     
     override func viewDidLoad() {
-        
-    
         super.viewDidLoad()
         self.title = "JWUIKitLoadingViews"
     }

@@ -16,6 +16,10 @@
 		C4176E531CAA1F6200770F24 /* JWCircleLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E511CAA1F6200770F24 /* JWCircleLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4176E541CAA1F6200770F24 /* JWCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E521CAA1F6200770F24 /* JWCircleLoadingView.m */; };
 		C4176E561CAA217700770F24 /* JWLoadingViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E551CAA217700770F24 /* JWLoadingViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4176E661CAA61A400770F24 /* JWButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E641CAA61A400770F24 /* JWButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4176E671CAA61A400770F24 /* JWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E651CAA61A400770F24 /* JWButton.m */; };
+		C4176E6A1CAA80FA00770F24 /* UIImage+JWColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E681CAA80FA00770F24 /* UIImage+JWColor.h */; };
+		C4176E6B1CAA80FA00770F24 /* UIImage+JWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E691CAA80FA00770F24 /* UIImage+JWColor.m */; };
 		C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E231C9935C000FA3176 /* JWUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4446E641C99431100FA3176 /* UIView+JWFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E621C99431100FA3176 /* UIView+JWFrame.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E631C99431100FA3176 /* UIView+JWFrame.m */; };
@@ -50,6 +54,10 @@
 		C4176E511CAA1F6200770F24 /* JWCircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCircleLoadingView.h; sourceTree = "<group>"; };
 		C4176E521CAA1F6200770F24 /* JWCircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCircleLoadingView.m; sourceTree = "<group>"; };
 		C4176E551CAA217700770F24 /* JWLoadingViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLoadingViewProtocol.h; sourceTree = "<group>"; };
+		C4176E641CAA61A400770F24 /* JWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButton.h; sourceTree = "<group>"; };
+		C4176E651CAA61A400770F24 /* JWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButton.m; sourceTree = "<group>"; };
+		C4176E681CAA80FA00770F24 /* UIImage+JWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWColor.h"; sourceTree = "<group>"; };
+		C4176E691CAA80FA00770F24 /* UIImage+JWColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JWColor.m"; sourceTree = "<group>"; };
 		C4446E201C9935C000FA3176 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E231C9935C000FA3176 /* JWUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWUIKit.h; sourceTree = "<group>"; };
 		C4446E251C9935C000FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +104,15 @@
 			path = Shape;
 			sourceTree = "<group>";
 		};
+		C4176E5F1CAA607D00770F24 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C4176E641CAA61A400770F24 /* JWButton.h */,
+				C4176E651CAA61A400770F24 /* JWButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		C4446E161C9935C000FA3176 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +143,7 @@
 		C4446E541C99364100FA3176 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				C4176E5F1CAA607D00770F24 /* Button */,
 				C4176E241CA8ED0C00770F24 /* Shape */,
 				C4F9D4A11CA8D9DE00F08726 /* Loading */,
 				C4F9D49C1CA8D9C200F08726 /* Progress */,
@@ -145,6 +163,8 @@
 				C4176E2D1CA8EED500770F24 /* JWAlgorithm.m */,
 				C4CD17C51C9FEE2400187997 /* UIImage+JWSub.h */,
 				C4CD17C61C9FEE2400187997 /* UIImage+JWSub.m */,
+				C4176E681CAA80FA00770F24 /* UIImage+JWColor.h */,
+				C4176E691CAA80FA00770F24 /* UIImage+JWColor.m */,
 				C4446E621C99431100FA3176 /* UIView+JWFrame.h */,
 				C4446E631C99431100FA3176 /* UIView+JWFrame.m */,
 				05E35D2E1CA0456600264270 /* UIView+JWIndex.h */,
@@ -226,12 +246,14 @@
 				C4176E301CA8EED500770F24 /* JWAlgorithm.h in Headers */,
 				C4CD18041CA0F1B800187997 /* JWAnimatedImageView.h in Headers */,
 				C4CD180A1CA0F1B800187997 /* JWPageView.h in Headers */,
+				C4176E6A1CAA80FA00770F24 /* UIImage+JWColor.h in Headers */,
 				C4CD18061CA0F1B800187997 /* JWFPSLabel.h in Headers */,
 				C4CD180C1CA0F1B800187997 /* JWTextField.h in Headers */,
 				C4CD18081CA0F1B800187997 /* JWTickNumberLabel.h in Headers */,
 				C4F9D4A61CA8D9DE00F08726 /* JWRadarLoadingView.h in Headers */,
 				C4F9D4A81CA8D9DE00F08726 /* JWSoundLikeLoadingView.h in Headers */,
 				C4176E2B1CA8ED7200770F24 /* JWMicrophoneView.h in Headers */,
+				C4176E661CAA61A400770F24 /* JWButton.h in Headers */,
 				C4176E531CAA1F6200770F24 /* JWCircleLoadingView.h in Headers */,
 				C4F9D49F1CA8D9C200F08726 /* JWCircleProgressView.h in Headers */,
 				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
@@ -316,10 +338,12 @@
 				C4CD18051CA0F1B800187997 /* JWAnimatedImageView.m in Sources */,
 				C4CD18091CA0F1B800187997 /* JWTickNumberLabel.m in Sources */,
 				C4176E2C1CA8ED7200770F24 /* JWMicrophoneView.m in Sources */,
+				C4176E6B1CAA80FA00770F24 /* UIImage+JWColor.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */,
 				C4CD18071CA0F1B800187997 /* JWFPSLabel.m in Sources */,
 				C4F9D4A91CA8D9DE00F08726 /* JWSoundLikeLoadingView.m in Sources */,
 				C4F9D4A71CA8D9DE00F08726 /* JWRadarLoadingView.m in Sources */,
+				C4176E671CAA61A400770F24 /* JWButton.m in Sources */,
 				C4CD180B1CA0F1B800187997 /* JWPageView.m in Sources */,
 				C4F9D4A01CA8D9C200F08726 /* JWCircleProgressView.m in Sources */,
 			);

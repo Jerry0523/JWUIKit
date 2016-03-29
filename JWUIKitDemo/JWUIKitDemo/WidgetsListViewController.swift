@@ -13,6 +13,7 @@ class WidgetsListViewController: UITableViewController {
     let cellIdentifier = "cellIdentifier"
     let data = [["name":"Label", "class":LabelsViewController.classForCoder()],
                 ["name":"TextField", "class":TextFieldsViewController.classForCoder()],
+                ["name":"Button", "class":ButtonsViewController.classForCoder()],
                 ["name":"Image", "class":ImageViewsViewController.classForCoder()],
                 ["name":"Loading", "class":LoadingViewsViewController.classForCoder()],
                 ["name":"Progress", "class":ProgressViewsViewController.classForCoder()],
