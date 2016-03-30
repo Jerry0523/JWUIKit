@@ -23,8 +23,8 @@ JWUIKitInitialze {
     
     self.showBackground = YES;
     
-    self.tintColor = [UIColor whiteColor];
     self.style = JWCircleProgressStyleDefault;
+    [self setupLayerColor];
 }
 
 - (void)layoutSubviews {
@@ -92,23 +92,18 @@ JWUIKitInitialze {
 }
 
 - (void)setTintColor:(UIColor *)tintColor {
-    if (!tintColor) {
-        tintColor = [UIColor whiteColor];
-    }
-    if (_tintColor != tintColor) {
-        _tintColor = tintColor;
-        [self setupLayerColor];
-    }
+    [super setTintColor:tintColor];
+    [self setupLayerColor];
 }
 
 #pragma mark - Private
 - (void)setupLayerColor {
     if (self.style == JWCircleProgressStyleDefault) {
         _layer.fillColor = [UIColor clearColor].CGColor;
-        _layer.strokeColor = _tintColor.CGColor;
+        _layer.strokeColor = self.tintColor.CGColor;
         
     } else if(self.style == JWCircleProgressStylePie) {
-        _layer.fillColor = _tintColor.CGColor;
+        _layer.fillColor = self.tintColor.CGColor;
         _layer.strokeColor = [UIColor clearColor].CGColor;
     }
 }
@@ -122,6 +117,9 @@ JWUIKitInitialze {
     }
     CGFloat circleProgress = (self.style == JWCircleProgressStylePie ? self.progress : 1.0);
     CGFloat radius = (MIN(self.w, self.h) - _layer.lineWidth) * .5f;
+    if (self.style == JWCircleProgressStylePie) {
+        radius -= 2;
+    }
     CGPathAddArc(path, NULL, self.w * .5f, self.h * .5f, radius, -M_PI_2, -M_PI_2 + M_PI * 2 * circleProgress, 0);
     _layer.path = path;
     CGPathRelease(path);

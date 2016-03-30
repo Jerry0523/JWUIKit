@@ -18,17 +18,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-Wg-MJ8" userLabel="ContentView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-i2-xwy" customClass="JWMicrophoneView">
-                            <rect key="frame" x="90" y="214" width="140" height="140"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="220" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-i2-xwy" customClass="JWMicrophoneView">
+                            <rect key="frame" x="50" y="174" width="220" height="220"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="140" id="X2i-k7-aQb"/>
-                                <constraint firstAttribute="height" constant="140" id="r9I-zI-gWG"/>
-                            </constraints>
+                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                    <color key="value" red="0.97647058823529409" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="volumn">
                                     <real key="value" value="0.5"/>
                                 </userDefinedRuntimeAttribute>

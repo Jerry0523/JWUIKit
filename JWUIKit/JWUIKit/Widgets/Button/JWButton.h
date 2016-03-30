@@ -18,11 +18,11 @@ typedef NS_ENUM(NSInteger, JWButtonImagePosition) {
 
 @interface JWButton : UIButton
 
-@property (assign, nonatomic) JWButtonImagePosition imagePosition;//default is JWButtonImagePositionDefault. It will change the titleEdgeInsets and imageEdgeInsets
+@property (assign, nonatomic) JWButtonImagePosition imagePosition;//default is JWButtonImagePositionDefault. It will change titleEdgeInsets and imageEdgeInsets
 
-@property (assign, nonatomic) CGFloat offset;//default is 0. Must be greater than 0. The gap margin between text and image. It will change the titleEdgeInsets and imageEdgeInsets
+@property (assign, nonatomic) CGFloat offset;//default is 0. Must be greater than 0. The margin between text and image. It will change titleEdgeInsets and imageEdgeInsets
 
-@property (assign, nonatomic) CGFloat padding;//default is 0. It will change the contentEdgeInsets.
+@property (assign, nonatomic) CGFloat padding;//default is 0. It will change contentEdgeInsets.
 
 @end
 

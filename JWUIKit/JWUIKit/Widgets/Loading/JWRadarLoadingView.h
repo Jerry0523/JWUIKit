@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat centerCircleRadiusPercent;
 @property (assign, nonatomic) CGFloat ringsCount;
 
-@property (strong, nonatomic, nullable) UIColor *tintColor;
-
 @property (assign, nonatomic, readonly) BOOL isAnimating;
 @property (assign, nonatomic) NSTimeInterval circleAnimationDuration;
 @property (assign, nonatomic) NSTimeInterval ringAnimationDuration;

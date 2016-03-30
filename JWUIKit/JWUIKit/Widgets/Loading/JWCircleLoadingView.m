@@ -23,8 +23,7 @@ JWUIKitInitialze {
     _circleLayer.fillColor = [UIColor clearColor].CGColor;
     
     [self.layer addSublayer:_circleLayer];
-    
-    self.tintColor = [UIColor redColor];
+    _circleLayer.strokeColor = self.tintColor.CGColor;
 }
 
 - (void)layoutSubviews {
@@ -70,10 +69,8 @@ JWUIKitInitialze {
 
 #pragma mark - Setter & Getter
 - (void)setTintColor:(UIColor *)tintColor {
-    if (_tintColor != tintColor) {
-        _tintColor = tintColor;
-        _circleLayer.strokeColor = _tintColor.CGColor;
-    }
+    [super setTintColor:tintColor];
+    _circleLayer.strokeColor = tintColor.CGColor;
 }
 
 #pragma mark - Private

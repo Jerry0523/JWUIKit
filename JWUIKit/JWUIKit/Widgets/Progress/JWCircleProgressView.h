@@ -22,8 +22,6 @@ typedef NS_ENUM(NSUInteger, JWCircleProgressStyle){
 
 @property (assign, nonatomic) BOOL showBackground;//default is YES
 
-@property (strong, nonatomic, nullable) UIColor *tintColor;//default is white
-
 @end
 
 NS_ASSUME_NONNULL_END

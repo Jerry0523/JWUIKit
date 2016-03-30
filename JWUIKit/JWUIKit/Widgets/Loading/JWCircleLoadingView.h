@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JWCircleLoadingView : UIView<JWLoadingViewProtocol>
 
-@property (strong, nonatomic, nullable) UIColor *tintColor;
 @property (assign, nonatomic, readonly) BOOL isAnimating;
 
 @end

@@ -21,7 +21,6 @@ JWUIKitInitialze {
     self.circleAnimationDuration = 0.2f;
     self.ringAnimationDuration = 0.25f;
     
-    self.tintColor = [UIColor redColor];
     self.ringsCount = 2;
     self.centerCircleRadiusPercent = .3f;
 }
@@ -94,19 +93,15 @@ JWUIKitInitialze {
 
 #pragma mark - Setter & Getter
 - (void)setTintColor:(UIColor *)tintColor {
-    if (_tintColor != tintColor) {
-         _tintColor = tintColor;
-        [self setupColorsByTintColor:tintColor];
-    }
-   
+    [super setTintColor: tintColor];
+    [self setupColors];
 }
 
 - (void)setRingsCount:(CGFloat)ringsCount {
     if (ringsCount && _ringsCount != ringsCount) {
         _ringsCount = ringsCount;
-        if (_tintColor) {
-            [self setupColorsByTintColor:_tintColor];
-        }
+        [self setupColors];
+        
         if (_ringLayersArray.count != ringsCount) {
             [_ringLayersArray makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
             NSMutableArray *array = [NSMutableArray arrayWithCapacity:ringsCount];
@@ -194,14 +189,14 @@ JWUIKitInitialze {
     }];
 }
 
-- (void)setupColorsByTintColor:(UIColor*)tintColor {
+- (void)setupColors {
     NSUInteger colorsCount = self.ringsCount + 1;
     CGFloat colorsDamping = (1.0 - 0.01) / colorsCount;
     
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:colorsCount];
     for (int i = 0; i < colorsCount; i++) {
         CGFloat colorAlpha = 1.0 - colorsDamping * i;
-        UIColor *idxColor = [tintColor colorWithAlphaComponent:colorAlpha];
+        UIColor *idxColor = [self.tintColor colorWithAlphaComponent:colorAlpha];
         [array addObject:idxColor];
     }
     _colors = array;

@@ -13,6 +13,8 @@ class ButtonsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "JWUIKitButtons"
+        let button = JWButton()
+        button.offset = 0;
     }
 
     override func didReceiveMemoryWarning() {

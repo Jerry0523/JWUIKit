@@ -11,7 +11,6 @@ import UIKit
 class ProgressViewsViewController: UIViewController {
     
     @IBOutlet weak var circleProgressView0: JWCircleProgressView!
-
     @IBOutlet weak var circleProgressView1: JWCircleProgressView!
     
     override func viewDidLoad() {

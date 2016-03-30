@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JWSoundLikeLoadingView : UIView<JWLoadingViewProtocol>
 
 @property (assign, nonatomic) CGFloat barsCount;
-@property (strong, nonatomic, nullable) UIColor *tintColor;
 
 @property (assign, nonatomic) CGFloat barsMarginPercent;
 @property (assign, nonatomic, readonly) BOOL isAnimating;

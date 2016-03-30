@@ -31,30 +31,39 @@ JWUIKitInitialze {
     _volumeLayer.fillColor = [UIColor clearColor].CGColor;
 
     [self.layer addSublayer:_volumeLayer];
-    
-    self.tintColor = [UIColor colorWithRed: 0 green: 122.0 / 255.0 blue: 1.0 alpha: 1];
+    if(!self.tintColor) {
+        self.tintColor = [UIColor colorWithRed: 0 green: 122.0 / 255.0 blue: 1.0 alpha: 1];
+    } else {
+        [self setLayerColor];
+    }
 }
 
 - (void)layoutSubviews {
     [self layoutLayers];
 }
 
+- (CGSize)intrinsicContentSize {
+    return CGSizeMake(100, 100);
+}
+
 #pragma mark - Setter & Getter
 - (void)setTintColor:(UIColor *)tintColor {
-    if (_tintColor != tintColor) {
-        _tintColor = tintColor;
-        _microphoneLayer.strokeColor = tintColor.CGColor;
-    }
+    [super setTintColor:tintColor];
+    [self setLayerColor];
 }
 
 - (void)setVolumn:(CGFloat)volumn {
     if (_volumn != volumn) {
         _volumn = JWValueConformTo(volumn, 0, 1);
-        _volumeLayer.fillColor = [_tintColor colorWithAlphaComponent:volumn].CGColor;
+        _volumeLayer.fillColor = [self.tintColor colorWithAlphaComponent:volumn].CGColor;
     }
 }
 
 #pragma mark - Private
+- (void)setLayerColor {
+    _microphoneLayer.strokeColor = self.tintColor.CGColor;
+}
+
 - (void)layoutLayers {
     CGFloat layerSize = MIN(self.w, self.h);
     _microphoneLayer.frame = CGRectMake((self.w - layerSize) * .5f, (self.h - layerSize) * .5f, layerSize, layerSize);

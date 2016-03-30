@@ -25,13 +25,9 @@
                             <rect key="frame" x="10" y="10" width="60" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HZ7-NC-8Km" customClass="JWRadarLoadingView">
-                                    <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                            <color key="value" red="0.97647058823529409" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
+                                    <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="0.09574468085" colorSpace="calibratedWhite"/>
@@ -40,13 +36,9 @@
                             <rect key="frame" x="80" y="10" width="60" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2U-bF-uw0" customClass="JWSoundLikeLoadingView">
-                                    <rect key="frame" x="15" y="17" width="30" height="25"/>
+                                    <rect key="frame" x="18" y="20" width="25" height="20"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                            <color key="value" red="0.97647058823529409" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
+                                    <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="0.09574468085" colorSpace="calibratedWhite"/>
@@ -57,11 +49,7 @@
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3O-K4-Ig6" customClass="JWCircleLoadingView">
                                     <rect key="frame" x="20" y="20" width="20" height="20"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                            <color key="value" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
+                                    <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="0.09701906028" colorSpace="calibratedWhite"/>

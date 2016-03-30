@@ -18,7 +18,6 @@
 
 JWUIKitInitialze {
     self.barsCount = 3;
-    self.tintColor = [UIColor redColor];
     self.barsMarginPercent = 0.6f;
     
     self.duration = 0.35f;
@@ -65,11 +64,9 @@ JWUIKitInitialze {
 
 #pragma mark - Setter & Getter
 - (void)setTintColor:(UIColor *)tintColor {
-    if (_tintColor != tintColor) {
-        _tintColor = tintColor;
-        if (_layers.count) {
-            [self setupBarsColor];
-        }
+    [super setTintColor:tintColor];
+    if (_layers.count) {
+        [self setupBarsColor];
     }
 }
 

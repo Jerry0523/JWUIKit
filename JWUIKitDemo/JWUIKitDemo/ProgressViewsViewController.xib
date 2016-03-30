@@ -26,15 +26,13 @@
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtK-eF-nJX" customClass="JWCircleProgressView">
                                     <rect key="frame" x="15" y="15" width="30" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="style">
                                             <integer key="value" value="0"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                             <integer key="value" value="0"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                            <color key="value" red="0.97647058823529409" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
@@ -47,15 +45,13 @@
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMt-K0-U6I" customClass="JWCircleProgressView">
                                     <rect key="frame" x="15" y="15" width="30" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="style">
                                             <integer key="value" value="1"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                             <integer key="value" value="0"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                            <color key="value" red="0.97647058823529409" green="0.57647058823529407" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>

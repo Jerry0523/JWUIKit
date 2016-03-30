@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JWMicrophoneView : UIView
 
-@property (strong, nonatomic, nullable) UIColor *tintColor;
 @property (assign, nonatomic) CGFloat volumn;
 
 @end
