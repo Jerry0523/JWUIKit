@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "JWLoadingViewProtocol.h"
+#import "JWLoadingProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWSoundLikeLoadingView : UIView<JWLoadingViewProtocol>
+@interface JWSoundLikeLoadingView : UIView<JWLoadingProtocol>
 
 @property (assign, nonatomic) CGFloat barsCount;
 

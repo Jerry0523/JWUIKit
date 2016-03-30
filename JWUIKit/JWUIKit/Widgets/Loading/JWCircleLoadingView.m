@@ -31,6 +31,10 @@ JWUIKitInitialze {
     [self layoutLayers];
 }
 
+- (void)tintColorDidChange {
+    _circleLayer.strokeColor = self.tintColor.CGColor;
+}
+
 #pragma mark - JWLoadingViewProtocol
 - (void)startAnimating {
     if (!_isAnimating) {
@@ -65,12 +69,6 @@ JWUIKitInitialze {
         [_circleLayer removeAllAnimations];
         _isAnimating = NO;
     }
-}
-
-#pragma mark - Setter & Getter
-- (void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor:tintColor];
-    _circleLayer.strokeColor = tintColor.CGColor;
 }
 
 #pragma mark - Private

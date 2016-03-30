@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0583298E1CAC053A00F87BAF /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0583298D1CAC053A00F87BAF /* JWUIKit.framework */; };
+		0583298F1CAC053A00F87BAF /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0583298D1CAC053A00F87BAF /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
 		C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */; };
-		C4176E231CA8DDA300770F24 /* LoadingViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */; };
 		C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewsController.swift */; };
 		C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E321CA8F47200770F24 /* ShapeViewsController.xib */; };
 		C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E601CAA60D400770F24 /* ButtonsViewController.swift */; };
@@ -23,20 +24,17 @@
 		C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */; };
 		C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */; };
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
-		C4CD17EE1CA0EAAB00187997 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */; };
-		C4CD17F01CA0EAB700187997 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
-		C4CD17F51CA0EFE100187997 /* ProgressViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CD17F31CA0EFE100187997 /* ProgressViewsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C4CD17F11CA0EAB700187997 /* Embed Frameworks */ = {
+		058329901CAC053A00F87BAF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C4CD17F01CA0EAB700187997 /* JWUIKit.framework in Embed Frameworks */,
+				0583298F1CAC053A00F87BAF /* JWUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,9 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0583298D1CAC053A00F87BAF /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/JerryWong/Library/Developer/Xcode/DerivedData/JWUIKit-camodsdqqelogjdvwcxxystygmyi/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
 		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
 		C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewsViewController.swift; sourceTree = "<group>"; };
-		C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewsViewController.xib; sourceTree = "<group>"; };
 		C4176E311CA8F47200770F24 /* ShapeViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewsController.swift; sourceTree = "<group>"; };
 		C4176E321CA8F47200770F24 /* ShapeViewsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeViewsController.xib; sourceTree = "<group>"; };
 		C4176E601CAA60D400770F24 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
@@ -63,9 +61,7 @@
 		C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
 		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
-		C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
 		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
-		C4CD17F31CA0EFE100187997 /* ProgressViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4CD17EE1CA0EAAB00187997 /* JWUIKit.framework in Frameworks */,
+				0583298E1CAC053A00F87BAF /* JWUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,9 +106,7 @@
 				C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */,
 				05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */,
 				C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */,
-				C4176E211CA8DDA300770F24 /* LoadingViewsViewController.xib */,
 				C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */,
-				C4CD17F31CA0EFE100187997 /* ProgressViewsViewController.xib */,
 				C4176E311CA8F47200770F24 /* ShapeViewsController.swift */,
 				C4176E321CA8F47200770F24 /* ShapeViewsController.xib */,
 				C4446E851C9A658B00FA3176 /* ViewController.swift */,
@@ -127,7 +121,7 @@
 		C4446E951C9A65B500FA3176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C4CD17ED1CA0EAAB00187997 /* JWUIKit.framework */,
+				0583298D1CAC053A00F87BAF /* JWUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,7 +136,7 @@
 				C4446E7C1C9A658B00FA3176 /* Sources */,
 				C4446E7D1C9A658B00FA3176 /* Frameworks */,
 				C4446E7E1C9A658B00FA3176 /* Resources */,
-				C4CD17F11CA0EAB700187997 /* Embed Frameworks */,
+				058329901CAC053A00F87BAF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,8 +191,6 @@
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
 				C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */,
-				C4176E231CA8DDA300770F24 /* LoadingViewsViewController.xib in Resources */,
-				C4CD17F51CA0EFE100187997 /* ProgressViewsViewController.xib in Resources */,
 				C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

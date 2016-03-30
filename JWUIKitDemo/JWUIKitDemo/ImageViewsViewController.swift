@@ -35,7 +35,7 @@ class ImageViewsViewController: UIViewController, UICollectionViewDataSource {
         let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: collectionView, action: #selector(UICollectionView.reloadData))
         self.navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

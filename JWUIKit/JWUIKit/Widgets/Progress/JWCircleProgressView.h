@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+#import "JWProgressProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,7 @@ typedef NS_ENUM(NSUInteger, JWCircleProgressStyle){
     JWCircleProgressStylePie
 };
 
-@interface JWCircleProgressView : UIView
+@interface JWCircleProgressView : UIView<JWProgressProtocol>
 
 @property (assign, nonatomic) CGFloat progress;
 @property (assign, nonatomic) JWCircleProgressStyle style;

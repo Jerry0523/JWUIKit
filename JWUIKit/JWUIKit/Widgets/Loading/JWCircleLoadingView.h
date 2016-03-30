@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "JWLoadingViewProtocol.h"
+#import "JWLoadingProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWCircleLoadingView : UIView<JWLoadingViewProtocol>
+@interface JWCircleLoadingView : UIView<JWLoadingProtocol>
 
 @property (assign, nonatomic, readonly) BOOL isAnimating;
 

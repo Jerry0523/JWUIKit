@@ -16,6 +16,8 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 
 //Core
 #import <JWUIKit/JWAlgorithm.h>
+#import <JWUIKit/JWLoadingProtocol.h>
+#import <JWUIKit/JWProgressProtocol.h>
 
 //Labels
 #import <JWUIKit/JWFPSLabel.h>
@@ -29,7 +31,6 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 //Progress
 #import <JWUIKit/JWCircleProgressView.h>
 //Loading
-#import <JWUIKit/JWLoadingViewProtocol.h>
 #import <JWUIKit/JWRadarLoadingView.h>
 #import <JWUIKit/JWSoundLikeLoadingView.h>
 #import <JWUIKit/JWCircleLoadingView.h>

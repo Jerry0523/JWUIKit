@@ -17,6 +17,7 @@
 }
 
 JWUIKitInitialze {
+    self.backgroundColor = [UIColor clearColor];
     _style = -1;
     _layer = [CAShapeLayer layer];
     [self.layer addSublayer:_layer];
@@ -30,6 +31,10 @@ JWUIKitInitialze {
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self setupShape];
+}
+
+- (void)tintColorDidChange {
+    [self setupLayerColor];
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -89,11 +94,6 @@ JWUIKitInitialze {
         }
         [self setupLayerColor];
     }
-}
-
-- (void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor:tintColor];
-    [self setupLayerColor];
 }
 
 #pragma mark - Private
