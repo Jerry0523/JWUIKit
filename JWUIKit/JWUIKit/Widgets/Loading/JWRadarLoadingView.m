@@ -30,6 +30,10 @@ JWUIKitInitialze {
     [self layoutLayers];
 }
 
+- (void)tintColorDidChange {
+    [self setupColors];
+}
+
 #pragma mark - JWLoadingViewProtocol
 
 - (void)startAnimating {
@@ -92,11 +96,6 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Setter & Getter
-- (void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor: tintColor];
-    [self setupColors];
-}
-
 - (void)setRingsCount:(CGFloat)ringsCount {
     if (ringsCount && _ringsCount != ringsCount) {
         _ringsCount = ringsCount;

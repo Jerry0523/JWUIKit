@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "JWLoadingViewProtocol.h"
+#import "JWLoadingProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWRadarLoadingView : UIView<JWLoadingViewProtocol>
+@interface JWRadarLoadingView : UIView<JWLoadingProtocol>
 
 @property (assign, nonatomic) CGFloat centerCircleRadiusPercent;
 @property (assign, nonatomic) CGFloat ringsCount;

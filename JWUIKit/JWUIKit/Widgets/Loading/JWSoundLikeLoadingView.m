@@ -28,6 +28,12 @@ JWUIKitInitialze {
     [self layoutBarLayers];
 }
 
+- (void)tintColorDidChange {
+    if (_layers.count) {
+        [self setupBarsColor];
+    }
+}
+
 #pragma mark - JWLoadingViewProtocol
 - (void)startAnimating {
     if (!_isAnimating) {
@@ -63,13 +69,6 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Setter & Getter
-- (void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor:tintColor];
-    if (_layers.count) {
-        [self setupBarsColor];
-    }
-}
-
 - (void)setBarsCount:(CGFloat)barsCount {
     if (barsCount && _barsCount != barsCount) {
         _barsCount = barsCount;

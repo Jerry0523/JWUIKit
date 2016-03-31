@@ -8,7 +8,7 @@
 
 @import Foundation;
 
-@protocol JWLoadingViewProtocol <NSObject>
+@protocol JWLoadingProtocol <NSObject>
 
 - (void)startAnimating;
 
