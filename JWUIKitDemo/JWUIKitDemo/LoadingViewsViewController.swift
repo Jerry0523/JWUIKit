@@ -38,7 +38,7 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -57,8 +57,9 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
         } else if indexPath.row == 1 {
             let soundLikeLoadingView = JWSoundLikeLoadingView(frame: CGRectMake(0, 0, 25, 20))
             cellView = soundLikeLoadingView
-        } else if indexPath.row == 2 {
+        } else if indexPath.row == 2 || indexPath.row == 3{
             let circleLoadingView = JWCircleLoadingView(frame: CGRectMake(0, 0, 25, 20))
+            circleLoadingView.cumulative = indexPath.row == 2;
             cellView = circleLoadingView
         }
         

@@ -28,19 +28,19 @@ class TextFieldsViewController: UIViewController {
     func setupComplexTextField() {
         let imageView = UIImageView(image: UIImage(named: "account"))
         
-        let button = UIButton()
+        let button = JWButton()
         button.titleLabel?.font = UIFont.systemFontOfSize(14)
         button.setTitle("Male", forState: .Normal)
         button.setTitleColor(UIColor(white: 0.5, alpha: 1.0), forState: .Normal)
-        button.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5)
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, -2, 0, 0)
         button.setImage(UIImage(named: "arrowDown"), forState: .Normal)
-        
+        button.imagePosition = .Right
+        button.offset = 5.0;
+        button.contentEdgeInsets = UIEdgeInsetsMake(0, 2, 0, 2)
         button.sizeToFit()
         
         imageView.bounds = CGRectMake(0, 0, CGRectGetHeight(button.frame), CGRectGetHeight(button.frame))
         
-        self.complexTextField.leftViews = [JWTextFieldSpaceView(), imageView , button]
+        self.complexTextField.leftViews = [JWTextFieldSpaceView(), imageView, button]
     }
 
 }

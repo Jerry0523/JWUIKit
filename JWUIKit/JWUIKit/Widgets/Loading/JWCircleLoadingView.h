@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JWCircleLoadingView : UIView<JWLoadingProtocol>
 
 @property (assign, nonatomic, readonly) BOOL isAnimating;
+@property (assign, nonatomic) BOOL cumulative;//default is YES
 
 @end
 

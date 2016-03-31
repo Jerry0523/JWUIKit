@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0583298E1CAC053A00F87BAF /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0583298D1CAC053A00F87BAF /* JWUIKit.framework */; };
-		0583298F1CAC053A00F87BAF /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0583298D1CAC053A00F87BAF /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
 		C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */; };
 		C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewsController.swift */; };
@@ -25,16 +23,18 @@
 		C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */; };
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
 		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
+		C4E8812A1CACC1D7000E1CFF /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E881291CACC1D7000E1CFF /* JWUIKit.framework */; };
+		C4E8812C1CACC1DC000E1CFF /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4E881291CACC1D7000E1CFF /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		058329901CAC053A00F87BAF /* Embed Frameworks */ = {
+		C4E8812D1CACC1DC000E1CFF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0583298F1CAC053A00F87BAF /* JWUIKit.framework in Embed Frameworks */,
+				C4E8812C1CACC1DC000E1CFF /* JWUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +62,7 @@
 		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
 		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
+		C4E881291CACC1D7000E1CFF /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0583298E1CAC053A00F87BAF /* JWUIKit.framework in Frameworks */,
+				C4E8812A1CACC1D7000E1CFF /* JWUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +122,7 @@
 		C4446E951C9A65B500FA3176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4E881291CACC1D7000E1CFF /* JWUIKit.framework */,
 				0583298D1CAC053A00F87BAF /* JWUIKit.framework */,
 			);
 			name = Frameworks;
@@ -136,7 +138,7 @@
 				C4446E7C1C9A658B00FA3176 /* Sources */,
 				C4446E7D1C9A658B00FA3176 /* Frameworks */,
 				C4446E7E1C9A658B00FA3176 /* Resources */,
-				058329901CAC053A00F87BAF /* Embed Frameworks */,
+				C4E8812D1CACC1DC000E1CFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -62,6 +62,9 @@ JWUIKitInitialze {
 
 #pragma mark - Private
 - (void)updateInsets {
+    self.contentEdgeInsets = UIEdgeInsetsMake(self.padding, self.padding, self.padding, self.padding);
+    
+    CGSize size = [self intrinsicContentSize];
     CGFloat halfOffset = self.offset * .5f;
     if (self.imagePosition == JWButtonImagePositionDefault) {
         
@@ -69,13 +72,12 @@ JWUIKitInitialze {
         self.imageEdgeInsets = UIEdgeInsetsMake(0, -halfOffset, 0, 0);
         
     } else if (self.imagePosition == JWButtonImagePositionRight) {
-        self.titleEdgeInsets = UIEdgeInsetsMake(0, -self.imageView.w - self.w + self.titleLabel.intrinsicContentSize.width + halfOffset, 0, 0);
-        self.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -self.titleLabel.w - self.w + self.imageView.w + halfOffset);
+        self.titleEdgeInsets = UIEdgeInsetsMake(0, -self.imageView.w - size.width + self.titleLabel.intrinsicContentSize.width + halfOffset + self.padding * 2, 0, 0);
+        self.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -self.titleLabel.intrinsicContentSize.width - size.width + self.imageView.w + halfOffset + self.padding * 2);
     } else if(self.imagePosition == JWButtonImagePositionTop) {
         self.titleEdgeInsets = UIEdgeInsetsMake(0, -self.imageView.w, -self.imageView.h - halfOffset, 0);
         self.imageEdgeInsets = UIEdgeInsetsMake(-self.titleLabel.intrinsicContentSize.height - halfOffset, 0, 0, -self.titleLabel.intrinsicContentSize.width);
     }
-    self.contentEdgeInsets = UIEdgeInsetsMake(self.padding, self.padding, self.padding, self.padding);
 }
 
 
