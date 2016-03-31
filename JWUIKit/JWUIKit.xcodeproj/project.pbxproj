@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E35D301CA0456600264270 /* UIView+JWIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E35D2E1CA0456600264270 /* UIView+JWIndex.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		05E35D311CA0456600264270 /* UIView+JWIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D2F1CA0456600264270 /* UIView+JWIndex.m */; };
 		C4176E2B1CA8ED7200770F24 /* JWMicrophoneView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E291CA8ED7200770F24 /* JWMicrophoneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4176E2C1CA8ED7200770F24 /* JWMicrophoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E2A1CA8ED7200770F24 /* JWMicrophoneView.m */; };
 		C4176E2F1CA8EED500770F24 /* JWAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E2D1CA8EED500770F24 /* JWAlgorithm.m */; };
@@ -45,8 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05E35D2E1CA0456600264270 /* UIView+JWIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWIndex.h"; sourceTree = "<group>"; };
-		05E35D2F1CA0456600264270 /* UIView+JWIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWIndex.m"; sourceTree = "<group>"; };
 		C4176E291CA8ED7200770F24 /* JWMicrophoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMicrophoneView.h; sourceTree = "<group>"; };
 		C4176E2A1CA8ED7200770F24 /* JWMicrophoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMicrophoneView.m; sourceTree = "<group>"; };
 		C4176E2D1CA8EED500770F24 /* JWAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWAlgorithm.m; sourceTree = "<group>"; };
@@ -167,8 +163,6 @@
 				C4176E691CAA80FA00770F24 /* UIImage+JWColor.m */,
 				C4446E621C99431100FA3176 /* UIView+JWFrame.h */,
 				C4446E631C99431100FA3176 /* UIView+JWFrame.m */,
-				05E35D2E1CA0456600264270 /* UIView+JWIndex.h */,
-				05E35D2F1CA0456600264270 /* UIView+JWIndex.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -258,7 +252,6 @@
 				C4F9D49F1CA8D9C200F08726 /* JWCircleProgressView.h in Headers */,
 				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
 				C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */,
-				05E35D301CA0456600264270 /* UIView+JWIndex.h in Headers */,
 				C4446E641C99431100FA3176 /* UIView+JWFrame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E35D311CA0456600264270 /* UIView+JWIndex.m in Sources */,
 				C4CD17C81C9FEE2400187997 /* UIImage+JWSub.m in Sources */,
 				C4176E541CAA1F6200770F24 /* JWCircleLoadingView.m in Sources */,
 				C4176E2F1CA8EED500770F24 /* JWAlgorithm.m in Sources */,

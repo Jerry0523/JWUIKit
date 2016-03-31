@@ -9,9 +9,9 @@
 #import "JWAnimatedImageView.h"
 //Core
 #import "JWUIKitMacro.h"
+#import "JWAlgorithm.h"
 #import "UIView+JWFrame.h"
 #import "UIImage+JWSub.h"
-#import "UIView+JWIndex.h"
 
 @interface JWAnimatedImageView()
 
@@ -187,11 +187,13 @@ JWUIKitInitialze {
             [slicesSourceRectArray addObject:[NSValue valueWithCGRect:sliceRect]];
         }
     }
-    NSArray *indexArray = [self circleIndexForRowCount:pieceOfSlices columnCount:pieceOfSlices];
+    int *indexArray = JWCircleIndex(pieceOfSlices, pieceOfSlices);
     NSMutableArray *slicesRectArray = @[].mutableCopy;
-    for (NSNumber *idx in indexArray) {
-        [slicesRectArray addObject:slicesSourceRectArray[idx.integerValue]];
+    int piecesCount = pieceOfSlices * pieceOfSlices;
+    for (int i = 0; i < piecesCount; i++) {
+        [slicesRectArray addObject:slicesSourceRectArray[indexArray[i]]];
     }
+    free(indexArray);
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *imagesArray = @[].mutableCopy;

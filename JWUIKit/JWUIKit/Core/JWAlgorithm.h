@@ -17,3 +17,5 @@ bool JWVerifyValue(float input, float min, float max);
 float JWValueConformTo(float input, float min, float max);
 
 double JWRadians(float degrees);
+
+int* JWCircleIndex(int rowCount, int columnCount);
