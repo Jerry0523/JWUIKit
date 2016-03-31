@@ -174,7 +174,7 @@ JWUIKitInitialze {
     }
     self.imageView.hidden = YES;
     
-    NSUInteger pieceOfSlices = 3;
+    int pieceOfSlices = 3;
     
     CGFloat sliceWidth = round(self.imageView.w / pieceOfSlices);
     CGFloat sliceHeight = round(self.imageView.h / pieceOfSlices);

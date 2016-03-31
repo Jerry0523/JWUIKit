@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 #import "JWLoadingProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN

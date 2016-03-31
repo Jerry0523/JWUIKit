@@ -38,7 +38,7 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 6
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -57,10 +57,14 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
         } else if indexPath.row == 1 {
             let soundLikeLoadingView = JWSoundLikeLoadingView(frame: CGRectMake(0, 0, 25, 20))
             cellView = soundLikeLoadingView
-        } else if indexPath.row == 2 || indexPath.row == 3{
+        } else if indexPath.row == 2 || indexPath.row == 3 {
             let circleLoadingView = JWCircleLoadingView(frame: CGRectMake(0, 0, 25, 20))
             circleLoadingView.cumulative = indexPath.row == 2;
             cellView = circleLoadingView
+        } else if indexPath.row == 4 || indexPath.row == 5 {
+            let dotCircleLoadingView = JWDotLoadingView(frame: CGRectMake(0, 0, 30, 30))
+            dotCircleLoadingView.style = indexPath.row == 5 ? .Line : .Circle;
+            cellView = dotCircleLoadingView
         }
         
         let tintColor = UIColor(red: 249.0 / 255.0, green: 147.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)

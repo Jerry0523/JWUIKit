@@ -42,7 +42,7 @@ int* JWCircleIndex(int rowCount, int columnCount) {
     int columnIdx = 0;
     
     for (int i = 0; i < totalCount; i++) {
-        long value = rowIdx * columnCount + columnIdx;
+        int value = rowIdx * columnCount + columnIdx;
         if (JWArrayContains(array, totalCount, value)) {
             break;
         } else {

@@ -34,6 +34,8 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWRadarLoadingView.h>
 #import <JWUIKit/JWSoundLikeLoadingView.h>
 #import <JWUIKit/JWCircleLoadingView.h>
+#import <JWUIKit/JWDotLoadingView.h>
+
 //Page
 #import <JWUIKit/JWPageView.h>
 //Shapes
