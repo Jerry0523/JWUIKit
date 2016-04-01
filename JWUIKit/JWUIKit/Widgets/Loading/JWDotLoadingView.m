@@ -17,14 +17,7 @@
 }
 
 JWUIKitInitialze {
-    NSMutableArray *mDotArray = @[].mutableCopy;
-    for(int i = 0; i < 5; i++) {
-        CAShapeLayer *dotLayer = [CAShapeLayer layer];
-        [self.layer addSublayer:dotLayer];
-        [mDotArray addObject:dotLayer];
-    }
-    _dotViews = mDotArray;
-    [self setupDotColor];
+    self.dotCount = 5;
 }
 
 - (void)startAnimating {
@@ -53,11 +46,10 @@ JWUIKitInitialze {
         CAKeyframeAnimation* rotationAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         rotationAnimation.duration = duration;
         rotationAnimation.values = @[[NSValue valueWithCATransform3D:CATransform3DMakeTranslation(- self.w, 0, 0)],
+                                     [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(- self.w * 0.2f, 0, 0)],
                                      [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(0, 0, 0)],
-                                     [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(self.w * .2f, 0, 0)],
                                      [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(self.w, 0, 0)],];
-        rotationAnimation.keyTimes = @[@(0), @(0.5f), @(0.6), @(1)];
-        rotationAnimation.autoreverses = YES;
+        rotationAnimation.keyTimes = @[@(0), @(0.3f), @(0.7), @(1)];
         rotationAnimation.repeatCount = INFINITY;
         
         [CATransaction begin];
@@ -78,7 +70,9 @@ JWUIKitInitialze {
 }
 
 - (void)tintColorDidChange {
-    [self setupDotColor];
+    for (CAShapeLayer *dotLayer in _dotViews) {
+        dotLayer.fillColor = self.tintColor.CGColor;
+    }
 }
 
 - (void)layoutSubviews {
@@ -87,6 +81,9 @@ JWUIKitInitialze {
 }
 
 - (CGSize)intrinsicContentSize {
+    if (self.style == JWDotLoadingStyleLine) {
+        return CGSizeMake(60, 30);
+    }
     return CGSizeMake(30, 30);
 }
 
@@ -110,18 +107,31 @@ JWUIKitInitialze {
     }
 }
 
-#pragma mark - Private
-- (void)setupDotColor {
-    for (CAShapeLayer *dotLayer in _dotViews) {
-        dotLayer.fillColor = self.tintColor.CGColor;
+- (void)setDotCount:(NSUInteger)dotCount {
+    if (dotCount && _dotCount != dotCount) {
+        _dotCount = dotCount;
+        [self setupDotsLayer];
     }
+}
+
+#pragma mark - Private
+- (void)setupDotsLayer {
+    [_dotViews makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+    NSMutableArray *mDotArray = @[].mutableCopy;
+    for(int i = 0; i < self.dotCount; i++) {
+        CAShapeLayer *dotLayer = [CAShapeLayer layer];
+        [self.layer addSublayer:dotLayer];
+        [mDotArray addObject:dotLayer];
+    }
+    _dotViews = mDotArray;
+    [self tintColorDidChange];
 }
 
 - (void)layoutDotViews {
     if (self.style == JWDotLoadingStyleCircle) {
         CGFloat contentWidth = MIN(self.w, self.h);
-        CGFloat dotRadius = contentWidth * .5f / 6.0f;
-        CGFloat stepAngle = JWRadians(80.0) / 5.0f;
+        CGFloat dotRadius = 3;
+        CGFloat stepAngle = 0.38f;
         __block CGFloat startAngle = 0;
         CGFloat radius = (contentWidth * .5f) - dotRadius;
         
@@ -131,7 +141,6 @@ JWUIKitInitialze {
             CGFloat y = radius * (1 - cos(startAngle));
             
             CGMutablePathRef path = CGPathCreateMutable();
-            CGPathMoveToPoint(path, NULL, x, y);
             CGPathAddArc(path, NULL, x, y, dotRadius, 0, M_PI * 2, 0);
             dotView.path = path;
             CGPathRelease(path);
@@ -139,8 +148,8 @@ JWUIKitInitialze {
             startAngle += stepAngle;
         }];
     } else if(self.style == JWDotLoadingStyleLine) {
-        CGFloat dotRadius = self.w * .5f / 6.0f;
-        CGFloat padding = (self.w - (dotRadius * 18)) * .5f;
+        CGFloat dotRadius = 3;
+        CGFloat padding = (self.w - (dotRadius * ((self.dotCount - 1) + self.dotCount * 2))) * .5f;
         CGFloat y = self.h * .5f;
         
         __block CGFloat x = self.w - padding - dotRadius;
@@ -154,7 +163,7 @@ JWUIKitInitialze {
             dotView.path = path;
             CGPathRelease(path);
             
-            x -= dotRadius * 4;
+            x -= dotRadius * 3;
         }];
     }
 }

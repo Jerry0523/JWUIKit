@@ -41,8 +41,8 @@
 		C4F9D4A01CA8D9C200F08726 /* JWCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9D49E1CA8D9C200F08726 /* JWCircleProgressView.m */; };
 		C4F9D4A61CA8D9DE00F08726 /* JWRadarLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F9D4A21CA8D9DE00F08726 /* JWRadarLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4F9D4A71CA8D9DE00F08726 /* JWRadarLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9D4A31CA8D9DE00F08726 /* JWRadarLoadingView.m */; };
-		C4F9D4A81CA8D9DE00F08726 /* JWSoundLikeLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F9D4A41CA8D9DE00F08726 /* JWSoundLikeLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4F9D4A91CA8D9DE00F08726 /* JWSoundLikeLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9D4A51CA8D9DE00F08726 /* JWSoundLikeLoadingView.m */; };
+		C4F9D4A81CA8D9DE00F08726 /* JWBarLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F9D4A41CA8D9DE00F08726 /* JWBarLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F9D4A91CA8D9DE00F08726 /* JWBarLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9D4A51CA8D9DE00F08726 /* JWBarLoadingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,8 +82,8 @@
 		C4F9D49E1CA8D9C200F08726 /* JWCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCircleProgressView.m; sourceTree = "<group>"; };
 		C4F9D4A21CA8D9DE00F08726 /* JWRadarLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRadarLoadingView.h; sourceTree = "<group>"; };
 		C4F9D4A31CA8D9DE00F08726 /* JWRadarLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRadarLoadingView.m; sourceTree = "<group>"; };
-		C4F9D4A41CA8D9DE00F08726 /* JWSoundLikeLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSoundLikeLoadingView.h; sourceTree = "<group>"; };
-		C4F9D4A51CA8D9DE00F08726 /* JWSoundLikeLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSoundLikeLoadingView.m; sourceTree = "<group>"; };
+		C4F9D4A41CA8D9DE00F08726 /* JWBarLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBarLoadingView.h; sourceTree = "<group>"; };
+		C4F9D4A51CA8D9DE00F08726 /* JWBarLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBarLoadingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,8 +227,8 @@
 			children = (
 				C4F9D4A21CA8D9DE00F08726 /* JWRadarLoadingView.h */,
 				C4F9D4A31CA8D9DE00F08726 /* JWRadarLoadingView.m */,
-				C4F9D4A41CA8D9DE00F08726 /* JWSoundLikeLoadingView.h */,
-				C4F9D4A51CA8D9DE00F08726 /* JWSoundLikeLoadingView.m */,
+				C4F9D4A41CA8D9DE00F08726 /* JWBarLoadingView.h */,
+				C4F9D4A51CA8D9DE00F08726 /* JWBarLoadingView.m */,
 				C4176E511CAA1F6200770F24 /* JWCircleLoadingView.h */,
 				C4176E521CAA1F6200770F24 /* JWCircleLoadingView.m */,
 				C4E8812E1CACF1D2000E1CFF /* JWDotLoadingView.h */,
@@ -252,7 +252,7 @@
 				C4CD180C1CA0F1B800187997 /* JWTextField.h in Headers */,
 				C4CD18081CA0F1B800187997 /* JWTickNumberLabel.h in Headers */,
 				C4F9D4A61CA8D9DE00F08726 /* JWRadarLoadingView.h in Headers */,
-				C4F9D4A81CA8D9DE00F08726 /* JWSoundLikeLoadingView.h in Headers */,
+				C4F9D4A81CA8D9DE00F08726 /* JWBarLoadingView.h in Headers */,
 				C4176E2B1CA8ED7200770F24 /* JWMicrophoneView.h in Headers */,
 				C4176E661CAA61A400770F24 /* JWButton.h in Headers */,
 				C4176E531CAA1F6200770F24 /* JWCircleLoadingView.h in Headers */,
@@ -345,7 +345,7 @@
 				C4176E6B1CAA80FA00770F24 /* UIImage+JWColor.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */,
 				C4CD18071CA0F1B800187997 /* JWFPSLabel.m in Sources */,
-				C4F9D4A91CA8D9DE00F08726 /* JWSoundLikeLoadingView.m in Sources */,
+				C4F9D4A91CA8D9DE00F08726 /* JWBarLoadingView.m in Sources */,
 				C4F9D4A71CA8D9DE00F08726 /* JWRadarLoadingView.m in Sources */,
 				C4176E671CAA61A400770F24 /* JWButton.m in Sources */,
 				C4CD180B1CA0F1B800187997 /* JWPageView.m in Sources */,

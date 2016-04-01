@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, JWDotLoadingStyle){
 @property (assign, nonatomic, readonly) BOOL isAnimating;
 @property (assign, nonatomic) JWDotLoadingStyle style;
 
+@property (assign, nonatomic) NSUInteger dotCount;//default is 5
+
 @end
 
 NS_ASSUME_NONNULL_END

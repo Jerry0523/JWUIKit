@@ -32,7 +32,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWCircleProgressView.h>
 //Loading
 #import <JWUIKit/JWRadarLoadingView.h>
-#import <JWUIKit/JWSoundLikeLoadingView.h>
+#import <JWUIKit/JWBarLoadingView.h>
 #import <JWUIKit/JWCircleLoadingView.h>
 #import <JWUIKit/JWDotLoadingView.h>
 

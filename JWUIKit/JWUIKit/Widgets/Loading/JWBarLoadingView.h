@@ -1,5 +1,5 @@
 //
-//  JWSoundLikeLoadingView.h
+//  JWBarLoadingView.h
 //  JWUIKit
 //
 //  Created by 王杰 on 16/3/27.
@@ -9,13 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "JWLoadingProtocol.h"
 
+typedef NS_ENUM(NSInteger, JWBarLoadingStyle){
+    JWBarLoadingStyleSound   = 0,
+    JWBarLoadingStyleWave     = 1
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWSoundLikeLoadingView : UIView<JWLoadingProtocol>
+@interface JWBarLoadingView : UIView<JWLoadingProtocol>
 
 @property (assign, nonatomic) CGFloat barsCount;
-
 @property (assign, nonatomic) CGFloat barsMarginPercent;
+
+@property (assign, nonatomic) JWBarLoadingStyle style;
+
 @property (assign, nonatomic, readonly) BOOL isAnimating;
 @property (assign, nonatomic) NSTimeInterval duration;
 

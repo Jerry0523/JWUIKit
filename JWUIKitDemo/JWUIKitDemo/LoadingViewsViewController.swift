@@ -38,7 +38,7 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -54,16 +54,21 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
         if indexPath.row == 0 {
             let radarLoadingView = JWRadarLoadingView(frame: CGRectMake(0, 0, 40, 40))
             cellView = radarLoadingView;
-        } else if indexPath.row == 1 {
-            let soundLikeLoadingView = JWSoundLikeLoadingView(frame: CGRectMake(0, 0, 25, 20))
+        } else if indexPath.row == 1 || indexPath.row == 2 {
+            let soundLikeLoadingView = JWBarLoadingView(frame: CGRectMake(0, 0, 25, 20))
+            if indexPath.row == 2 {
+                soundLikeLoadingView.style = .Wave
+                soundLikeLoadingView.duration = 0.2
+            }
             cellView = soundLikeLoadingView
-        } else if indexPath.row == 2 || indexPath.row == 3 {
+        } else if indexPath.row == 3 || indexPath.row == 4 {
             let circleLoadingView = JWCircleLoadingView(frame: CGRectMake(0, 0, 25, 20))
-            circleLoadingView.cumulative = indexPath.row == 2;
+            circleLoadingView.cumulative = indexPath.row == 3;
             cellView = circleLoadingView
-        } else if indexPath.row == 4 || indexPath.row == 5 {
-            let dotCircleLoadingView = JWDotLoadingView(frame: CGRectMake(0, 0, 30, 30))
-            dotCircleLoadingView.style = indexPath.row == 5 ? .Line : .Circle;
+        } else if indexPath.row == 5 || indexPath.row == 6 {
+            let lineStyle = indexPath.row == 6
+            let dotCircleLoadingView = JWDotLoadingView(frame: CGRectMake(0, 0, lineStyle ? 80 : 30, 30))
+            dotCircleLoadingView.style = lineStyle ? .Line : .Circle;
             cellView = dotCircleLoadingView
         }
         
