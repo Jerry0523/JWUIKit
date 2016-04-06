@@ -42,6 +42,8 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWMicrophoneView.h>
 //Drawer
 #import <JWUIKit/JWDrawer.h>
+//Toast
+#import <JWUIKit/JWToast.h>
 
 
 

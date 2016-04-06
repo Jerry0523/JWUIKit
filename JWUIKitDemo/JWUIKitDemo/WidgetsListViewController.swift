@@ -18,7 +18,8 @@ class WidgetsListViewController: UITableViewController {
                 ["name":"Loading", "class":LoadingViewsViewController.classForCoder()],
                 ["name":"Progress", "class":ProgressViewsViewController.classForCoder()],
                 ["name":"Shape", "class":ShapesViewController.classForCoder()],
-                ["name":"Drawer", "class":DrawersViewController.classForCoder()]
+                ["name":"Drawer", "class":DrawersViewController.classForCoder()],
+                ["name":"Toast", "class":ToastViewController.classForCoder()]
                ]
 
     override func viewDidLoad() {

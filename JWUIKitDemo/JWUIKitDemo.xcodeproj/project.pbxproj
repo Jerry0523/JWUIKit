@@ -24,6 +24,7 @@
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
 		C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */; };
 		C45EB4241CB4BCC200792DF0 /* DrawersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */; };
+		C45EB42D1CB5156300792DF0 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EB42C1CB5156300792DF0 /* ToastViewController.swift */; };
 		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
 		C4CD4ED91CB3AFE0004DD38A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD4ED81CB3AFE0004DD38A /* Const.swift */; };
 		C4E8812A1CACC1D7000E1CFF /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E881291CACC1D7000E1CFF /* JWUIKit.framework */; };
@@ -66,6 +67,7 @@
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
 		C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawersViewController.swift; sourceTree = "<group>"; };
 		C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawersViewController.xib; sourceTree = "<group>"; };
+		C45EB42C1CB5156300792DF0 /* ToastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
 		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
 		C4CD4ED81CB3AFE0004DD38A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C4E881291CACC1D7000E1CFF /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C4176E321CA8F47200770F24 /* ShapesViewController.xib */,
 				C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */,
 				C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */,
+				C45EB42C1CB5156300792DF0 /* ToastViewController.swift */,
 				C4446E851C9A658B00FA3176 /* ViewController.swift */,
 				C4446E8A1C9A658B00FA3176 /* Assets.xcassets */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 				C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
 				C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */,
+				C45EB42D1CB5156300792DF0 /* ToastViewController.swift in Sources */,
 				C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */,
 				C4176E331CA8F47200770F24 /* ShapeViewController.swift in Sources */,
 				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,

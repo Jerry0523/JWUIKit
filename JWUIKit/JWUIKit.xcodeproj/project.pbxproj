@@ -22,6 +22,8 @@
 		C4446E241C9935C000FA3176 /* JWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E231C9935C000FA3176 /* JWUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4446E641C99431100FA3176 /* UIView+JWFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C4446E621C99431100FA3176 /* UIView+JWFrame.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446E631C99431100FA3176 /* UIView+JWFrame.m */; };
+		C45EB42A1CB50EBC00792DF0 /* JWToast.h in Headers */ = {isa = PBXBuildFile; fileRef = C45EB4281CB50EBC00792DF0 /* JWToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C45EB42B1CB50EBC00792DF0 /* JWToast.m in Sources */ = {isa = PBXBuildFile; fileRef = C45EB4291CB50EBC00792DF0 /* JWToast.m */; };
 		C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD178B1C9BCABC00187997 /* JWUIKitMacro.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD17C51C9FEE2400187997 /* UIImage+JWSub.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4CD17C81C9FEE2400187997 /* UIImage+JWSub.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17C61C9FEE2400187997 /* UIImage+JWSub.m */; };
@@ -67,6 +69,8 @@
 		C4446E251C9935C000FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4446E621C99431100FA3176 /* UIView+JWFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWFrame.h"; sourceTree = "<group>"; };
 		C4446E631C99431100FA3176 /* UIView+JWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWFrame.m"; sourceTree = "<group>"; };
+		C45EB4281CB50EBC00792DF0 /* JWToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWToast.h; sourceTree = "<group>"; };
+		C45EB4291CB50EBC00792DF0 /* JWToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWToast.m; sourceTree = "<group>"; };
 		C4CD178B1C9BCABC00187997 /* JWUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWUIKitMacro.h; sourceTree = "<group>"; };
 		C4CD17C51C9FEE2400187997 /* UIImage+JWSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWSub.h"; sourceTree = "<group>"; };
 		C4CD17C61C9FEE2400187997 /* UIImage+JWSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JWSub.m"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		C4446E541C99364100FA3176 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				C45EB4251CB50E5500792DF0 /* Toast */,
 				C4176E5F1CAA607D00770F24 /* Button */,
 				C4CD4F1C1CB4A791004DD38A /* Drawer */,
 				C4176E241CA8ED0C00770F24 /* Shape */,
@@ -182,6 +187,15 @@
 				C4446E631C99431100FA3176 /* UIView+JWFrame.m */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C45EB4251CB50E5500792DF0 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				C45EB4281CB50EBC00792DF0 /* JWToast.h */,
+				C45EB4291CB50EBC00792DF0 /* JWToast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		C4CD17F61CA0F1B800187997 /* ImageView */ = {
@@ -281,6 +295,7 @@
 				C4E881301CACF1D2000E1CFF /* JWDotLoadingView.h in Headers */,
 				C4CD4EC41CB37D21004DD38A /* JWBaseLoadingView.h in Headers */,
 				C4CD4F1F1CB4A7AD004DD38A /* JWDrawer.h in Headers */,
+				C45EB42A1CB50EBC00792DF0 /* JWToast.h in Headers */,
 				058329951CAC13A000F87BAF /* JWLoadingProtocol.h in Headers */,
 				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
 				C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */,
@@ -316,6 +331,7 @@
 		C4446E171C9935C000FA3176 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jerry Wong";
 				TargetAttributes = {
@@ -372,6 +388,7 @@
 				C4F9D4A91CA8D9DE00F08726 /* JWBarLoadingView.m in Sources */,
 				C4F9D4A71CA8D9DE00F08726 /* JWRadarLoadingView.m in Sources */,
 				C4176E671CAA61A400770F24 /* JWButton.m in Sources */,
+				C45EB42B1CB50EBC00792DF0 /* JWToast.m in Sources */,
 				C4CD180B1CA0F1B800187997 /* JWPageView.m in Sources */,
 				C4F9D4A01CA8D9C200F08726 /* JWCircleProgressView.m in Sources */,
 			);
