@@ -29,6 +29,8 @@ JWUIKitInitialze {
     
     self.layer.cornerRadius = 5.0f;
     self.layer.masksToBounds = YES;
+    
+    self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     self.backgroundColor = [UIColor colorWithWhite:.0 alpha:.8f];
 }
 
