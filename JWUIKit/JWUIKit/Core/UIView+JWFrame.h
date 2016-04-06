@@ -18,6 +18,8 @@
 @property (assign, nonatomic, readonly) CGFloat maxX;
 @property (assign, nonatomic, readonly) CGFloat maxY;
 
-- (void)moveToPoint:(CGPoint)point;
+- (void)originToPoint:(CGPoint)point;
+
+- (void)makeTranslateForX:(CGFloat)x y:(CGFloat)y;
 
 @end

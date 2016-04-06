@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
 		C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */; };
-		C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewsController.swift */; };
-		C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E321CA8F47200770F24 /* ShapeViewsController.xib */; };
+		C4176E331CA8F47200770F24 /* ShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewController.swift */; };
+		C4176E341CA8F47200770F24 /* ShapesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E321CA8F47200770F24 /* ShapesViewController.xib */; };
 		C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E601CAA60D400770F24 /* ButtonsViewController.swift */; };
 		C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E611CAA60D400770F24 /* ButtonsViewController.xib */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
@@ -22,7 +22,10 @@
 		C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */; };
 		C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */; };
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
+		C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */; };
+		C45EB4241CB4BCC200792DF0 /* DrawersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */; };
 		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
+		C4CD4ED91CB3AFE0004DD38A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD4ED81CB3AFE0004DD38A /* Const.swift */; };
 		C4E8812A1CACC1D7000E1CFF /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E881291CACC1D7000E1CFF /* JWUIKit.framework */; };
 		C4E8812C1CACC1DC000E1CFF /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4E881291CACC1D7000E1CFF /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -45,8 +48,8 @@
 		0583298D1CAC053A00F87BAF /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/JerryWong/Library/Developer/Xcode/DerivedData/JWUIKit-camodsdqqelogjdvwcxxystygmyi/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
 		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
 		C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewsViewController.swift; sourceTree = "<group>"; };
-		C4176E311CA8F47200770F24 /* ShapeViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewsController.swift; sourceTree = "<group>"; };
-		C4176E321CA8F47200770F24 /* ShapeViewsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeViewsController.xib; sourceTree = "<group>"; };
+		C4176E311CA8F47200770F24 /* ShapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewController.swift; sourceTree = "<group>"; };
+		C4176E321CA8F47200770F24 /* ShapesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapesViewController.xib; sourceTree = "<group>"; };
 		C4176E601CAA60D400770F24 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		C4176E611CAA60D400770F24 /* ButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +64,10 @@
 		C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
 		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
+		C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawersViewController.swift; sourceTree = "<group>"; };
+		C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawersViewController.xib; sourceTree = "<group>"; };
 		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
+		C4CD4ED81CB3AFE0004DD38A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C4E881291CACC1D7000E1CFF /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 		C4446E821C9A658B00FA3176 /* JWUIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C4CD4ED81CB3AFE0004DD38A /* Const.swift */,
 				C4446E831C9A658B00FA3176 /* AppDelegate.swift */,
 				C4446EA51C9A812500FA3176 /* WidgetsListViewController.swift */,
 				C4446EAB1C9A87F800FA3176 /* LabelsViewController.swift */,
@@ -108,8 +115,10 @@
 				05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */,
 				C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */,
 				C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */,
-				C4176E311CA8F47200770F24 /* ShapeViewsController.swift */,
-				C4176E321CA8F47200770F24 /* ShapeViewsController.xib */,
+				C4176E311CA8F47200770F24 /* ShapeViewController.swift */,
+				C4176E321CA8F47200770F24 /* ShapesViewController.xib */,
+				C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */,
+				C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */,
 				C4446E851C9A658B00FA3176 /* ViewController.swift */,
 				C4446E8A1C9A658B00FA3176 /* Assets.xcassets */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
@@ -193,7 +202,8 @@
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
 				C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */,
-				C4176E341CA8F47200770F24 /* ShapeViewsController.xib in Resources */,
+				C4176E341CA8F47200770F24 /* ShapesViewController.xib in Resources */,
+				C45EB4241CB4BCC200792DF0 /* DrawersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,15 +215,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */,
+				C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
 				C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */,
 				C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */,
-				C4176E331CA8F47200770F24 /* ShapeViewsController.swift in Sources */,
+				C4176E331CA8F47200770F24 /* ShapeViewController.swift in Sources */,
 				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,
 				C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */,
 				C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */,
 				C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */,
 				05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */,
+				C4CD4ED91CB3AFE0004DD38A /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

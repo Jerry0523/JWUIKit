@@ -17,7 +17,8 @@
     NSArray<UIColor*> *_colors;
 }
 
-JWUIKitInitialze {
+- (void)setup {
+    [super setup];
     self.circleAnimationDuration = 0.2f;
     self.ringAnimationDuration = 0.25f;
     
@@ -37,10 +38,10 @@ JWUIKitInitialze {
 #pragma mark - JWLoadingViewProtocol
 
 - (void)startAnimating {
-    if (_isAnimating) {
+    if (self.isAnimating) {
         return ;
     }
-    _isAnimating = YES;
+    self.isAnimating = YES;
     
     [CATransaction begin];
     
@@ -87,11 +88,11 @@ JWUIKitInitialze {
 }
 
 - (void)stopAnimating {
-    if (_isAnimating) {
+    if (self.isAnimating) {
         [_centerCirclelLayer removeAllAnimations];
         _centerCirclelLayer.opacity = 0.0f;
         [_ringLayersArray makeObjectsPerformSelector:@selector(removeAllAnimations)];
-        _isAnimating = NO;
+        self.isAnimating = NO;
     }
 }
 

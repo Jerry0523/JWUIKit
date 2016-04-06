@@ -6,8 +6,7 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "JWLoadingProtocol.h"
+#import "JWBaseLoadingView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,9 +15,8 @@ typedef NS_ENUM(NSInteger, JWDotLoadingStyle){
     JWDotLoadingStyleLine     = 1
 };
 
-@interface JWDotLoadingView : UIView<JWLoadingProtocol>
+@interface JWDotLoadingView : JWBaseLoadingView
 
-@property (assign, nonatomic, readonly) BOOL isAnimating;
 @property (assign, nonatomic) JWDotLoadingStyle style;
 
 @property (assign, nonatomic) NSUInteger dotCount;//default is 5

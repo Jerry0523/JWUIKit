@@ -22,7 +22,7 @@ JWUIKitInitialze {
     _layer = [CAShapeLayer layer];
     [self.layer addSublayer:_layer];
     
-    self.showBackground = YES;
+    self.drawBackground = YES;
     
     self.style = JWCircleProgressStyleDefault;
     [self setupLayerColor];
@@ -38,7 +38,7 @@ JWUIKitInitialze {
 }
 
 - (void)drawRect:(CGRect)rect {
-    if (self.showBackground) {
+    if (self.drawBackground) {
         if (self.style == JWCircleProgressStyleDefault) {
             CGContextRef context = UIGraphicsGetCurrentContext();
             CGContextSetLineWidth(context, 4.0);
@@ -93,6 +93,13 @@ JWUIKitInitialze {
             _layer.lineWidth = 1.0f;
         }
         [self setupLayerColor];
+    }
+}
+
+- (void)setDrawBackground:(BOOL)drawBackground {
+    if (_drawBackground != drawBackground) {
+        _drawBackground = drawBackground;
+        [self setNeedsDisplay];
     }
 }
 

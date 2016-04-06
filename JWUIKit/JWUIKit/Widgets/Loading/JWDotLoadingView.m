@@ -16,15 +16,16 @@
     NSArray<CAShapeLayer*> *_dotViews;
 }
 
-JWUIKitInitialze {
+- (void)setup {
+    [super setup];
     self.dotCount = 5;
 }
 
 - (void)startAnimating {
-    if (_isAnimating) {
+    if (self.isAnimating) {
         return ;
     }
-    _isAnimating = YES;
+    self.isAnimating = YES;
     
     NSTimeInterval duration = 1.6f;
     if (self.style == JWDotLoadingStyleCircle) {
@@ -63,9 +64,9 @@ JWUIKitInitialze {
 }
 
 - (void)stopAnimating {
-    if (_isAnimating) {
+    if (self.isAnimating) {
         [_dotViews makeObjectsPerformSelector:@selector(removeAllAnimations)];
-        _isAnimating = NO;
+        self.isAnimating = NO;
     }
 }
 
@@ -87,11 +88,8 @@ JWUIKitInitialze {
     return CGSizeMake(30, 30);
 }
 
-- (void)sizeToFit {
-    CGRect frame = self.frame;
-    CGSize intrinsicContentSize = [self intrinsicContentSize];
-    frame.size = intrinsicContentSize;
-    self.frame = frame;
+- (CGSize)sizeThatFits:(CGSize)size {
+    return [self intrinsicContentSize];
 }
 
 #pragma mark - Setter & Getter

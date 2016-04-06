@@ -6,24 +6,21 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "JWLoadingProtocol.h"
+#import "JWBaseLoadingView.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, JWBarLoadingStyle){
     JWBarLoadingStyleSound   = 0,
     JWBarLoadingStyleWave     = 1
 };
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface JWBarLoadingView : UIView<JWLoadingProtocol>
+@interface JWBarLoadingView : JWBaseLoadingView
 
 @property (assign, nonatomic) CGFloat barsCount;
 @property (assign, nonatomic) CGFloat barsMarginPercent;
 
 @property (assign, nonatomic) JWBarLoadingStyle style;
-
-@property (assign, nonatomic, readonly) BOOL isAnimating;
 @property (assign, nonatomic) NSTimeInterval duration;
 
 @end

@@ -108,7 +108,7 @@ JWUIKitInitialze {
             [leftView sizeToFit];
         }
         containerHeight = MAX(leftView.h, containerHeight);
-        [leftView moveToPoint:CGPointMake(containerView.subviews.lastObject.maxX, 0)];
+        [leftView originToPoint:CGPointMake(containerView.subviews.lastObject.maxX, 0)];
         [containerView addSubview:leftView];
         if (i == items.count - 1) {
             containerView.w = leftView.maxX;

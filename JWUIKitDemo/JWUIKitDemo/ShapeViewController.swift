@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShapeViewsController: UIViewController {
+class ShapesViewController: UIViewController {
 
     @IBOutlet weak var microphoneView: JWMicrophoneView!
     

@@ -28,12 +28,6 @@ JWUIKitInitialze {
     self.duration = 0.5f;
 }
 
-- (void)sizeToFit {
-    [self.imageView sizeToFit];
-    self.w = self.imageView.w;
-    self.h = self.imageView.h;
-}
-
 - (CGSize)sizeThatFits:(CGSize)size{
     return [self.imageView sizeThatFits:size];
 }

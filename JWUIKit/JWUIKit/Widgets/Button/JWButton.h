@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-NS_ASSUME_NONNULL_BEGIN;
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, JWButtonImagePosition) {
     JWButtonImagePositionDefault = 0,//image left and text right
@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger, JWButtonImagePosition) {
 
 @property (assign, nonatomic) CGFloat padding;//default is 0. It will change contentEdgeInsets.
 
+- (void)setImageName:(NSString *)imageName forState:(UIControlState)state;//load image from main bundle
+
 @end
 
-NS_ASSUME_NONNULL_END;
+NS_ASSUME_NONNULL_END

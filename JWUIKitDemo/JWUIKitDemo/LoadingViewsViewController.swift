@@ -38,7 +38,7 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -61,19 +61,18 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
                 soundLikeLoadingView.duration = 0.2
             }
             cellView = soundLikeLoadingView
-        } else if indexPath.row == 3 || indexPath.row == 4 {
-            let circleLoadingView = JWCircleLoadingView(frame: CGRectMake(0, 0, 25, 20))
-            circleLoadingView.cumulative = indexPath.row == 3;
+        } else if indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5 {
+            let circleLoadingView = JWCircleLoadingView(frame: CGRectMake(0, 0, 25, 25))
+            circleLoadingView.style = JWCircleLoadingStyle(rawValue: indexPath.row - 3)!
             cellView = circleLoadingView
-        } else if indexPath.row == 5 || indexPath.row == 6 {
-            let lineStyle = indexPath.row == 6
+        } else if indexPath.row == 6 || indexPath.row == 7 {
+            let lineStyle = indexPath.row == 7
             let dotCircleLoadingView = JWDotLoadingView(frame: CGRectMake(0, 0, lineStyle ? 80 : 30, 30))
             dotCircleLoadingView.style = lineStyle ? .Line : .Circle;
             cellView = dotCircleLoadingView
         }
         
-        let tintColor = UIColor(red: 249.0 / 255.0, green: 147.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
-        cell.tintColor = tintColor
+        cell.tintColor = JWConst.themeColor
         cell.contentView.addSubview(cellView!)
         cellView!.center = CGPointMake(CGRectGetWidth(cell.frame) * 0.5, CGRectGetHeight(cell.frame) * 0.5)
         

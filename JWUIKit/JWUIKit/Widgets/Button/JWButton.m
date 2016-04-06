@@ -17,11 +17,8 @@ JWUIKitInitialze {
     
 }
 
-- (void)sizeToFit {
-    CGRect frame = self.frame;
-    CGSize intrinsicContentSize = [self intrinsicContentSize];
-    frame.size = intrinsicContentSize;
-    self.frame = frame;
+- (CGSize)sizeThatFits:(CGSize)size {
+    return [self intrinsicContentSize];
 }
 
 - (CGSize)intrinsicContentSize {
@@ -36,6 +33,11 @@ JWUIKitInitialze {
         mSize.width += self.offset;
     }
     return mSize;
+}
+
+- (void)setImageName:(NSString *)imageName forState:(UIControlState)state {
+    UIImage *image = [UIImage imageNamed:imageName];
+    [self setImage:image forState:state];
 }
 
 #pragma mark - Getter & Setter

@@ -58,10 +58,17 @@
     return CGRectGetMaxY(self.frame);
 }
 
-- (void)moveToPoint:(CGPoint)point{
+- (void)originToPoint:(CGPoint)point{
     CGRect frame = self.frame;
     frame.origin.x = point.x;
     frame.origin.y = point.y;
+    self.frame = frame;
+}
+
+- (void)makeTranslateForX:(CGFloat)x y:(CGFloat)y {
+    CGRect frame = self.frame;
+    frame.origin.x += x;
+    frame.origin.y += y;
     self.frame = frame;
 }
 

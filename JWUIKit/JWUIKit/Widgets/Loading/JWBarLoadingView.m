@@ -16,7 +16,8 @@
     NSArray<CAShapeLayer*> *_layers;
 }
 
-JWUIKitInitialze {
+- (void)setup {
+    [super setup];
     self.barsCount = 4;
     self.barsMarginPercent = 0.6f;
     self.duration = 0.4f;
@@ -36,57 +37,58 @@ JWUIKitInitialze {
 
 #pragma mark - JWLoadingViewProtocol
 - (void)startAnimating {
-    if (!_isAnimating) {
-        _isAnimating = YES;
-        
-        [CATransaction begin];
-        CGFloat barDuration = self.duration;
-        CFTimeInterval currentMediaTime = CACurrentMediaTime();
-        
-        [_layers enumerateObjectsUsingBlock:^(CAShapeLayer *bar, NSUInteger idx, BOOL *stop) {
-            if (self.style == JWBarLoadingStyleSound) {
-                CABasicAnimation *barAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-                barAnimation.duration = barDuration;
-                barAnimation.fromValue = @(0);
-                barAnimation.toValue = @(1);
-                barAnimation.fillMode = kCAFillModeBoth;
-                barAnimation.beginTime = currentMediaTime + idx * JWRandom(50, 101) * barDuration / 100.0f;
-                barAnimation.repeatCount = INFINITY;
-                barAnimation.autoreverses = YES;
-                
-                [bar addAnimation:barAnimation forKey:nil];
-            } else if(self.style == JWBarLoadingStyleWave) {
-                
-                CAKeyframeAnimation *strokeStartAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeStart"];
-                strokeStartAnimation.keyTimes = @[@(0.0), @(0.2), @(0.4), @(1.0)];
-                strokeStartAnimation.values = @[@(0.3f), @(0), @(0.3f), @(0.3f)];
-                strokeStartAnimation.duration = barDuration * self.barsCount;
-                strokeStartAnimation.fillMode = kCAFillModeBoth;
-                
-                CAKeyframeAnimation *strokeEndAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeEnd"];
-                strokeEndAnimation.keyTimes = @[@(0.0), @(0.2), @(0.4), @(1.0)];
-                strokeEndAnimation.values = @[@(0.7f), @(1), @(0.7f), @(0.7f)];
-                strokeEndAnimation.duration = barDuration * self.barsCount;
-                strokeEndAnimation.fillMode = kCAFillModeBoth;
-                
-                CAAnimationGroup *groupAnimation = [CAAnimationGroup new];
-                groupAnimation.animations = @[strokeEndAnimation, strokeStartAnimation];
-                groupAnimation.repeatCount = INFINITY;
-                groupAnimation.beginTime = currentMediaTime + idx * barDuration;
-                groupAnimation.duration = barDuration * self.barsCount;
-                
-                [bar addAnimation:groupAnimation forKey:nil];
-            }
-        }];
-        
-        [CATransaction commit];
+    if (self.isAnimating) {
+        return;
     }
+    self.isAnimating = YES;
+    
+    [CATransaction begin];
+    CGFloat barDuration = self.duration;
+    CFTimeInterval currentMediaTime = CACurrentMediaTime();
+    
+    [_layers enumerateObjectsUsingBlock:^(CAShapeLayer *bar, NSUInteger idx, BOOL *stop) {
+        if (self.style == JWBarLoadingStyleSound) {
+            CABasicAnimation *barAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+            barAnimation.duration = barDuration;
+            barAnimation.fromValue = @(0);
+            barAnimation.toValue = @(1);
+            barAnimation.fillMode = kCAFillModeBoth;
+            barAnimation.beginTime = currentMediaTime + idx * JWRandom(50, 101) * barDuration / 100.0f;
+            barAnimation.repeatCount = INFINITY;
+            barAnimation.autoreverses = YES;
+            
+            [bar addAnimation:barAnimation forKey:nil];
+        } else if(self.style == JWBarLoadingStyleWave) {
+            
+            CAKeyframeAnimation *strokeStartAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeStart"];
+            strokeStartAnimation.keyTimes = @[@(0.0), @(0.2), @(0.4), @(1.0)];
+            strokeStartAnimation.values = @[@(0.3f), @(0), @(0.3f), @(0.3f)];
+            strokeStartAnimation.duration = barDuration * self.barsCount;
+            strokeStartAnimation.fillMode = kCAFillModeBoth;
+            
+            CAKeyframeAnimation *strokeEndAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeEnd"];
+            strokeEndAnimation.keyTimes = @[@(0.0), @(0.2), @(0.4), @(1.0)];
+            strokeEndAnimation.values = @[@(0.7f), @(1), @(0.7f), @(0.7f)];
+            strokeEndAnimation.duration = barDuration * self.barsCount;
+            strokeEndAnimation.fillMode = kCAFillModeBoth;
+            
+            CAAnimationGroup *groupAnimation = [CAAnimationGroup new];
+            groupAnimation.animations = @[strokeEndAnimation, strokeStartAnimation];
+            groupAnimation.repeatCount = INFINITY;
+            groupAnimation.beginTime = currentMediaTime + idx * barDuration;
+            groupAnimation.duration = barDuration * self.barsCount;
+            
+            [bar addAnimation:groupAnimation forKey:nil];
+        }
+    }];
+    
+    [CATransaction commit];
 }
 
 - (void)stopAnimating {
-    if (_isAnimating) {
+    if (self.isAnimating) {
         [_layers makeObjectsPerformSelector:@selector(removeAllAnimations)];
-        _isAnimating = NO;
+        self.isAnimating = NO;
     }
 }
 

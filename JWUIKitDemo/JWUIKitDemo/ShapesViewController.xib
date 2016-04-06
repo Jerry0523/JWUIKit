@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShapeViewsController" customModule="JWUIKitDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShapesViewController" customModule="JWUIKitDemo" customModuleProvider="target">
             <connections>
                 <outlet property="microphoneView" destination="6Sy-i2-xwy" id="beD-cV-mwH"/>
                 <outlet property="view" destination="f6y-YH-kBz" id="7jO-p6-Yb4"/>
