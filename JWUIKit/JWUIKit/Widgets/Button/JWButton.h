@@ -16,13 +16,14 @@ typedef NS_ENUM(NSInteger, JWButtonImagePosition) {
     JWButtonImagePositionRight = 2//text left and image right
 };
 
+IB_DESIGNABLE
 @interface JWButton : UIButton
 
-@property (assign, nonatomic) JWButtonImagePosition imagePosition;//default is JWButtonImagePositionDefault. It will change titleEdgeInsets and imageEdgeInsets
+@property (assign, nonatomic) IBInspectable JWButtonImagePosition imagePosition;//default is JWButtonImagePositionDefault. It will change titleEdgeInsets and imageEdgeInsets
 
-@property (assign, nonatomic) CGFloat offset;//default is 0. Must be greater than 0. The margin between text and image. It will change titleEdgeInsets and imageEdgeInsets
+@property (assign, nonatomic) IBInspectable CGFloat offset;//default is 0. Must be greater than 0. The margin between text and image. It will change titleEdgeInsets and imageEdgeInsets
 
-@property (assign, nonatomic) CGFloat padding;//default is 0. It will change contentEdgeInsets.
+@property (assign, nonatomic) IBInspectable CGFloat padding;//default is 0. It will change contentEdgeInsets.
 
 - (void)setImageName:(NSString *)imageName forState:(UIControlState)state;//load image from main bundle
 

@@ -9,17 +9,20 @@
 import UIKit
 
 class ToastViewController: UIViewController {
+    @IBOutlet weak var textField: JWTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "JWUIKitToast"
         self.view.backgroundColor = JWConst.backgroundColor
-        
-        JWToast.makeToast("Just a test sdjfksdjfklsdjklfsjdklfjskldjfklsdjflkjsdklfjsdklfjskldf").show()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func didPressToastButton(sender: AnyObject) {
+        self.view.endEditing(true)
+        JWToast.makeToast(textField.text).show()
+    }
 }

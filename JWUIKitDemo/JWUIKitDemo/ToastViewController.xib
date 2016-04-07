@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToastViewController" customModule="JWUIKitDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="wst-dj-pOG" id="od5-oy-f4C"/>
+                <outlet property="view" destination="jOS-R4-rLh" id="ceM-OE-a4z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" id="jOS-R4-rLh">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVl-iq-eXq" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello, my toast." placeholder="Input text to toast" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wst-dj-pOG" userLabel="PaddingTextField" customClass="JWTextField">
+                            <rect key="frame" x="20" y="20" width="196" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="giF-lo-6l1"/>
+                            </constraints>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKw-CQ-B7e" customClass="JWButton">
+                            <rect key="frame" x="236" y="25" width="64" height="30"/>
+                            <color key="backgroundColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="uXB-G6-Iv4"/>
+                            </constraints>
+                            <state key="normal" title="Toast">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didPressToastButton:" destination="-1" eventType="touchUpInside" id="G1f-Jk-sG9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IKw-CQ-B7e" secondAttribute="trailing" constant="20" id="GL0-3f-wSs"/>
+                        <constraint firstItem="wst-dj-pOG" firstAttribute="top" secondItem="FVl-iq-eXq" secondAttribute="top" constant="20" id="ROT-En-Yj0"/>
+                        <constraint firstAttribute="height" constant="568" id="RPP-T8-pw6"/>
+                        <constraint firstItem="IKw-CQ-B7e" firstAttribute="leading" secondItem="wst-dj-pOG" secondAttribute="trailing" constant="20" id="UNm-ht-Vsq"/>
+                        <constraint firstItem="wst-dj-pOG" firstAttribute="leading" secondItem="FVl-iq-eXq" secondAttribute="leading" constant="20" id="XFW-1G-QOP"/>
+                        <constraint firstItem="IKw-CQ-B7e" firstAttribute="centerY" secondItem="wst-dj-pOG" secondAttribute="centerY" id="rXx-Ag-agP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FVl-iq-eXq" firstAttribute="centerX" secondItem="jOS-R4-rLh" secondAttribute="centerX" id="LVG-SI-HJa"/>
+                <constraint firstItem="FVl-iq-eXq" firstAttribute="leading" secondItem="jOS-R4-rLh" secondAttribute="leading" id="ZNS-3S-YwC"/>
+                <constraint firstItem="FVl-iq-eXq" firstAttribute="top" secondItem="jOS-R4-rLh" secondAttribute="top" id="bSQ-AY-dr7"/>
+                <constraint firstAttribute="trailing" secondItem="FVl-iq-eXq" secondAttribute="trailing" id="ih5-Gy-sdx"/>
+            </constraints>
+            <point key="canvasLocation" x="-172" y="-525"/>
+        </scrollView>
+    </objects>
+</document>

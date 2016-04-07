@@ -18,6 +18,9 @@
 const CGFloat padding = 10.0f;
 const CGFloat margin = 30.0f;
 
+const NSTimeInterval lengthShort = 1.0f;
+const NSTimeInterval lengthLong = 2.0f;
+
 JWUIKitInitialze {
     _textLabel = [UILabel new];
     _textLabel.numberOfLines = 0;
@@ -58,10 +61,10 @@ JWUIKitInitialze {
 
 - (void)show {
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    [self showInView:keyWindow];
+    [self showInView:keyWindow length:JWToastLengthShort];
 }
 
-- (void)showInView:(UIView*)view {
+- (void)showInView:(UIView*)view length:(JWToastLength)length {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     
     [view addSubview:self];
@@ -71,10 +74,17 @@ JWUIKitInitialze {
     
     self.alpha = .0f;
     
+    NSTimeInterval delay;
+    if (length == JWToastLengthShort) {
+        delay = lengthShort;
+    } else {
+        delay = lengthLong;
+    }
+    
     [UIView animateWithDuration:.5f animations:^{
         self.alpha = 1.0f;
     } completion:^(BOOL finished) {
-        [self performSelector:@selector(hide) withObject:nil afterDelay:2.0];
+        [self performSelector:@selector(hide) withObject:nil afterDelay:delay];
     }];
 }
 

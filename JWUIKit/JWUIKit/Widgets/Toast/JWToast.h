@@ -8,12 +8,17 @@
 
 @import UIKit;
 
+typedef NS_ENUM(NSInteger, JWToastLength) {
+    JWToastLengthShort,
+    JWToastLengthLong
+};
+
 @interface JWToast : UIView
 
 + (instancetype)makeToast:(NSString*)msg;
 
 - (void)show;
-- (void)showInView:(UIView*)view;
+- (void)showInView:(UIView*)view length:(JWToastLength)length;
 
 - (void)hide;
 
