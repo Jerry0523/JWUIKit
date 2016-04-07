@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WidgetsListViewController: UITableViewController {
+class WidgetsListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let cellIdentifier = "cellIdentifier"
     let data = [["name":"Label", "class":LabelsViewController.classForCoder()],
@@ -19,7 +19,8 @@ class WidgetsListViewController: UITableViewController {
                 ["name":"Progress", "class":ProgressViewsViewController.classForCoder()],
                 ["name":"Shape", "class":ShapesViewController.classForCoder()],
                 ["name":"Drawer", "class":DrawersViewController.classForCoder()],
-                ["name":"Toast", "class":ToastViewController.classForCoder()]
+                ["name":"Toast", "class":ToastViewController.classForCoder()],
+                ["name":"Page", "class":PagesViewController.classForCoder()]
                ]
 
     override func viewDidLoad() {
@@ -35,8 +36,21 @@ class WidgetsListViewController: UITableViewController {
         
         self.navigationItem.titleView = titleView
         
-        self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
-        self.tableView.tableFooterView = UIView()
+        let collectionViewFlowlayout = UICollectionViewFlowLayout()
+        collectionViewFlowlayout.scrollDirection = .Vertical
+        collectionViewFlowlayout.minimumLineSpacing = 10
+        collectionViewFlowlayout.minimumInteritemSpacing = 10
+        collectionViewFlowlayout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10)
+        collectionViewFlowlayout.itemSize = CGSizeMake(80, 80)
+        
+        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: collectionViewFlowlayout)
+        collectionView.alwaysBounceVertical = true
+        collectionView.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.backgroundColor = UIColor(white: 240.0 / 255.0, alpha: 1.0)
+        self.view.addSubview(collectionView)
+        collectionView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -54,27 +68,37 @@ class WidgetsListViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    // MARK: - UITableViewDataSource
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    //MARK: - UICollectionViewDataSource
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
+        cell.backgroundColor = UIColor(white: 220.0 / 255.0, alpha: 1.0)
+        
+        if cell.contentView.subviews.count == 0 {
+            let label = UILabel(frame: cell.bounds)
+            label.textColor = JWConst.textColor
+            label.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            label.font = UIFont.systemFontOfSize(15.0)
+            label.textAlignment = .Center
+            cell.contentView.addSubview(label)
+        }
+        
+        let label: UILabel = cell.contentView.subviews[0] as! UILabel
         let item = data[indexPath.row]
-        cell.textLabel?.textColor = JWConst.textColor
-        cell.textLabel?.text = item["name"] as? String
+        label.text = item["name"] as? String
+        
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let mClass: UIViewController.Type? = data[indexPath.row]["class"] as? UIViewController.Type
         if mClass != nil {
             let vc = mClass!.self.init();
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
 }

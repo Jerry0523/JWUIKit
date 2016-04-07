@@ -38,6 +38,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 
 //Page
 #import <JWUIKit/JWPageView.h>
+#import <JWUIKit/JWPageControl.h>
 //Shapes
 #import <JWUIKit/JWMicrophoneView.h>
 //Drawer

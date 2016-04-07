@@ -13,9 +13,9 @@
 		C4176E341CA8F47200770F24 /* ShapesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E321CA8F47200770F24 /* ShapesViewController.xib */; };
 		C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E601CAA60D400770F24 /* ButtonsViewController.swift */; };
 		C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E611CAA60D400770F24 /* ButtonsViewController.xib */; };
+		C427D8FE1CB674B6005AE31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C427D8FD1CB674B6005AE31A /* Assets.xcassets */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
-		C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* ViewController.swift */; };
-		C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8A1C9A658B00FA3176 /* Assets.xcassets */; };
+		C4446E861C9A658B00FA3176 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* PagesViewController.swift */; };
 		C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */; };
 		C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EA51C9A812500FA3176 /* WidgetsListViewController.swift */; };
 		C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EAB1C9A87F800FA3176 /* LabelsViewController.swift */; };
@@ -54,10 +54,10 @@
 		C4176E321CA8F47200770F24 /* ShapesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapesViewController.xib; sourceTree = "<group>"; };
 		C4176E601CAA60D400770F24 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		C4176E611CAA60D400770F24 /* ButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
+		C427D8FD1CB674B6005AE31A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4446E851C9A658B00FA3176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4446E8A1C9A658B00FA3176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4446E851C9A658B00FA3176 /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
 		C4446E8D1C9A658B00FA3176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4446E8F1C9A658B00FA3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4446E991C9A672600FA3176 /* JWUIKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWUIKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -125,11 +125,11 @@
 				C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */,
 				C45EB42C1CB5156300792DF0 /* ToastViewController.swift */,
 				C45EB5351CB6338000792DF0 /* ToastViewController.xib */,
-				C4446E851C9A658B00FA3176 /* ViewController.swift */,
-				C4446E8A1C9A658B00FA3176 /* Assets.xcassets */,
+				C4446E851C9A658B00FA3176 /* PagesViewController.swift */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
 				C4446E8F1C9A658B00FA3176 /* Info.plist */,
 				C4446E991C9A672600FA3176 /* JWUIKitDemo-Bridging-Header.h */,
+				C427D8FD1CB674B6005AE31A /* Assets.xcassets */,
 			);
 			path = JWUIKitDemo;
 			sourceTree = "<group>";
@@ -208,8 +208,8 @@
 				C45EB5361CB6338000792DF0 /* ToastViewController.xib in Resources */,
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
-				C4446E8B1C9A658B00FA3176 /* Assets.xcassets in Resources */,
 				C4176E341CA8F47200770F24 /* ShapesViewController.xib in Resources */,
+				C427D8FE1CB674B6005AE31A /* Assets.xcassets in Resources */,
 				C45EB4241CB4BCC200792DF0 /* DrawersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4446E861C9A658B00FA3176 /* ViewController.swift in Sources */,
+				C4446E861C9A658B00FA3176 /* PagesViewController.swift in Sources */,
 				C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
 				C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */,

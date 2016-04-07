@@ -22,12 +22,12 @@ IB_DESIGNABLE
 @property (strong, nonatomic, nullable) NSArray<__kindof UIView*> *leftViews;
 @property (strong, nonatomic, nullable) NSArray<__kindof UIView*> *rightViews;
 
-@property (strong, nonatomic, nullable) IBInspectable UIImageView *imageView;//an easy way to set left imageview. It will change leftViews.
+@property (strong, nonatomic, nullable) UIImageView *imageView;//an easy way to set left imageview. It will change leftViews.
 
 @property (assign, nonatomic) IBInspectable CGFloat paddingLeft;//an easy way to add left padding. It will insert a space view into leftViews.
 
 @property (strong, nonatomic, nullable) NSSet<NSNumber*> *segmentValues;//a NSSet contains index of the segment logic.
-@property (assign, nonatomic) IBInspectable JWTextFieldSegmentStyle segmentStyle;//a pre-set control to add space by the given format. It will change the segmentValues and keyboardType.
+@property (assign, nonatomic) JWTextFieldSegmentStyle segmentStyle;//a pre-set control to add space by the given format. It will change the segmentValues and keyboardType.
 
 @property (assign, nonatomic) NSUInteger maxTextLength;//default is NSIntegerMax.When set, it will limit the length of trimed text.
 

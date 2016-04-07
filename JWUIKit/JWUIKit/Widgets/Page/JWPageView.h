@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+#import "JWPageControl.h"
 
 NS_ASSUME_NONNULL_BEGIN;
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN;
 @interface JWPageView : UIView
 
 @property (strong, nonatomic, readonly) UICollectionView *collectionView;
-@property (strong, nonatomic, readonly) UIPageControl *pageControl;
+@property (strong, nonatomic, readonly) JWPageControl *pageControl;
 
 @property (weak, nonatomic, nullable) id<JWPageViewDataSource> dataSource;
 @property (weak, nonatomic, nullable) id<JWPageViewDelegate> delegate;

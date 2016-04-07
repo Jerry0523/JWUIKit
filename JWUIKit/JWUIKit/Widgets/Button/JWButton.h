@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, JWButtonImagePosition) {
 IB_DESIGNABLE
 @interface JWButton : UIButton
 
-@property (assign, nonatomic) IBInspectable JWButtonImagePosition imagePosition;//default is JWButtonImagePositionDefault. It will change titleEdgeInsets and imageEdgeInsets
+@property (assign, nonatomic) JWButtonImagePosition imagePosition;//default is JWButtonImagePositionDefault. It will change titleEdgeInsets and imageEdgeInsets
 
 @property (assign, nonatomic) IBInspectable CGFloat offset;//default is 0. Must be greater than 0. The margin between text and image. It will change titleEdgeInsets and imageEdgeInsets
 

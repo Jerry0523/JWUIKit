@@ -7,6 +7,7 @@
 //
 
 #import "JWPageView.h"
+
 //Core
 #import "JWUIKitMacro.h"
 #import "UIView+JWFrame.h"
@@ -14,7 +15,7 @@
 @interface JWPageView()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
-@property (strong, nonatomic) UIPageControl *pageControl;
+@property (strong, nonatomic) JWPageControl *pageControl;
 @property (strong, nonatomic) UICollectionViewFlowLayout *flowlayout;
 
 @end
@@ -106,6 +107,7 @@ JWUIKitInitialze {
         _flowlayout = [[UICollectionViewFlowLayout alloc] init];
         _flowlayout.minimumLineSpacing = 0;
         _flowlayout.minimumInteritemSpacing = 0;
+        _flowlayout.sectionInset = UIEdgeInsetsZero;
     }
     return _flowlayout;
 }
@@ -128,7 +130,8 @@ JWUIKitInitialze {
 
 - (UIPageControl*)pageControl {
     if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.h - 30, self.w, 30)];
+        _pageControl = [[JWPageControl alloc] initWithFrame:CGRectMake(0, self.h - 30, self.w, 30)];
+        _pageControl.hidesForSinglePage = YES;
         _pageControl.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     }
     return _pageControl;
