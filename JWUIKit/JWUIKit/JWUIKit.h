@@ -45,6 +45,8 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWDrawer.h>
 //Toast
 #import <JWUIKit/JWToast.h>
+//PullRefresh
+#import <JWUIKit/JWPullRefreshHeaderView.h>
 
 
 

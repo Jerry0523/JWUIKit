@@ -15,6 +15,9 @@ class ToastViewController: UIViewController {
         super.viewDidLoad()
         self.title = "JWUIKitToast"
         self.view.backgroundColor = JWConst.backgroundColor
+        
+        let pullRefreshView = JWPullRefreshHeaderView()
+        self.view.addSubview(pullRefreshView)
     }
 
     override func didReceiveMemoryWarning() {
