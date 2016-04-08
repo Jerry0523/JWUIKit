@@ -27,22 +27,33 @@ static NSString *cellIdentifier = @"cellIdentifier";
 JWUIKitInitialze {
     [self addSubview:self.collectionView];
     [self addSubview:self.pageControl];
-    self.vertical = NO;
+    self.cycled = YES;
+}
+
+- (void)dealloc {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
 #pragma mark - Public
 - (void)reloadData {
     self.pageControl.currentPage = 0;
-    self.pageControl.numberOfPages = [self collectionView:self.collectionView numberOfItemsInSection:0];
+    self.pageControl.numberOfPages = [self rawCellCount];
     [self.collectionView reloadData];
+    
+    if (self.cycled) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    }
+    
+    [self resetAutoPlayTimer];
 }
 
 #pragma mark - UICollectionViewDataSource & UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if ([self.dataSource respondsToSelector:@selector(numberOfPagesInPageView:)]) {
-        return [self.dataSource numberOfPagesInPageView:self];
+    NSUInteger count = [self rawCellCount];
+    if (self.cycled && count) {
+        count += 2;
     }
-    return 0;
+    return count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -51,7 +62,7 @@ JWUIKitInitialze {
     [reuseView removeFromSuperview];
     
     if ([self.dataSource respondsToSelector:@selector(pageView:viewAt:reusableView:)]) {
-        reuseView = [self.dataSource pageView:self viewAt:indexPath.row reusableView:reuseView];
+        reuseView = [self.dataSource pageView:self viewAt:[self parseRowIndex:indexPath.row] reusableView:reuseView];
     }
     
     reuseView.frame = cell.contentView.bounds;
@@ -68,33 +79,39 @@ JWUIKitInitialze {
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    CGPoint contentOffset = scrollView.contentOffset;
-    if (scrollView.w == 0 || scrollView.h == 0) {
-        return;
-    }
-    
-    NSUInteger idx = 0;
-    if (self.vertical) {
-        idx = contentOffset.y / scrollView.h;
-    } else {
-        idx = contentOffset.x / scrollView.w;
-    }
-    
-    self.pageControl.currentPage = idx;
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:scrollView.contentOffset];
+    NSUInteger idx = indexPath.item;
+    self.pageControl.currentPage = [self parseRowIndex:idx];
     
     if ([self.delegate respondsToSelector:@selector(pageView:didScrollToIndex:)]) {
         [self.delegate pageView:self didScrollToIndex:idx];
     }
+    
+    if (self.cycled) {
+        
+        NSUInteger totalCount = [self collectionView:self.collectionView numberOfItemsInSection:0];
+        if (indexPath.item == 0) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:[self rawCellCount] inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        } else if (indexPath.item + 1 == totalCount) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        }
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self resetAutoPlayTimer];
 }
 
 #pragma mark - Setter & Getter
-- (void)setAutoPlay:(BOOL)autoPlay {
-    _autoPlay = autoPlay;
-}
-
-- (void)setVertical:(BOOL)vertical {
-    _vertical = vertical;
-    self.flowlayout.scrollDirection = vertical ? UICollectionViewScrollDirectionVertical : UICollectionViewScrollDirectionHorizontal;
+- (void)setAutoPlayInterval:(NSTimeInterval)autoPlayInterval {
+    if (autoPlayInterval >= 0 && _autoPlayInterval != autoPlayInterval) {
+        _autoPlayInterval = autoPlayInterval;
+        [self resetAutoPlayTimer];
+    }
 }
 
 - (void)setDataSource:(id<JWPageViewDataSource>)dataSource {
@@ -108,6 +125,7 @@ JWUIKitInitialze {
         _flowlayout.minimumLineSpacing = 0;
         _flowlayout.minimumInteritemSpacing = 0;
         _flowlayout.sectionInset = UIEdgeInsetsZero;
+        _flowlayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     }
     return _flowlayout;
 }
@@ -140,6 +158,55 @@ JWUIKitInitialze {
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     self.flowlayout.itemSize = CGSizeMake(self.w, self.h);
+}
+
+#pragma mark - Private
+- (NSUInteger)rawCellCount {
+    NSUInteger count = 0;
+    if ([self.dataSource respondsToSelector:@selector(numberOfPagesInPageView:)]) {
+        count =  [self.dataSource numberOfPagesInPageView:self];
+    }
+    return count;
+}
+
+- (NSUInteger)parseRowIndex:(NSUInteger)input {
+    NSUInteger rawCount = [self rawCellCount];
+    NSUInteger output = input;
+    
+    if (input == 0) {
+        output = rawCount - 1;
+    } else if(input == rawCount + 1) {
+        output = 0;
+    } else {
+        output--;
+    }
+    return output;
+}
+
+- (void)resetAutoPlayTimer {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    if (_autoPlayInterval) {
+        [self performSelector:@selector(triggerNextPage:) withObject:nil afterDelay:_autoPlayInterval inModes:@[NSRunLoopCommonModes]];
+    }
+}
+
+- (void)triggerNextPage:(id)sender {
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:self.collectionView.contentOffset];
+    NSUInteger totalCount = [self collectionView:self.collectionView numberOfItemsInSection:0];
+    
+    if (totalCount == 0) {
+        return ;
+    }
+    
+    NSUInteger currentIdx = indexPath.item;
+    if (currentIdx == totalCount - 1) {
+        currentIdx = 0;
+    } else {
+        currentIdx++;
+    }
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:currentIdx inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
+    
+    [self resetAutoPlayTimer];
 }
 
 @end

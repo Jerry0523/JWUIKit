@@ -8,9 +8,13 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface JWPageControl : UIPageControl
 
-@property (strong, nonatomic) UIImage *activeImage;
-@property (strong, nonatomic) UIImage *inactiveImage;
+@property (strong, nonatomic, nullable) UIImage *activeImage;
+@property (strong, nonatomic, nullable) UIImage *inactiveImage;
 
 @end
+
+NS_ASSUME_NONNULL_END

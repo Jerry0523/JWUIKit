@@ -9,7 +9,7 @@
 @import UIKit;
 #import "JWPageControl.h"
 
-NS_ASSUME_NONNULL_BEGIN;
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol JWPageViewDataSource, JWPageViewDelegate;
 
@@ -21,9 +21,10 @@ NS_ASSUME_NONNULL_BEGIN;
 @property (weak, nonatomic, nullable) id<JWPageViewDataSource> dataSource;
 @property (weak, nonatomic, nullable) id<JWPageViewDelegate> delegate;
 
-@property (assign, nonatomic) BOOL cycled;
-@property (assign, nonatomic) BOOL autoPlay;
-@property (assign, nonatomic) BOOL vertical;
+@property (assign, nonatomic) BOOL cycled;//default is YES
+
+@property (assign, nonatomic) NSTimeInterval autoPlayInterval;
+
 
 - (void)reloadData;
 
@@ -46,4 +47,4 @@ NS_ASSUME_NONNULL_BEGIN;
 
 @end
 
-NS_ASSUME_NONNULL_END;
+NS_ASSUME_NONNULL_END

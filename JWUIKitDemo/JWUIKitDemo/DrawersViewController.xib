@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-VZ-BHm">
-                            <rect key="frame" x="40" y="20" width="239" height="29"/>
+                            <rect key="frame" x="40" y="30" width="239" height="29"/>
                             <segments>
                                 <segment title="Bottom"/>
                                 <segment title="Right"/>
@@ -36,44 +36,44 @@
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                         </segmentedControl>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-Kv-dRx">
-                            <rect key="frame" x="230" y="67" width="51" height="31"/>
+                            <rect key="frame" x="230" y="77" width="51" height="31"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="onTintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw Shadow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dae-kG-PFm">
-                            <rect key="frame" x="40" y="73" width="99.5" height="19.5"/>
+                            <rect key="frame" x="40" y="83" width="99.5" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-wB-yp1">
-                            <rect key="frame" x="230" y="112" width="51" height="31"/>
+                            <rect key="frame" x="230" y="122" width="51" height="31"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="onTintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDr-ys-3w8">
-                            <rect key="frame" x="40" y="117" width="45" height="19.5"/>
+                            <rect key="frame" x="40" y="127" width="45" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7b-aR-U2T">
-                            <rect key="frame" x="230" y="151" width="51" height="31"/>
+                            <rect key="frame" x="230" y="161" width="51" height="31"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="onTintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Window" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-ls-SjS">
-                            <rect key="frame" x="40" y="156" width="83.5" height="19.5"/>
+                            <rect key="frame" x="40" y="166" width="83.5" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w3-R0-2gI">
-                            <rect key="frame" x="90" y="212" width="140" height="140"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w3-R0-2gI" customClass="JWButton">
+                            <rect key="frame" x="80" y="222" width="160" height="44"/>
                             <color key="backgroundColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="140" id="XNG-tw-cHA"/>
-                                <constraint firstAttribute="height" constant="140" id="dxr-n8-4TP"/>
+                                <constraint firstAttribute="width" constant="160" id="XNG-tw-cHA"/>
+                                <constraint firstAttribute="height" constant="44" id="dxr-n8-4TP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Show Drawer">
@@ -81,7 +81,7 @@
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="70"/>
+                                    <integer key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
@@ -103,7 +103,7 @@
                         <constraint firstItem="fi1-Kv-dRx" firstAttribute="trailing" secondItem="W7I-VZ-BHm" secondAttribute="trailing" id="eGB-FU-dWu"/>
                         <constraint firstItem="wRZ-wB-yp1" firstAttribute="trailing" secondItem="W7I-VZ-BHm" secondAttribute="trailing" id="fF9-GW-KnJ"/>
                         <constraint firstItem="vDr-ys-3w8" firstAttribute="leading" secondItem="W7I-VZ-BHm" secondAttribute="leading" id="fzd-DS-m19"/>
-                        <constraint firstItem="W7I-VZ-BHm" firstAttribute="top" secondItem="fmI-Gh-NiL" secondAttribute="top" constant="20" id="nHe-vk-iqp"/>
+                        <constraint firstItem="W7I-VZ-BHm" firstAttribute="top" secondItem="fmI-Gh-NiL" secondAttribute="top" constant="30" id="nHe-vk-iqp"/>
                         <constraint firstAttribute="height" constant="568" id="o27-ZH-OiE"/>
                         <constraint firstItem="dae-kG-PFm" firstAttribute="leading" secondItem="W7I-VZ-BHm" secondAttribute="leading" id="rQs-dd-Tih"/>
                         <constraint firstItem="cSY-ls-SjS" firstAttribute="leading" secondItem="vDr-ys-3w8" secondAttribute="leading" id="ruz-Re-WGx"/>
