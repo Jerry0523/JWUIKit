@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+IB_DESIGNABLE
 @interface JWMicrophoneView : UIView
 
-@property (assign, nonatomic) CGFloat volumn;
+@property (assign, nonatomic) IBInspectable CGFloat volumn;
+@property (assign, nonatomic) IBInspectable CGFloat lineWidth;
 
 @end
 

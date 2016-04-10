@@ -16,6 +16,8 @@ class ToastViewController: UIViewController {
         self.title = "JWUIKitToast"
         self.view.backgroundColor = JWConst.backgroundColor
         
+//        self.navigationController?.navigationBarHidden = true
+        
         let pullRefreshView = JWPullRefreshHeaderView()
         self.view.addSubview(pullRefreshView)
     }

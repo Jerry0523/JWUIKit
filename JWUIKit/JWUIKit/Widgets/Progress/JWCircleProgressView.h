@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, JWCircleProgressStyle){
 @property (assign, nonatomic) CGFloat progress;
 @property (assign, nonatomic) JWCircleProgressStyle style;
 
+@property (assign, nonatomic) CGFloat lineWidth;
 @property (assign, nonatomic) BOOL drawBackground;//default is YES
 
 @end

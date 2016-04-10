@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05072B6C1CB8F20300234EC8 /* JWArrow.h in Headers */ = {isa = PBXBuildFile; fileRef = 05072B6A1CB8F20300234EC8 /* JWArrow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05072B6D1CB8F20300234EC8 /* JWArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 05072B6B1CB8F20300234EC8 /* JWArrow.m */; };
+		05072B701CB908F900234EC8 /* JWPullRefreshHeaderContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05072B6E1CB908F900234EC8 /* JWPullRefreshHeaderContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05072B711CB908F900234EC8 /* JWPullRefreshHeaderContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05072B6F1CB908F900234EC8 /* JWPullRefreshHeaderContentView.m */; };
 		058329951CAC13A000F87BAF /* JWLoadingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 058329931CAC13A000F87BAF /* JWLoadingProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		058329961CAC13A000F87BAF /* JWProgressProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 058329941CAC13A000F87BAF /* JWProgressProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4176E2B1CA8ED7200770F24 /* JWMicrophoneView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E291CA8ED7200770F24 /* JWMicrophoneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +60,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05072B6A1CB8F20300234EC8 /* JWArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWArrow.h; sourceTree = "<group>"; };
+		05072B6B1CB8F20300234EC8 /* JWArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWArrow.m; sourceTree = "<group>"; };
+		05072B6E1CB908F900234EC8 /* JWPullRefreshHeaderContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPullRefreshHeaderContentView.h; sourceTree = "<group>"; };
+		05072B6F1CB908F900234EC8 /* JWPullRefreshHeaderContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPullRefreshHeaderContentView.m; sourceTree = "<group>"; };
 		058329931CAC13A000F87BAF /* JWLoadingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLoadingProtocol.h; sourceTree = "<group>"; };
 		058329941CAC13A000F87BAF /* JWProgressProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWProgressProtocol.h; sourceTree = "<group>"; };
 		C4176E291CA8ED7200770F24 /* JWMicrophoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMicrophoneView.h; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 			children = (
 				C4176E291CA8ED7200770F24 /* JWMicrophoneView.h */,
 				C4176E2A1CA8ED7200770F24 /* JWMicrophoneView.m */,
+				05072B6A1CB8F20300234EC8 /* JWArrow.h */,
+				05072B6B1CB8F20300234EC8 /* JWArrow.m */,
 			);
 			path = Shape;
 			sourceTree = "<group>";
@@ -140,6 +150,8 @@
 			children = (
 				C427D90C1CB7ACBE005AE31A /* JWPullRefreshHeaderView.h */,
 				C427D90D1CB7ACBE005AE31A /* JWPullRefreshHeaderView.m */,
+				05072B6E1CB908F900234EC8 /* JWPullRefreshHeaderContentView.h */,
+				05072B6F1CB908F900234EC8 /* JWPullRefreshHeaderContentView.m */,
 			);
 			path = PullRefresh;
 			sourceTree = "<group>";
@@ -319,6 +331,8 @@
 				058329951CAC13A000F87BAF /* JWLoadingProtocol.h in Headers */,
 				C427D90E1CB7ACBE005AE31A /* JWPullRefreshHeaderView.h in Headers */,
 				C427D9051CB7A176005AE31A /* JWPageControl.h in Headers */,
+				05072B6C1CB8F20300234EC8 /* JWArrow.h in Headers */,
+				05072B701CB908F900234EC8 /* JWPullRefreshHeaderContentView.h in Headers */,
 				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
 				C4CD17C71C9FEE2400187997 /* UIImage+JWSub.h in Headers */,
 				C4176E6A1CAA80FA00770F24 /* UIImage+JWColor.h in Headers */,
@@ -408,6 +422,8 @@
 				C4176E6B1CAA80FA00770F24 /* UIImage+JWColor.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */,
 				C4CD18071CA0F1B800187997 /* JWFPSLabel.m in Sources */,
+				05072B711CB908F900234EC8 /* JWPullRefreshHeaderContentView.m in Sources */,
+				05072B6D1CB8F20300234EC8 /* JWArrow.m in Sources */,
 				C4F9D4A91CA8D9DE00F08726 /* JWBarLoadingView.m in Sources */,
 				C4F9D4A71CA8D9DE00F08726 /* JWRadarLoadingView.m in Sources */,
 				C4176E671CAA61A400770F24 /* JWButton.m in Sources */,

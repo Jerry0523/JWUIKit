@@ -7,7 +7,17 @@
 //
 
 @import UIKit;
+#import "JWPullRefreshHeaderContentView.h"
+
+
+typedef NS_ENUM(NSInteger, JWPullRefreshState) {
+    JWPullRefreshStateDefault,
+    JWPullRefreshStateRefreshing
+};
 
 @interface JWPullRefreshHeaderView : UIView
+
+@property (assign, nonatomic) JWPullRefreshState state;
+@property (strong, nonatomic) JWPullRefreshHeaderContentView *contentView;
 
 @end

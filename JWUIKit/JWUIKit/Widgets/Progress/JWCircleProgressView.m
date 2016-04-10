@@ -86,13 +86,20 @@ JWUIKitInitialze {
     if (_style != style) {
         _style = style;
         if (style == JWCircleProgressStyleDefault) {
-            _layer.lineWidth = 4.0f;
             _layer.lineCap = kCALineCapRound;
             _layer.strokeEnd = 0;
+            self.lineWidth = 4.0f;
         } else if(style == JWCircleProgressStylePie) {
-            _layer.lineWidth = 1.0f;
+            self.lineWidth = 1.0f;
         }
         [self setupLayerColor];
+    }
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth {
+    if (_lineWidth != lineWidth) {
+        _lineWidth = lineWidth;
+        _layer.lineWidth = lineWidth;
     }
 }
 

@@ -41,12 +41,14 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWPageControl.h>
 //Shapes
 #import <JWUIKit/JWMicrophoneView.h>
+#import <JWUIKit/JWArrow.h>
 //Drawer
 #import <JWUIKit/JWDrawer.h>
 //Toast
 #import <JWUIKit/JWToast.h>
 //PullRefresh
 #import <JWUIKit/JWPullRefreshHeaderView.h>
+#import <JWUIKit/JWPullRefreshHeaderContentView.h>
 
 
 

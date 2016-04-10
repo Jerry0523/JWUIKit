@@ -21,7 +21,6 @@
 
 JWUIKitInitialze {
     _microphoneLayer = [CAShapeLayer layer];
-    _microphoneLayer.lineWidth = 4.0;
     _microphoneLayer.fillColor = [UIColor clearColor].CGColor;
     _microphoneLayer.lineCap = kCALineCapRound;
     
@@ -29,13 +28,11 @@ JWUIKitInitialze {
     
     _volumeLayer = [CAShapeLayer layer];
     _volumeLayer.fillColor = [UIColor clearColor].CGColor;
+    
+    self.lineWidth = 4.0;
 
     [self.layer addSublayer:_volumeLayer];
-    if(!self.tintColor) {
-        self.tintColor = [UIColor colorWithRed: 0 green: 122.0 / 255.0 blue: 1.0 alpha: 1];
-    } else {
-        [self setLayerColor];
-    }
+    [self setLayerColor];
 }
 
 - (void)layoutSubviews {
@@ -43,19 +40,25 @@ JWUIKitInitialze {
 }
 
 - (CGSize)intrinsicContentSize {
-    return CGSizeMake(100, 100);
+    return CGSizeMake(80, 80);
 }
 
-#pragma mark - Setter & Getter
-- (void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor:tintColor];
+- (void)tintColorDidChange {
     [self setLayerColor];
 }
 
+#pragma mark - Setter & Getter
 - (void)setVolumn:(CGFloat)volumn {
     if (_volumn != volumn) {
         _volumn = JWValueConformTo(volumn, 0, 1);
         _volumeLayer.fillColor = [self.tintColor colorWithAlphaComponent:volumn].CGColor;
+    }
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth {
+    if (_lineWidth != lineWidth) {
+        _lineWidth = lineWidth;
+        _microphoneLayer.lineWidth = lineWidth;
     }
 }
 
