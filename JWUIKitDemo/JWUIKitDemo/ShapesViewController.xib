@@ -42,19 +42,6 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="rZJ-eI-wMm" customClass="JWArrow">
-                            <rect key="frame" x="22" y="131" width="80" height="80"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                    <real key="value" value="3"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="direction">
-                                    <integer key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -69,7 +56,7 @@
                 <constraint firstItem="BJ7-Wg-MJ8" firstAttribute="centerX" secondItem="f6y-YH-kBz" secondAttribute="centerX" id="oII-q5-7WX"/>
                 <constraint firstItem="BJ7-Wg-MJ8" firstAttribute="leading" secondItem="f6y-YH-kBz" secondAttribute="leading" id="vKG-yA-jMz"/>
             </constraints>
-            <point key="canvasLocation" x="314" y="356"/>
+            <point key="canvasLocation" x="51" y="147"/>
         </scrollView>
     </objects>
 </document>

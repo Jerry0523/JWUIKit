@@ -63,4 +63,10 @@ JWUIKitInitialze {
     
 }
 
+#pragma mark - Setter & Getter
+- (void)setIsAnimating:(BOOL)isAnimating {
+    _isAnimating = isAnimating;
+    self.hidden = !isAnimating;
+}
+
 @end

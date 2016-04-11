@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWAlgorithm.h>
 #import <JWUIKit/JWLoadingProtocol.h>
 #import <JWUIKit/JWProgressProtocol.h>
+#import <JWUIKit/JWPullRefreshContentViewProtocol.h>
 
 //Labels
 #import <JWUIKit/JWFPSLabel.h>

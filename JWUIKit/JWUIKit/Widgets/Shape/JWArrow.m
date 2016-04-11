@@ -14,17 +14,17 @@
 
 #define kConvertByRatio(value, dest) JWConvertValue(value, 100.0f, dest)
 
-@implementation JWArrow
-
-+ (Class)layerClass {
-    return [CAShapeLayer class];
+@implementation JWArrow {
+    CAShapeLayer *_arrowLayer;
 }
 
 JWUIKitInitialze {
-    CAShapeLayer *shapeLayer = self.layer;
-    shapeLayer.fillColor = [UIColor clearColor].CGColor;
-    shapeLayer.lineCap = kCALineCapRound;
-    shapeLayer.lineJoin = kCALineJoinRound;
+    _arrowLayer = [CAShapeLayer layer];
+    _arrowLayer.fillColor = [UIColor clearColor].CGColor;
+    _arrowLayer.lineCap = kCALineCapRound;
+    _arrowLayer.lineJoin = kCALineJoinRound;
+    
+    [self.layer addSublayer:_arrowLayer];
     
     self.lineWidth = 4.0;
     [self setLayerColor];
@@ -46,7 +46,7 @@ JWUIKitInitialze {
 - (void)setLineWidth:(CGFloat)lineWidth {
     if (_lineWidth != lineWidth) {
         _lineWidth = lineWidth;
-        ((CAShapeLayer*)self.layer).lineWidth = lineWidth;
+        _arrowLayer.lineWidth = lineWidth;
     }
 }
 
@@ -67,16 +67,20 @@ JWUIKitInitialze {
                 angle = M_PI_2;
                 break;
         }
-        self.transform = CGAffineTransformMakeRotation(angle);
+        [UIView animateWithDuration:.25 animations:^{
+            self.transform = CGAffineTransformMakeRotation(angle);
+        }];
     }
 }
 
 #pragma mark - Private
 - (void)setLayerColor {
-    ((CAShapeLayer*)self.layer).strokeColor = self.tintColor.CGColor;
+    _arrowLayer.strokeColor = self.tintColor.CGColor;
 }
 
 - (void)layoutLayers {
+    _arrowLayer.frame = self.bounds;
+    
     CGFloat layerSize = MIN(self.w, self.h);
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     
@@ -86,7 +90,7 @@ JWUIKitInitialze {
     [bezierPath moveToPoint:CGPointMake(kConvertByRatio(50, layerSize), kConvertByRatio(2, layerSize))];
     [bezierPath addLineToPoint:CGPointMake(kConvertByRatio(80, layerSize), kConvertByRatio(36, layerSize))];
     
-    ((CAShapeLayer*)self.layer).path = bezierPath.CGPath;
+    _arrowLayer.path = bezierPath.CGPath;
 }
 
 @end

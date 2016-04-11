@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JWProgressProtocol.h"
+#import "JWPullRefreshContentViewProtocol.h"
 
-@interface JWPullRefreshHeaderContentView : UIView<JWProgressProtocol>
-
-- (void)beginLoading;
-- (void)stopLoading;
+@interface JWPullRefreshHeaderContentView : UIView<JWPullRefreshContentViewProtocol>
 
 @end

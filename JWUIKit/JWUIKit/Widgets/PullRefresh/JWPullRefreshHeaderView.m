@@ -23,10 +23,9 @@
 
 JWUIKitInitialze {
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.backgroundColor = [UIColor lightGrayColor];
     self.clipsToBounds = YES;
-    
-    self.contentView = [[JWPullRefreshHeaderContentView alloc] initWithFrame:CGRectMake(0, self.h - 80, self.w, 80)];
+    self.backgroundColor = JWColor(230, 230, 230, 1.0);
+    self.contentView = [[JWPullRefreshHeaderContentView alloc] initWithFrame:CGRectMake(0, self.h - 60, self.w, 60)];
     [self addSubview:self.contentView];
     
 }
@@ -90,11 +89,11 @@ JWUIKitInitialze {
             }
                 break;
             case JWPullRefreshStateRefreshing: {
-                [self.contentView beginLoading];
+                [self.contentView startLoading];
                 [self.scrollView removeObserver:self forKeyPath:@"contentInset"];
                 [UIView animateWithDuration:0.25f animations:^{
                     
-                    UIEdgeInsets newInset = UIEdgeInsetsMake(_scrollViewOriginalInset.top + 80, _scrollViewOriginalInset.left, _scrollViewOriginalInset.bottom, _scrollViewOriginalInset.right);
+                    UIEdgeInsets newInset = UIEdgeInsetsMake(_scrollViewOriginalInset.top + 70.0f, _scrollViewOriginalInset.left, _scrollViewOriginalInset.bottom, _scrollViewOriginalInset.right);
                     self.scrollView.contentInset = newInset;
                     
                     CGPoint newOffset = self.scrollView.contentOffset;
@@ -114,13 +113,16 @@ JWUIKitInitialze {
 
 #pragma mark - Private
 - (void)scrollViewContentOffsetDidChange:(NSDictionary*)change {
+    if (self.state == JWPullRefreshStateRefreshing) {
+        return;
+    }
     CGFloat offsetY = -self.scrollView.contentOffset.y - self.scrollViewOriginalInset.top;
     if (offsetY < 0) {
         return;
     }
     
     self.frame = CGRectMake(0, -offsetY, self.scrollView.w,  offsetY);
-    [self.contentView setProgress:self.h / 120.0f];
+    [self.contentView setProgress:self.h / 70.0f];
 }
 
 - (void)scrollViewContentInsetDidChange:(NSDictionary*)change {
@@ -133,7 +135,7 @@ JWUIKitInitialze {
             return;
         }
          CGFloat offsetY = - (self.scrollView.contentInset.top + self.scrollView.contentOffset.y);
-        if (offsetY >= 120) {
+        if (offsetY >= 70.0f) {
             self.state = JWPullRefreshStateRefreshing;
         } else {
             self.state = JWPullRefreshStateDefault;
