@@ -11,7 +11,7 @@
 #import "JWUIKitMacro.h"
 #import "JWAlgorithm.h"
 #import "UIView+JWFrame.h"
-#import "UIImage+JWSub.h"
+#import "UIImage+JWTransform.h"
 
 @interface JWAnimatedImageView()
 

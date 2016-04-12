@@ -18,7 +18,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWAlgorithm.h>
 #import <JWUIKit/JWLoadingProtocol.h>
 #import <JWUIKit/JWProgressProtocol.h>
-#import <JWUIKit/JWPullRefreshContentViewProtocol.h>
+#import <JWUIKit/JWRefreshContentViewProtocol.h>
 
 //Labels
 #import <JWUIKit/JWFPSLabel.h>
@@ -41,15 +41,15 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWPageView.h>
 #import <JWUIKit/JWPageControl.h>
 //Shapes
+#import <JWUIKit/JWSimpleShape.h>
 #import <JWUIKit/JWMicrophoneView.h>
-#import <JWUIKit/JWArrow.h>
 //Drawer
 #import <JWUIKit/JWDrawer.h>
 //Toast
 #import <JWUIKit/JWToast.h>
-//PullRefresh
-#import <JWUIKit/JWPullRefreshHeaderView.h>
-#import <JWUIKit/JWPullRefreshHeaderContentView.h>
+//Refresh
+#import <JWUIKit/JWRefreshHeaderView.h>
+#import <JWUIKit/JWRefreshHeaderContentView.h>
 
 
 

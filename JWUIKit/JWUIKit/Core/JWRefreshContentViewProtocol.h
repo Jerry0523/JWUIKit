@@ -1,5 +1,5 @@
 //
-//  JWPullRefreshContentViewProtocol.h
+//  JWRefreshContentViewProtocol.h
 //  JWUIKit
 //
 //  Created by Jerry on 16/4/11.
@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol JWPullRefreshContentViewProtocol <NSObject>
+@protocol JWRefreshContentViewProtocol <NSObject>
+
++ (CGFloat)preferredHeight;
 
 @optional
 - (void)setProgress:(CGFloat)progress;

@@ -1,39 +1,50 @@
 //
-//  JWPullRefreshHeaderView.m
+//  JWRefreshHeaderView.m
 //  JWUIKit
 //
 //  Created by Jerry on 16/4/8.
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import "JWPullRefreshHeaderView.h"
+#import "JWRefreshHeaderView.h"
+#import "JWRefreshHeaderContentView.h"
 //Core
 #import "JWUIKitMacro.h"
 #import "UIView+JWFrame.h"
 
-@interface JWPullRefreshHeaderView()
+@interface JWRefreshHeaderView()
 
 @property (weak, nonatomic) UIScrollView *scrollView;
-@property (weak, nonatomic) UIPanGestureRecognizer *panGestureRecognizer;
 @property (assign, nonatomic) UIEdgeInsets scrollViewOriginalInset;
+@property (weak, nonatomic) UIPanGestureRecognizer *panGestureRecognizer;
+
+@property (assign, nonatomic) JWPullRefreshState state;
+@property (strong, nonatomic) UIView<JWRefreshContentViewProtocol> *contentView;
+
 
 @end
 
-@implementation JWPullRefreshHeaderView
+@implementation JWRefreshHeaderView
 
 JWUIKitInitialze {
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.clipsToBounds = YES;
     self.backgroundColor = JWColor(230, 230, 230, 1.0);
-    self.contentView = [[JWPullRefreshHeaderContentView alloc] initWithFrame:CGRectMake(0, self.h - 60, self.w, 60)];
-    [self addSubview:self.contentView];
-    
+}
+
++ (instancetype)headerWithRefreshingBlock:(JWRefreshingBlock)refreshingBlock {
+    JWRefreshHeaderView *refreshView = [JWRefreshHeaderView new];
+    refreshView.refreshingBlock = refreshingBlock;
+    return refreshView;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
     if (newSuperview && ![newSuperview isKindOfClass:[UIScrollView class]]) {
         return;
+    }
+    if (!self.contentView) {
+        self.contentViewClass = NSStringFromClass([JWRefreshHeaderContentView class]);
     }
     [self removeKVO];
     if (newSuperview) {
@@ -42,6 +53,20 @@ JWUIKitInitialze {
         self.panGestureRecognizer = self.scrollView.panGestureRecognizer;
         [self registKVO];
     }
+}
+
+#pragma mark - Public
+- (void)startRefreshing {
+    self.state = JWPullRefreshStateRefreshing;
+}
+
+- (void)endRefreshing {
+    [self endRefreshingWithDelay:0];
+}
+
+- (void)endRefreshingWithDelay:(NSTimeInterval)delay {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    [self performSelector:@selector(didEndRefreshing) withObject:nil afterDelay:delay];
 }
 
 #pragma mark - KVO
@@ -69,11 +94,35 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Setter & Getter
+- (void)setContentView:(UIView<JWRefreshContentViewProtocol> *)contentView {
+    if (_contentView != contentView) {
+        [_contentView removeFromSuperview];
+        _contentView = contentView;
+        [self addSubview:self.contentView];
+        [self setupContentViewByStyleChange];
+    }
+}
+
+- (void)setContentViewClass:(NSString *)contentViewClass {
+    if (![_contentViewClass isEqualToString:contentViewClass]) {
+        _contentViewClass = contentViewClass;
+        Class contentViewCls = NSClassFromString(contentViewClass);
+        if (contentViewCls) {
+            self.contentView = [[contentViewCls alloc] initWithFrame:CGRectMake(0, 0, self.w, [contentViewCls preferredHeight])];
+        }
+    }
+}
+
+- (void)setStyle:(JWPullRefreshStyle)style {
+    _style = style;
+    [self setupContentViewByStyleChange];
+}
+
 - (void)setState:(JWPullRefreshState)state {
     if (_state != state) {
         _state = state;
         switch (state) {
-            case JWPullRefreshStateDefault: {
+            case JWPullRefreshStateIdle: {
                 [self.contentView stopLoading];
                 [self.scrollView removeObserver:self forKeyPath:@"contentInset"];
                 [UIView animateWithDuration:0.25f animations:^{
@@ -93,17 +142,18 @@ JWUIKitInitialze {
                 [self.scrollView removeObserver:self forKeyPath:@"contentInset"];
                 [UIView animateWithDuration:0.25f animations:^{
                     
-                    UIEdgeInsets newInset = UIEdgeInsetsMake(_scrollViewOriginalInset.top + 70.0f, _scrollViewOriginalInset.left, _scrollViewOriginalInset.bottom, _scrollViewOriginalInset.right);
+                    UIEdgeInsets newInset = UIEdgeInsetsMake(_scrollViewOriginalInset.top + self.contentView.h, _scrollViewOriginalInset.left, _scrollViewOriginalInset.bottom, _scrollViewOriginalInset.right);
                     self.scrollView.contentInset = newInset;
                     
                     CGPoint newOffset = self.scrollView.contentOffset;
                     newOffset.y = - newInset.top;
+                    
                     self.scrollView.contentOffset = newOffset;
                 } completion:^(BOOL finished) {
                     [self.scrollView addObserver:self forKeyPath:@"contentInset" options:NSKeyValueObservingOptionNew context:nil];
-                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        self.state = JWPullRefreshStateDefault;
-                    });
+                    if (self.refreshingBlock) {
+                        self.refreshingBlock();
+                    }
                 }];
             }
                 break;
@@ -112,17 +162,30 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Private
-- (void)scrollViewContentOffsetDidChange:(NSDictionary*)change {
-    if (self.state == JWPullRefreshStateRefreshing) {
-        return;
+- (void)setupContentViewByStyleChange {
+    CGFloat viewHeight = [self.contentView.class preferredHeight];
+    if (self.style == JWPullRefreshStyleStill) {
+        self.contentView.frame = CGRectMake(0, 0, self.w, viewHeight);
+        self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    } else if(self.style == JWPullRefreshStyleFollow) {
+        self.contentView.frame = CGRectMake(0, self.h - viewHeight, self.w, viewHeight);
+        self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     }
+}
+
+- (void)didEndRefreshing {
+    self.state = JWPullRefreshStateIdle;
+}
+
+- (void)scrollViewContentOffsetDidChange:(NSDictionary*)change {
     CGFloat offsetY = -self.scrollView.contentOffset.y - self.scrollViewOriginalInset.top;
     if (offsetY < 0) {
         return;
     }
-    
     self.frame = CGRectMake(0, -offsetY, self.scrollView.w,  offsetY);
-    [self.contentView setProgress:self.h / 70.0f];
+    if (self.state == JWPullRefreshStateIdle) {
+        [self.contentView setProgress:self.h / self.contentView.h];
+    }
 }
 
 - (void)scrollViewContentInsetDidChange:(NSDictionary*)change {
@@ -135,13 +198,12 @@ JWUIKitInitialze {
             return;
         }
          CGFloat offsetY = - (self.scrollView.contentInset.top + self.scrollView.contentOffset.y);
-        if (offsetY >= 70.0f) {
+        if (offsetY >= self.contentView.h) {
             self.state = JWPullRefreshStateRefreshing;
         } else {
-            self.state = JWPullRefreshStateDefault;
+            self.state = JWPullRefreshStateIdle;
         }
     }
 }
-
 
 @end

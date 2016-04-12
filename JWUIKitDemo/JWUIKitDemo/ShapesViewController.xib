@@ -32,14 +32,38 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-wu-3f1" customClass="JWArrow">
+                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-wu-3f1" customClass="JWSimpleShape">
                             <rect key="frame" x="120" y="18" width="80" height="80"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                    <real key="value" value="3"/>
+                                    <real key="value" value="4"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="type" value="arrow"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="subType" value="right"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-rk-VHU" customClass="JWSimpleShape">
+                            <rect key="frame" x="272" y="18" width="40" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="type" value="heart"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="T3n-Kr-jP8" customClass="JWSimpleShape">
+                            <rect key="frame" x="224" y="18" width="40" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="type" value="yes"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>

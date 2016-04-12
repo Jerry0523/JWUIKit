@@ -6,7 +6,9 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
+#import "JWUIKitMacro.h"
 #import "UIImage+JWColor.h"
+#import "UIImage+JWTransform.h"
 
 @implementation UIImage (JWColor)
 
@@ -26,35 +28,29 @@
 }
 
 - (UIColor*)mainColor {
-    int bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
-    CGContextRef context = NULL;
+    CGImageRef cgRef = self.CGImage;
     CGSize thumbSize = self.size;
     if (thumbSize.width > 50 || thumbSize.height > 50) {
         thumbSize = CGSizeMake(50, 50);
-        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-        context = CGBitmapContextCreate(NULL,
-                                        thumbSize.width,
-                                        thumbSize.height,
-                                        8,//bits per component
-                                        thumbSize.width * 4,
-                                        colorSpace,
-                                        bitmapInfo);
-        
-        CGRect drawRect = CGRectMake(0, 0, thumbSize.width, thumbSize.height);
-        CGImageRef cgRef;
-#if __IPHONE_OS_VERSION_MIN_REQUIRED
-        cgRef = self.CGImage;
-#else
-        cgRef = [self CGImageForProposedRect:NULL
-                                     context:nil
-                                       hints:nil];
-#endif
-        CGContextDrawImage(context, drawRect, cgRef);
-        CGColorSpaceRelease(colorSpace);
+        UIImage *scaledImage = [self getScaledImage:thumbSize];
+        cgRef = scaledImage.CGImage;
     }
     
-    unsigned char* data = CGBitmapContextGetData (context);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(NULL,
+                                    thumbSize.width,
+                                    thumbSize.height,
+                                    8,
+                                    thumbSize.width * 4,
+                                    colorSpace,
+                                    kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast);
     
+    CGContextDrawImage(context, CGRectMake(0, 0, thumbSize.width, thumbSize.height), cgRef);
+    CGColorSpaceRelease(colorSpace);
+    
+    
+
+    unsigned char* data = CGBitmapContextGetData (context);
     if (data == NULL) {
         CGContextRelease(context);
         return nil;
@@ -64,12 +60,12 @@
     
     for (int x = 0; x < thumbSize.width; x++) {
         for (int y = 0; y < thumbSize.height; y++) {
-            int offset = 4 * (x * y);
+            int offset = 4 * (thumbSize.width * x + y);
             int red = data[offset];
             int green = data[offset + 1];
             int blue = data[offset + 2];
             int alpha =  data[offset + 3];
-            NSArray *clr=@[@(red), @(green), @(blue), @(alpha)];
+            NSArray *clr = @[@(red), @(green), @(blue), @(alpha)];
             [cls addObject:clr];
         }
     }
@@ -77,21 +73,21 @@
     CGContextRelease(context);
     
     NSEnumerator *enumerator = [cls objectEnumerator];
-    NSArray *curColor = nil;
     
-    NSArray *MaxColor = nil;
-    NSUInteger MaxCount = 0;
+    NSArray *curColor = nil;
+    NSArray *maxColor = nil;
+    NSUInteger maxCount = 0;
     
     while ( (curColor = [enumerator nextObject]) != nil ) {
         NSUInteger tmpCount = [cls countForObject:curColor];
-        if ( tmpCount < MaxCount ) {
+        if ( tmpCount < maxCount ) {
             continue;
         }
-        MaxCount = tmpCount;
-        MaxColor = curColor;
+        maxCount = tmpCount;
+        maxColor = curColor;
     }
     
-    return [UIColor colorWithRed:([MaxColor[0] intValue]/255.0f) green:([MaxColor[1] intValue]/255.0f) blue:([MaxColor[2] intValue]/255.0f) alpha:([MaxColor[3] intValue] * .7 / 255.0f)];
+    return JWColor([maxColor[0] intValue], [maxColor[1] intValue], [maxColor[2] intValue], [maxColor[3] intValue] / 255.0f);
 }
 
 @end

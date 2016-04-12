@@ -30,7 +30,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-3S-ah3" userLabel="JWTickNumberLabel" customClass="JWTickNumberLabel">
-                            <rect key="frame" x="139" y="61" width="42" height="20.5"/>
+                            <rect key="frame" x="44.5" y="61" width="231.5" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="F8k-3x-R9J"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="zKd-kw-uXt"/>

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JWPullRefreshContentViewProtocol.h"
+#import "JWRefreshContentViewProtocol.h"
 
-@interface JWPullRefreshHeaderContentView : UIView<JWPullRefreshContentViewProtocol>
+@interface JWRefreshHeaderContentView : UIView<JWRefreshContentViewProtocol>
 
 @end

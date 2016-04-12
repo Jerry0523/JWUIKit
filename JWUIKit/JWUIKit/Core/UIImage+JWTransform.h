@@ -1,5 +1,5 @@
 //
-//  UIImage+JWSub.h
+//  UIImage+JWTransfrom.h
 //  JWUIKit
 //
 //  Created by Jerry on 16/3/21.
@@ -8,9 +8,9 @@
 
 @import UIKit;
 
-@interface UIImage (JWSub)
+@interface UIImage (JWTransfrom)
 
 -(UIImage*)getSubImage:(CGRect)rect;
--(UIImage*)scaleToSize:(CGSize)size;
+-(UIImage*)getScaledImage:(CGSize)size;
 
 @end
