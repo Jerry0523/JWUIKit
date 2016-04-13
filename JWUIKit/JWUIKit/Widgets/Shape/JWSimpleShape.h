@@ -15,9 +15,8 @@ IB_DESIGNABLE
 
 @property (assign, nonatomic) IBInspectable CGFloat lineWidth;
 
-@property (assign, nonatomic) IBInspectable NSString *type;
-
-@property (assign, nonatomic) IBInspectable NSString *subType;
+@property (strong, nonatomic) IBInspectable NSString *type;
+@property (strong, nonatomic) IBInspectable NSString *subType;
 
 - (void)beginSimpleAnimation;
 
@@ -26,10 +25,17 @@ IB_DESIGNABLE
 CA_EXTERN NSString *const JWSimpleShapeTypeYes;
 CA_EXTERN NSString *const JWSimpleShapeTypeArrow;
 CA_EXTERN NSString *const JWSimpleShapeTypeHeart;
+CA_EXTERN NSString *const JWSimpleShapeTypePentastar;
+
 
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowTop;
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowBottom;
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowLeft;
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowRight;
+
+CA_EXTERN NSString *const JWSimpleShapeSubTypeHeartFilled;
+
+CA_EXTERN NSString *const JWSimpleShapeSubTypePentastarFilled;
+CA_EXTERN NSString *const JWSimpleShapeSubTypePentastarFilledHalf;
 
 NS_ASSUME_NONNULL_END
