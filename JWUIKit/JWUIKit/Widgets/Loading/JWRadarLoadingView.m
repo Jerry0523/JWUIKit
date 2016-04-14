@@ -43,8 +43,6 @@
     }
     self.isAnimating = YES;
     
-    [CATransaction begin];
-    
     CABasicAnimation *centerCircleAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     
     centerCircleAnimation.duration = self.circleAnimationDuration;
@@ -83,8 +81,6 @@
         
         [ringLayer addAnimation:groupAnimation forKey:nil];
     }];
-    
-    [CATransaction commit];
 }
 
 - (void)stopAnimating {

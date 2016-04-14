@@ -41,8 +41,6 @@
         return;
     }
     self.isAnimating = YES;
-    
-    [CATransaction begin];
     CGFloat barDuration = self.duration;
     CFTimeInterval currentMediaTime = CACurrentMediaTime();
     
@@ -81,8 +79,6 @@
             [bar addAnimation:groupAnimation forKey:nil];
         }
     }];
-    
-    [CATransaction commit];
 }
 
 - (void)stopAnimating {

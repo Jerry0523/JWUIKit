@@ -36,12 +36,16 @@ class WidgetsListViewController: UIViewController, UICollectionViewDelegate, UIC
         
         self.navigationItem.titleView = titleView
         
+        let padding = CGFloat(JWConvertValue(10, 375, Float(self.view.frame.width)))
+        let itemSize = CGFloat(JWConvertValue(80, 375, Float(self.view.frame.width)))
+        
         let collectionViewFlowlayout = UICollectionViewFlowLayout()
         collectionViewFlowlayout.scrollDirection = .Vertical
-        collectionViewFlowlayout.minimumLineSpacing = 10
-        collectionViewFlowlayout.minimumInteritemSpacing = 10
-        collectionViewFlowlayout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10)
-        collectionViewFlowlayout.itemSize = CGSizeMake(80, 80)
+        collectionViewFlowlayout.minimumLineSpacing = padding
+        collectionViewFlowlayout.minimumInteritemSpacing = padding
+        collectionViewFlowlayout.sectionInset = UIEdgeInsetsMake(padding, padding, 0, padding)
+        
+        collectionViewFlowlayout.itemSize = CGSizeMake(itemSize, itemSize)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: collectionViewFlowlayout)
         collectionView.alwaysBounceVertical = true

@@ -14,6 +14,7 @@ IB_DESIGNABLE
 @interface JWSimpleShape : UIView
 
 @property (assign, nonatomic) IBInspectable CGFloat lineWidth;
+@property (assign, nonatomic) IBInspectable BOOL filled;
 
 @property (strong, nonatomic) IBInspectable NSString *type;
 @property (strong, nonatomic) IBInspectable NSString *subType;
@@ -26,6 +27,7 @@ CA_EXTERN NSString *const JWSimpleShapeTypeYes;
 CA_EXTERN NSString *const JWSimpleShapeTypeArrow;
 CA_EXTERN NSString *const JWSimpleShapeTypeHeart;
 CA_EXTERN NSString *const JWSimpleShapeTypePentastar;
+CA_EXTERN NSString *const JWSimpleShapeTypeSmile;
 
 
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowTop;
@@ -33,9 +35,6 @@ CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowBottom;
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowLeft;
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowRight;
 
-CA_EXTERN NSString *const JWSimpleShapeSubTypeHeartFilled;
-
-CA_EXTERN NSString *const JWSimpleShapeSubTypePentastarFilled;
-CA_EXTERN NSString *const JWSimpleShapeSubTypePentastarFilledHalf;
+CA_EXTERN NSString *const JWSimpleShapeSubTypePentastarHalf;
 
 NS_ASSUME_NONNULL_END

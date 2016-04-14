@@ -36,13 +36,11 @@
         rotationAnimation.keyTimes = @[@(0), @(0.5f), @(1)];
         rotationAnimation.repeatCount = INFINITY;
         
-        [CATransaction begin];
         CFTimeInterval currentMediaTime = CACurrentMediaTime();
         [_dotViews enumerateObjectsUsingBlock:^(CAShapeLayer *dotLayer, NSUInteger idx, BOOL *stop) {
             rotationAnimation.beginTime = currentMediaTime + 0.1f * idx;
             [dotLayer addAnimation:rotationAnimation forKey:nil];
         }];
-        [CATransaction commit];
     } else if(self.style == JWDotLoadingStyleLine) {
         CAKeyframeAnimation* rotationAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
         rotationAnimation.duration = duration;
@@ -52,14 +50,11 @@
                                      [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(self.w, 0, 0)],];
         rotationAnimation.keyTimes = @[@(0), @(0.3f), @(0.7), @(1)];
         rotationAnimation.repeatCount = INFINITY;
-        
-        [CATransaction begin];
         CFTimeInterval currentMediaTime = CACurrentMediaTime();
         [_dotViews enumerateObjectsUsingBlock:^(CAShapeLayer *dotLayer, NSUInteger idx, BOOL *stop) {
             rotationAnimation.beginTime = currentMediaTime + 0.1f * idx;
             [dotLayer addAnimation:rotationAnimation forKey:nil];
         }];
-        [CATransaction commit];
     }
 }
 

@@ -69,15 +69,11 @@ JWUIKitInitialze {
         if (self.style == JWCircleProgressStyleDefault) {
             _layer.strokeEnd = _progress;
         } else {
-            [CATransaction begin];
-            [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-            
             CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
             pathAnimation.fromValue = (__bridge id)(_layer.path);
             [self setupShape];
             pathAnimation.toValue = (__bridge id)(_layer.path);
             [_layer addAnimation:pathAnimation forKey:nil];
-            [CATransaction commit];
         }
     }
 }

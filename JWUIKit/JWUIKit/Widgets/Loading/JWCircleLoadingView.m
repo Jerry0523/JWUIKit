@@ -115,9 +115,6 @@
         return ;
     }
     self.isAnimating = YES;
-    
-    [CATransaction begin];
-    
     NSTimeInterval duration = 1.5f;
     if (self.style == JWCircleLoadingStyleCumulative) {
         CAKeyframeAnimation *strokeStartAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeStart"];
@@ -153,8 +150,6 @@
         
         [_gradientLayer addAnimation:rotationAnimation forKey:nil];
     }
-    
-    [CATransaction commit];
 }
 
 - (void)stopAnimating {

@@ -211,14 +211,12 @@ JWUIKitInitialze {
                 imageView.alpha = 0;
                 imageView.frame = [slicesRectArray[idx] CGRectValue];
                 [sliceContainer addSubview:imageView];
-                [CATransaction begin];
                 CABasicAnimation *mAnimation = fadeAnimation.copy;
                 mAnimation.beginTime = currentMediaTime + itemDuration * idx;
                 mAnimation.duration = itemDuration;
                 mAnimation.fillMode = kCAFillModeForwards;
                 mAnimation.removedOnCompletion = NO;
                 [imageView.layer addAnimation:mAnimation forKey:nil];
-                [CATransaction commit];
             }];
             
             dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, itemDuration * imagesArray.count * NSEC_PER_SEC);

@@ -16,15 +16,14 @@ NSString *const JWSimpleShapeTypeYes = @"yes";
 NSString *const JWSimpleShapeTypeArrow = @"arrow";
 NSString *const JWSimpleShapeTypeHeart = @"heart";
 NSString *const JWSimpleShapeTypePentastar = @"pentastar";
+NSString *const JWSimpleShapeTypeSmile = @"smile";
 
 NSString *const JWSimpleShapeSubTypeArrowTop = @"top";
 NSString *const JWSimpleShapeSubTypeArrowBottom = @"bottom";
 NSString *const JWSimpleShapeSubTypeArrowLeft = @"left";
 NSString *const JWSimpleShapeSubTypeArrowRight = @"right";
 
-NSString *const JWSimpleShapeSubTypeHeartFilled = @"filled";
-NSString *const JWSimpleShapeSubTypePentastarFilled = @"filled";
-NSString *const JWSimpleShapeSubTypePentastarFilledHalf = @"filledHalf";
+NSString *const JWSimpleShapeSubTypePentastarFilledHalf = @"half";
 
 #define kConvertByRatio(value, dest) JWConvertValue([value floatValue], 100.0f, dest)
 
@@ -32,7 +31,8 @@ typedef NS_ENUM(NSInteger, JWSimpleShapeMethod) {
     JWSimpleShapeMethodLine = 0,
     JWSimpleShapeMethodMove = 1,
     JWSimpleShapeMethodCurve = 2,
-    JWSimpleShapeMethodQuadCurve = 3
+    JWSimpleShapeMethodQuadCurve = 3,
+    JWSimpleShapeMethodArc  = 4
 };
 
 @implementation JWSimpleShape {
@@ -44,13 +44,14 @@ JWUIKitInitialze {
     self.backgroundColor = [UIColor clearColor];
     
     _shapeLayer = [CAShapeLayer layer];
-    _shapeLayer.fillColor = [UIColor clearColor].CGColor;
     _shapeLayer.lineCap = kCALineCapRound;
     _shapeLayer.lineJoin = kCALineJoinRound;
     
     [self.layer addSublayer:_shapeLayer];
     
     self.lineWidth = 2.0;
+    self.filled = NO;
+    
     [self setLayerColor];
 }
 
@@ -98,11 +99,23 @@ JWUIKitInitialze {
     [self setupData];
     [self setNeedsLayout];
 }
+
 - (void)setLineWidth:(CGFloat)lineWidth {
     if (_lineWidth != lineWidth) {
         _lineWidth = lineWidth;
         _shapeLayer.lineWidth = lineWidth;
     }
+}
+
+- (void)setFilled:(BOOL)filled {
+    _filled = filled;
+    UIColor *filledColor = [UIColor clearColor];
+    if(filled &&
+       ([self.type isEqualToString:JWSimpleShapeTypeHeart] ||
+       [self.type isEqualToString:JWSimpleShapeTypePentastar])) {
+        filledColor = self.tintColor;
+    }
+    _shapeLayer.fillColor = filledColor.CGColor;
 }
 
 - (void)setSubType:(NSString *)subType {
@@ -119,17 +132,9 @@ JWUIKitInitialze {
         [UIView animateWithDuration:.25 animations:^{
             _shapeLayer.transform = CATransform3DMakeRotation(angle, 0, 0, 1.0);
         }];
-    } else if([self.type isEqualToString:JWSimpleShapeTypeHeart]) {
-        if ([subType isEqualToString:JWSimpleShapeSubTypeHeartFilled]) {
-            _shapeLayer.fillColor = self.tintColor.CGColor;
-        } else {
-            _shapeLayer.fillColor = [UIColor clearColor].CGColor;
-        }
     } else if([self.type isEqualToString:JWSimpleShapeTypePentastar]) {
-        if ([subType isEqualToString:JWSimpleShapeSubTypePentastarFilled]) {
-            _shapeLayer.fillColor = self.tintColor.CGColor;
-        } else {
-            _shapeLayer.fillColor = [UIColor clearColor].CGColor;
+        if ([self.subType isEqualToString:JWSimpleShapeSubTypePentastarFilledHalf]) {
+            self.filled = NO;
         }
     }
 }
@@ -175,6 +180,8 @@ JWUIKitInitialze {
             } else if(method == JWSimpleShapeMethodQuadCurve && points.count == 4) {
                 [bezierPath addQuadCurveToPoint:CGPointMake(kConvertByRatio(points[0], layerSize), kConvertByRatio(points[1], layerSize))
                                    controlPoint:CGPointMake(kConvertByRatio(points[2], layerSize), kConvertByRatio(points[3], layerSize))];
+            } else if(method == JWSimpleShapeMethodArc) {
+                
             }
         }
     }
