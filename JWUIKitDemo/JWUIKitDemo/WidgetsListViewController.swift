@@ -20,7 +20,8 @@ class WidgetsListViewController: UIViewController, UICollectionViewDelegate, UIC
                 ["name":"Shape", "class":ShapesViewController.classForCoder()],
                 ["name":"Drawer", "class":DrawersViewController.classForCoder()],
                 ["name":"Toast", "class":ToastViewController.classForCoder()],
-                ["name":"Page", "class":PagesViewController.classForCoder()]
+                ["name":"Page", "class":PagesViewController.classForCoder()],
+                ["name":"Slice", "class":SliceViewController.classForCoder()]
                ]
 
     override func viewDidLoad() {

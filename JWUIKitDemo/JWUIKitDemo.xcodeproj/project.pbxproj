@@ -16,6 +16,8 @@
 		C427D8FE1CB674B6005AE31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C427D8FD1CB674B6005AE31A /* Assets.xcassets */; };
 		C441253F1CBF4899009D5452 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C441253E1CBF4899009D5452 /* JWUIKit.framework */; };
 		C44125401CBF4899009D5452 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C441253E1CBF4899009D5452 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C44125931CC0CFC6009D5452 /* SliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44125911CC0CFC6009D5452 /* SliceViewController.swift */; };
+		C44125941CC0CFC6009D5452 /* SliceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44125921CC0CFC6009D5452 /* SliceViewController.xib */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
 		C4446E861C9A658B00FA3176 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* PagesViewController.swift */; };
 		C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */; };
@@ -55,6 +57,8 @@
 		C4176E611CAA60D400770F24 /* ButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		C427D8FD1CB674B6005AE31A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C441253E1CBF4899009D5452 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/Jerry/Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
+		C44125911CC0CFC6009D5452 /* SliceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceViewController.swift; sourceTree = "<group>"; };
+		C44125921CC0CFC6009D5452 /* SliceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliceViewController.xib; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4446E851C9A658B00FA3176 /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				C45EB42C1CB5156300792DF0 /* ToastViewController.swift */,
 				C45EB5351CB6338000792DF0 /* ToastViewController.xib */,
 				C4446E851C9A658B00FA3176 /* PagesViewController.swift */,
+				C44125911CC0CFC6009D5452 /* SliceViewController.swift */,
+				C44125921CC0CFC6009D5452 /* SliceViewController.xib */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
 				C4446E8F1C9A658B00FA3176 /* Info.plist */,
 				C4446E991C9A672600FA3176 /* JWUIKitDemo-Bridging-Header.h */,
@@ -204,6 +210,7 @@
 				C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */,
 				C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */,
 				C45EB5361CB6338000792DF0 /* ToastViewController.xib in Resources */,
+				C44125941CC0CFC6009D5452 /* SliceViewController.xib in Resources */,
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
 				C4176E341CA8F47200770F24 /* ShapesViewController.xib in Resources */,
@@ -220,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4446E861C9A658B00FA3176 /* PagesViewController.swift in Sources */,
+				C44125931CC0CFC6009D5452 /* SliceViewController.swift in Sources */,
 				C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
 				C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */,
