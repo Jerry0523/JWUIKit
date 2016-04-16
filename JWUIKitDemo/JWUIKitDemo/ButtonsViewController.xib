@@ -19,20 +19,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N84-sK-65v" customClass="JWButton">
-                            <rect key="frame" x="10" y="10" width="140" height="62"/>
+                            <rect key="frame" x="10" y="10" width="120" height="42"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Default" image="account"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="offset">
-                                    <integer key="value" value="20"/>
+                                    <real key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                    <integer key="value" value="20"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-EV-srM" customClass="JWButton">
-                            <rect key="frame" x="10" y="154" width="118.5" height="102.5"/>
+                            <rect key="frame" x="10" y="114" width="98.5" height="64.5"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="ImageTop" image="account"/>
                             <userDefinedRuntimeAttributes>
@@ -40,26 +40,27 @@
                                     <integer key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="offset">
-                                    <integer key="value" value="20"/>
+                                    <real key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                    <integer key="value" value="20"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQj-EU-VmU" customClass="JWButton">
-                            <rect key="frame" x="10" y="82" width="173" height="62"/>
+                            <rect key="frame" x="10" y="62" width="143" height="42"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="ImageRight" image="account"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
                                     <integer key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="offset">
-                                    <integer key="value" value="20"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                    <integer key="value" value="20"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>

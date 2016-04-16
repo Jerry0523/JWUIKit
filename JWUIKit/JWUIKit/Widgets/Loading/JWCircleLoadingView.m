@@ -45,6 +45,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
     if (self.drawBackground && self.style != JWCircleLoadingStyleGradient) {
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGContextSetLineWidth(context, self.lineWidth);

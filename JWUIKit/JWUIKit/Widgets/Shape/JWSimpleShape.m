@@ -80,6 +80,7 @@ JWUIKitInitialze {
 }
 
 - (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
     if([self.type isEqualToString:JWSimpleShapeTypePentastar] && [self.subType isEqualToString:JWSimpleShapeSubTypePentastarFilledHalf]) {
         
         CGContextRef context = UIGraphicsGetCurrentContext();

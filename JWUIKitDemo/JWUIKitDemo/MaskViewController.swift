@@ -1,5 +1,5 @@
 //
-//  DrawersViewController.swift
+//  MaskViewController.swift
 //  JWUIKitDemo
 //
 //  Created by Jerry on 16/4/6.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawersViewController: UIViewController {
+class MaskViewController: UIViewController {
 
     @IBOutlet weak var directionSegment: UISegmentedControl!
     
@@ -20,11 +20,17 @@ class DrawersViewController: UIViewController {
     @IBOutlet weak var modalSwitch: UISwitch!
     @IBOutlet weak var onWindowSwitch: UISwitch!
     
-    let drawer = JWDrawer()
+    lazy var drawer = JWMaskDrawer()
+    
+    lazy var cameraMask :JWCamaraMaskView = {
+        let mask = JWCamaraMaskView()
+        mask.tintColor = JWConst.themeColor
+        return mask
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "JWUIKitDrawerViews"
+        self.title = "JWUIKitMask"
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +39,11 @@ class DrawersViewController: UIViewController {
 
     @IBAction func submitButtonClicked(sender: AnyObject) {
         drawer.dismissOnCompletion(nil)
+    }
+    
+    @IBAction func showCameraMask(sender: AnyObject) {
+        self.cameraMask.frame = self.view.bounds
+        self.view .addSubview(self.cameraMask)
     }
     
     @IBAction func actionButtonClicked(sender: AnyObject) {
@@ -60,7 +71,7 @@ class DrawersViewController: UIViewController {
             break
         }
         
-        drawer.direction = JWDrawerDirection(rawValue:directionSegment.selectedSegmentIndex)!
+        drawer.direction = JWMaskDrawerDirection(rawValue:directionSegment.selectedSegmentIndex)!
         drawer.modal = modalSwitch.on
         drawer.drawShadow = drawShadowSwitch.on
         

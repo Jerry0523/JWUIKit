@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053808AA1CC1312E008C3364 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053808A91CC1312E008C3364 /* JWUIKit.framework */; };
+		053808AB1CC1312E008C3364 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 053808A91CC1312E008C3364 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053808B51CC13FE8008C3364 /* FoldawayDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053808B31CC13FE8008C3364 /* FoldawayDrawerViewController.swift */; };
+		053808B61CC13FE8008C3364 /* FoldawayDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053808B41CC13FE8008C3364 /* FoldawayDrawerViewController.xib */; };
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
 		C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */; };
 		C4176E331CA8F47200770F24 /* ShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E311CA8F47200770F24 /* ShapeViewController.swift */; };
@@ -14,10 +18,6 @@
 		C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4176E601CAA60D400770F24 /* ButtonsViewController.swift */; };
 		C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4176E611CAA60D400770F24 /* ButtonsViewController.xib */; };
 		C427D8FE1CB674B6005AE31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C427D8FD1CB674B6005AE31A /* Assets.xcassets */; };
-		C441253F1CBF4899009D5452 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C441253E1CBF4899009D5452 /* JWUIKit.framework */; };
-		C44125401CBF4899009D5452 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C441253E1CBF4899009D5452 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C44125931CC0CFC6009D5452 /* SliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44125911CC0CFC6009D5452 /* SliceViewController.swift */; };
-		C44125941CC0CFC6009D5452 /* SliceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44125921CC0CFC6009D5452 /* SliceViewController.xib */; };
 		C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E831C9A658B00FA3176 /* AppDelegate.swift */; };
 		C4446E861C9A658B00FA3176 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446E851C9A658B00FA3176 /* PagesViewController.swift */; };
 		C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */; };
@@ -26,8 +26,8 @@
 		C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */; };
 		C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */; };
 		C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */; };
-		C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */; };
-		C45EB4241CB4BCC200792DF0 /* DrawersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */; };
+		C45EB4231CB4BCC200792DF0 /* MaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EB4211CB4BCC200792DF0 /* MaskViewController.swift */; };
+		C45EB4241CB4BCC200792DF0 /* MaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EB4221CB4BCC200792DF0 /* MaskViewController.xib */; };
 		C45EB42D1CB5156300792DF0 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EB42C1CB5156300792DF0 /* ToastViewController.swift */; };
 		C45EB5361CB6338000792DF0 /* ToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EB5351CB6338000792DF0 /* ToastViewController.xib */; };
 		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
@@ -35,13 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C44125411CBF4899009D5452 /* Embed Frameworks */ = {
+		053808AC1CC1312E008C3364 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C44125401CBF4899009D5452 /* JWUIKit.framework in Embed Frameworks */,
+				053808AB1CC1312E008C3364 /* JWUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +49,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		053808A91CC1312E008C3364 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/JerryWong/Library/Developer/Xcode/DerivedData/JWUIKit-camodsdqqelogjdvwcxxystygmyi/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
+		053808B31CC13FE8008C3364 /* FoldawayDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldawayDrawerViewController.swift; sourceTree = "<group>"; };
+		053808B41CC13FE8008C3364 /* FoldawayDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoldawayDrawerViewController.xib; sourceTree = "<group>"; };
 		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
 		C4176E201CA8DDA300770F24 /* LoadingViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewsViewController.swift; sourceTree = "<group>"; };
 		C4176E311CA8F47200770F24 /* ShapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +59,6 @@
 		C4176E601CAA60D400770F24 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		C4176E611CAA60D400770F24 /* ButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
 		C427D8FD1CB674B6005AE31A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C441253E1CBF4899009D5452 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/Jerry/Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
-		C44125911CC0CFC6009D5452 /* SliceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceViewController.swift; sourceTree = "<group>"; };
-		C44125921CC0CFC6009D5452 /* SliceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliceViewController.xib; sourceTree = "<group>"; };
 		C4446E801C9A658B00FA3176 /* JWUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4446E831C9A658B00FA3176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4446E851C9A658B00FA3176 /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +70,8 @@
 		C4446EAC1C9A87F800FA3176 /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
 		C4446EC01C9B98BE00FA3176 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		C4446EC11C9B98BE00FA3176 /* TextFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldsViewController.xib; sourceTree = "<group>"; };
-		C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawersViewController.swift; sourceTree = "<group>"; };
-		C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawersViewController.xib; sourceTree = "<group>"; };
+		C45EB4211CB4BCC200792DF0 /* MaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskViewController.swift; sourceTree = "<group>"; };
+		C45EB4221CB4BCC200792DF0 /* MaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaskViewController.xib; sourceTree = "<group>"; };
 		C45EB42C1CB5156300792DF0 /* ToastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
 		C45EB5351CB6338000792DF0 /* ToastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToastViewController.xib; sourceTree = "<group>"; };
 		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C441253F1CBF4899009D5452 /* JWUIKit.framework in Frameworks */,
+				053808AA1CC1312E008C3364 /* JWUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,13 +124,13 @@
 				C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */,
 				C4176E311CA8F47200770F24 /* ShapeViewController.swift */,
 				C4176E321CA8F47200770F24 /* ShapesViewController.xib */,
-				C45EB4211CB4BCC200792DF0 /* DrawersViewController.swift */,
-				C45EB4221CB4BCC200792DF0 /* DrawersViewController.xib */,
+				C45EB4211CB4BCC200792DF0 /* MaskViewController.swift */,
+				C45EB4221CB4BCC200792DF0 /* MaskViewController.xib */,
 				C45EB42C1CB5156300792DF0 /* ToastViewController.swift */,
 				C45EB5351CB6338000792DF0 /* ToastViewController.xib */,
 				C4446E851C9A658B00FA3176 /* PagesViewController.swift */,
-				C44125911CC0CFC6009D5452 /* SliceViewController.swift */,
-				C44125921CC0CFC6009D5452 /* SliceViewController.xib */,
+				053808B31CC13FE8008C3364 /* FoldawayDrawerViewController.swift */,
+				053808B41CC13FE8008C3364 /* FoldawayDrawerViewController.xib */,
 				C4446E8C1C9A658B00FA3176 /* LaunchScreen.storyboard */,
 				C4446E8F1C9A658B00FA3176 /* Info.plist */,
 				C4446E991C9A672600FA3176 /* JWUIKitDemo-Bridging-Header.h */,
@@ -142,7 +142,7 @@
 		C4446E951C9A65B500FA3176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C441253E1CBF4899009D5452 /* JWUIKit.framework */,
+				053808A91CC1312E008C3364 /* JWUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 				C4446E7C1C9A658B00FA3176 /* Sources */,
 				C4446E7D1C9A658B00FA3176 /* Frameworks */,
 				C4446E7E1C9A658B00FA3176 /* Resources */,
-				C44125411CBF4899009D5452 /* Embed Frameworks */,
+				053808AC1CC1312E008C3364 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,15 +207,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053808B61CC13FE8008C3364 /* FoldawayDrawerViewController.xib in Resources */,
 				C4176E631CAA60D400770F24 /* ButtonsViewController.xib in Resources */,
 				C4446EC31C9B98BE00FA3176 /* TextFieldsViewController.xib in Resources */,
 				C45EB5361CB6338000792DF0 /* ToastViewController.xib in Resources */,
-				C44125941CC0CFC6009D5452 /* SliceViewController.xib in Resources */,
 				C4446EAE1C9A87F800FA3176 /* LabelsViewController.xib in Resources */,
 				C4446E8E1C9A658B00FA3176 /* LaunchScreen.storyboard in Resources */,
 				C4176E341CA8F47200770F24 /* ShapesViewController.xib in Resources */,
 				C427D8FE1CB674B6005AE31A /* Assets.xcassets in Resources */,
-				C45EB4241CB4BCC200792DF0 /* DrawersViewController.xib in Resources */,
+				C45EB4241CB4BCC200792DF0 /* MaskViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4446E861C9A658B00FA3176 /* PagesViewController.swift in Sources */,
-				C44125931CC0CFC6009D5452 /* SliceViewController.swift in Sources */,
-				C45EB4231CB4BCC200792DF0 /* DrawersViewController.swift in Sources */,
+				C45EB4231CB4BCC200792DF0 /* MaskViewController.swift in Sources */,
 				C4446E841C9A658B00FA3176 /* AppDelegate.swift in Sources */,
 				C4176E621CAA60D400770F24 /* ButtonsViewController.swift in Sources */,
 				C45EB42D1CB5156300792DF0 /* ToastViewController.swift in Sources */,
@@ -236,6 +235,7 @@
 				C4176E331CA8F47200770F24 /* ShapeViewController.swift in Sources */,
 				C4446EA61C9A812500FA3176 /* WidgetsListViewController.swift in Sources */,
 				C4176E221CA8DDA300770F24 /* LoadingViewsViewController.swift in Sources */,
+				053808B51CC13FE8008C3364 /* FoldawayDrawerViewController.swift in Sources */,
 				C4446EAD1C9A87F800FA3176 /* LabelsViewController.swift in Sources */,
 				C4446EC21C9B98BE00FA3176 /* TextFieldsViewController.swift in Sources */,
 				05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */,

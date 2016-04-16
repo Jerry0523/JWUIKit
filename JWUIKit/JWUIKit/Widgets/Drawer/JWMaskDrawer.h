@@ -10,21 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, JWDrawerDirection){
-    JWDrawerDirectionBottom     = 0,
-    JWDrawerDirectionRight      = 1,
-    JWDrawerDirectionTop        = 2,
-    JWDrawerDirectionLeft       = 3
+typedef NS_ENUM(NSInteger, JWMaskDrawerDirection){
+    JWMaskDrawerDirectionBottom     = 0,
+    JWMaskDrawerDirectionRight      = 1,
+    JWMaskDrawerDirectionTop        = 2,
+    JWMaskDrawerDirectionLeft       = 3
 };
 
-@interface JWDrawer : UIView
+@interface JWMaskDrawer : UIView
 
 @property (strong, nonatomic, nullable) __kindof UIView *contentView;
 
 @property (assign, nonatomic) BOOL modal;
 @property (assign, nonatomic) BOOL drawShadow;
 
-@property (assign, nonatomic) JWDrawerDirection direction;
+@property (assign, nonatomic) JWMaskDrawerDirection direction;
 @property (assign, nonatomic) NSTimeInterval duration;
 
 - (void)showInView:(UIView*)superView;

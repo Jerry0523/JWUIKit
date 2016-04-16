@@ -6,12 +6,12 @@
 //  Copyright © 2016年 Jerry Wong. All rights reserved.
 //
 
-#import "JWDrawer.h"
+#import "JWMaskDrawer.h"
 //Core
 #import "JWUIKitMacro.h"
 #import "UIView+JWFrame.h"
 
-@implementation JWDrawer {
+@implementation JWMaskDrawer {
     UIView *_containerView;
     UITapGestureRecognizer *_tapGesture;
 }
@@ -21,7 +21,7 @@ JWUIKitInitialze {
     _containerView = [UIView new];
     [self addSubview:_containerView];
     
-    self.direction = JWDrawerDirectionBottom;
+    self.direction = JWMaskDrawerDirectionBottom;
     self.drawShadow = YES;
     self.duration = .5f;
     self.modal = YES;
@@ -87,7 +87,7 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Setter & Getter
-- (void)setDirection:(JWDrawerDirection)direction {
+- (void)setDirection:(JWMaskDrawerDirection)direction {
     _direction = direction;
     if (self.contentView) {
         [self setNeedsLayout];
@@ -125,16 +125,16 @@ JWUIKitInitialze {
 - (void)beforeShowAnimation {
     self.backgroundColor = [UIColor clearColor];
     switch (self.direction) {
-        case JWDrawerDirectionBottom:
+        case JWMaskDrawerDirectionBottom:
             [_containerView makeTranslateForX:0 y:_contentView.h];
             break;
-        case JWDrawerDirectionRight:
+        case JWMaskDrawerDirectionRight:
             [_containerView makeTranslateForX:_contentView.w y:0];
             break;
-        case JWDrawerDirectionTop:
+        case JWMaskDrawerDirectionTop:
             [_containerView makeTranslateForX:0 y:-_contentView.h];
             break;
-        case JWDrawerDirectionLeft:
+        case JWMaskDrawerDirectionLeft:
             [_containerView makeTranslateForX:-_contentView.w y:0];
             break;
     }
@@ -145,16 +145,16 @@ JWUIKitInitialze {
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:.5];
     }
     switch (self.direction) {
-        case JWDrawerDirectionBottom:
+        case JWMaskDrawerDirectionBottom:
             [_containerView makeTranslateForX:0 y:-_contentView.h];
             break;
-        case JWDrawerDirectionRight:
+        case JWMaskDrawerDirectionRight:
             [_containerView makeTranslateForX:-_contentView.w y:0];
             break;
-        case JWDrawerDirectionTop:
+        case JWMaskDrawerDirectionTop:
             [_containerView makeTranslateForX:0 y:_contentView.h];
             break;
-        case JWDrawerDirectionLeft:
+        case JWMaskDrawerDirectionLeft:
             [_containerView makeTranslateForX:_contentView.w y:0];
             break;
     }
@@ -162,19 +162,19 @@ JWUIKitInitialze {
 
 - (void)layoutContainerView {
     switch (self.direction) {
-        case JWDrawerDirectionBottom:
+        case JWMaskDrawerDirectionBottom:
             _containerView.frame = CGRectMake(0, self.h - _contentView.h, self.w, _contentView.h);
             _containerView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
             break;
-        case JWDrawerDirectionRight:
+        case JWMaskDrawerDirectionRight:
             _containerView.frame = CGRectMake(self.w - _contentView.w, 0, _contentView.w, self.h);
             _containerView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
             break;
-        case JWDrawerDirectionTop:
+        case JWMaskDrawerDirectionTop:
             _containerView.frame = CGRectMake(0, 0, self.w, _contentView.h);
             _containerView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
             break;
-        case JWDrawerDirectionLeft:
+        case JWMaskDrawerDirectionLeft:
             _containerView.frame = CGRectMake(0, 0, _contentView.w, self.h);
             _containerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
             break;

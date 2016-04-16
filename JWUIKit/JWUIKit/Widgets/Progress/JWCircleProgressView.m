@@ -38,6 +38,7 @@ JWUIKitInitialze {
 }
 
 - (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
     if (self.drawBackground) {
         if (self.style == JWCircleProgressStyleDefault) {
             CGContextRef context = UIGraphicsGetCurrentContext();

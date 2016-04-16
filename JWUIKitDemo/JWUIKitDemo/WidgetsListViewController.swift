@@ -18,10 +18,10 @@ class WidgetsListViewController: UIViewController, UICollectionViewDelegate, UIC
                 ["name":"Loading", "class":LoadingViewsViewController.classForCoder()],
                 ["name":"Progress", "class":ProgressViewsViewController.classForCoder()],
                 ["name":"Shape", "class":ShapesViewController.classForCoder()],
-                ["name":"Drawer", "class":DrawersViewController.classForCoder()],
+                ["name":"Mask", "class":MaskViewController.classForCoder()],
                 ["name":"Toast", "class":ToastViewController.classForCoder()],
                 ["name":"Page", "class":PagesViewController.classForCoder()],
-                ["name":"Slice", "class":SliceViewController.classForCoder()]
+                ["name":"Drawer", "class":FoldawayDrawerViewController.classForCoder()],
                ]
 
     override func viewDidLoad() {
@@ -89,6 +89,8 @@ class WidgetsListViewController: UIViewController, UICollectionViewDelegate, UIC
             label.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
             label.font = UIFont.systemFontOfSize(15.0)
             label.textAlignment = .Center
+            label.numberOfLines = 0
+            label.lineBreakMode = .ByWordWrapping
             cell.contentView.addSubview(label)
         }
         

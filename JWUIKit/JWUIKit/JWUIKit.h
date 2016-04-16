@@ -44,12 +44,15 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWSimpleShape.h>
 #import <JWUIKit/JWMicrophoneView.h>
 //Drawer
-#import <JWUIKit/JWDrawer.h>
+#import <JWUIKit/JWMaskDrawer.h>
+#import <JWUIKit/JWFoldawayDrawer.h>
 //Toast
 #import <JWUIKit/JWToast.h>
 //Refresh
 #import <JWUIKit/JWRefreshHeaderView.h>
 #import <JWUIKit/JWRefreshHeaderContentView.h>
+//Mask
+#import <JWUIKit/JWCamaraMaskView.h>
 
 
 
