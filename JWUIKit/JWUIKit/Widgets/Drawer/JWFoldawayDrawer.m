@@ -16,7 +16,7 @@
 }
 
 JWUIKitInitialze {
-    self.duration = 0.8f;
+    self.duration = 0.6f;
     self.autoLayoutSuperView = YES;
 }
 
@@ -41,11 +41,32 @@ JWUIKitInitialze {
 
 - (void)close {
     _isOpen = NO;
+    NSUInteger sectionCount = self.subviews.count;
+    if (sectionCount <= 1) {
+        return;
+    }
+    [self removeSectionAnimated];
+}
+
+- (void)toggle {
+    if (_isOpen) {
+        [self close];
+    } else {
+        [self open];
+    }
 }
 
 #pragma mark - CAAnimationDelegate
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    [self appendSectionAnimated];
+- (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag {
+    if (_isOpen) {
+        [self appendSectionAnimated];
+    } else {
+        UIView *lastContainer = self.subviews.lastObject;
+        [lastContainer removeFromSuperview];
+        [self notifySizeChanged];
+        
+        [self removeSectionAnimated];
+    }
 }
 
 #pragma mark - Setter & Getter
@@ -57,7 +78,7 @@ JWUIKitInitialze {
     if (count > 0) {
         [self addSubview:[self createContainerAtIndex:0]];
     }
-    [self invalidateIntrinsicContentSize];
+    [self notifySizeChanged];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
@@ -83,10 +104,7 @@ JWUIKitInitialze {
     [nextContainer originToPoint:CGPointMake(0, lastContainer.maxY)];
     [self addSubview:nextContainer];
     
-    [self invalidateIntrinsicContentSize];
-    [UIView animateWithDuration:self.duration animations:^{
-        [self.superview layoutIfNeeded];
-    }];
+    [self notifySizeChanged];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:willOpenIndex:)]) {
         [self.delegate drawer:self willOpenIndex:currentIdx];
@@ -106,6 +124,36 @@ JWUIKitInitialze {
     [[nextContainer.subviews firstObject].layer addAnimation:fadeAnimation forKey:nil];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:didOpenIndex:)]) {
+        [self.delegate drawer:self didOpenIndex:currentIdx];
+    }
+}
+
+- (void)removeSectionAnimated {
+    NSUInteger currentIdx = self.subviews.count;
+    if (currentIdx <= 1) {
+        return;
+    }
+    
+    UIView *lastContainer = self.subviews.lastObject;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:willCloseIndex:)]) {
+        [self.delegate drawer:self willCloseIndex:currentIdx];
+    }
+    
+    CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    transformAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(0, 0, 100), M_PI, 1, 0, 0)];
+    transformAnimation.duration = self.duration;
+    transformAnimation.delegate = self;
+    [lastContainer.layer addAnimation:transformAnimation forKey:nil];
+    
+    CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeAnimation.fromValue = @(1);
+    fadeAnimation.toValue = @(0);
+    fadeAnimation.duration = self.duration;
+    [[lastContainer.subviews firstObject].layer addAnimation:fadeAnimation forKey:nil];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:didCloseIndex:)]) {
         [self.delegate drawer:self didOpenIndex:currentIdx];
     }
 }
@@ -131,6 +179,32 @@ JWUIKitInitialze {
     
     [container addSubview:contentView];
     return container;
+}
+
+- (void)notifySizeChanged {
+    if (!self.autoLayoutSuperView) {
+        [self invalidateIntrinsicContentSize];
+        return;
+    }
+    
+    UIView *superView = self.superview;
+    while (![superView isKindOfClass:[UITableView class]] && superView.superview) {
+        superView = superView.superview;
+    }
+    
+    BOOL isSuperViewTableView = [superView isKindOfClass:[UITableView class]];
+    
+    if (isSuperViewTableView) {
+        UITableView *tableView = superView;
+        [tableView beginUpdates];
+        [self invalidateIntrinsicContentSize];
+        [tableView endUpdates];
+    } else {
+        [self invalidateIntrinsicContentSize];
+        [UIView animateWithDuration:self.duration animations:^{
+            [self.superview layoutIfNeeded];
+        }];
+    }
 }
 
 

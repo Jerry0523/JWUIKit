@@ -22,6 +22,8 @@
 - (void)open;
 - (void)close;
 
+- (void)toggle;
+
 @end
 
 @protocol JWFoldawayDrawerDataSource <NSObject>
@@ -40,5 +42,8 @@
 
 - (void)drawer:(JWFoldawayDrawer*)drawer willOpenIndex:(NSUInteger)index;
 - (void)drawer:(JWFoldawayDrawer*)drawer didOpenIndex:(NSUInteger)index;
+
+- (void)drawer:(JWFoldawayDrawer*)drawer willCloseIndex:(NSUInteger)index;
+- (void)drawer:(JWFoldawayDrawer*)drawer didCloseIndex:(NSUInteger)index;
 
 @end
