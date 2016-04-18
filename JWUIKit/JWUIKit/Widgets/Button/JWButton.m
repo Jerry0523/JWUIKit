@@ -10,6 +10,7 @@
 //Core
 #import "JWUIKitMacro.h"
 #import "UIView+JWFrame.h"
+#import "UIImage+JWColor.h"
 
 @implementation JWButton
 

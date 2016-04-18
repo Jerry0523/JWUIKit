@@ -17,6 +17,7 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
     
     lazy var drawerView :JWFoldawayDrawer = {
         let drawerView = JWFoldawayDrawer()
+        drawerView.backgroundColor = UIColor.blackColor()
         drawerView.dataSource = self
         drawerView.delegate = self
         return drawerView
@@ -32,11 +33,6 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
         tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 225
         tableView.rowHeight = UITableViewAutomaticDimension
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.drawerView.toggle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,9 +54,10 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
         if indexPath.section == 0 {
             cell.textLabel?.text = "section0"
         } else if indexPath.section == 1 {
-            cell.backgroundColor = UIColor.blackColor()
             if cell.contentView.subviews.count == 0 {
                 cell.contentView.addSubview(self.drawerView)
+                cell.selectionStyle = .None
+                cell.backgroundColor = UIColor.blackColor()
                 
                 let leftConstraint = NSLayoutConstraint(item: drawerView, attribute: .Leading, relatedBy: .Equal, toItem: cell.contentView, attribute: .Leading, multiplier: 1.0, constant: 0)
                 

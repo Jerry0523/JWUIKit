@@ -87,37 +87,31 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CopyRight 2016 Rodrigo Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGX-bU-EbN">
-                    <rect key="frame" x="79" y="88" width="162" height="14.5"/>
+                    <rect key="frame" x="79" y="86.5" width="162" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WT-Yo-5lv">
-                    <rect key="frame" x="130" y="13" width="60" height="60"/>
-                    <color key="backgroundColor" red="1" green="0.48108466442413755" blue="0.017857293734482745" alpha="1" colorSpace="calibratedRGB"/>
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WT-Yo-5lv">
+                    <rect key="frame" x="15" y="20.5" width="290" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.4823529412" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="Kpq-up-32V"/>
-                        <constraint firstAttribute="width" constant="60" id="cEy-CG-4Ba"/>
+                        <constraint firstAttribute="height" constant="44" id="Kpq-up-32V"/>
                     </constraints>
                     <state key="normal" title="Share">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="30"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="5WT-Yo-5lv" firstAttribute="top" secondItem="k1X-Un-1iH" secondAttribute="bottom" constant="12" id="5Bb-8A-GZZ"/>
+                <constraint firstItem="5WT-Yo-5lv" firstAttribute="top" secondItem="k1X-Un-1iH" secondAttribute="bottom" constant="20" id="5Bb-8A-GZZ"/>
                 <constraint firstItem="k1X-Un-1iH" firstAttribute="leading" secondItem="J1j-E2-kIp" secondAttribute="leading" id="B1V-ky-hMB"/>
                 <constraint firstItem="MGX-bU-EbN" firstAttribute="centerX" secondItem="J1j-E2-kIp" secondAttribute="centerX" id="WbA-gW-s0e"/>
                 <constraint firstItem="k1X-Un-1iH" firstAttribute="top" secondItem="J1j-E2-kIp" secondAttribute="top" id="aLl-ev-l5I"/>
-                <constraint firstItem="5WT-Yo-5lv" firstAttribute="centerX" secondItem="J1j-E2-kIp" secondAttribute="centerX" id="jht-eM-qYa"/>
-                <constraint firstAttribute="bottom" secondItem="MGX-bU-EbN" secondAttribute="bottom" constant="10" id="tkh-UE-77E"/>
+                <constraint firstItem="5WT-Yo-5lv" firstAttribute="leading" secondItem="J1j-E2-kIp" secondAttribute="leading" constant="15" id="dEE-s7-heX"/>
+                <constraint firstAttribute="trailing" secondItem="5WT-Yo-5lv" secondAttribute="trailing" constant="15" id="pRL-Jq-3cz"/>
+                <constraint firstAttribute="bottom" secondItem="MGX-bU-EbN" secondAttribute="bottom" constant="12" id="tkh-UE-77E"/>
                 <constraint firstAttribute="trailing" secondItem="k1X-Un-1iH" secondAttribute="trailing" id="wsF-dL-RUj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

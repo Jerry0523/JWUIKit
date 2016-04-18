@@ -13,6 +13,7 @@
 
 @implementation JWFoldawayDrawer {
     UIColor *_containerBackgroundColor;
+    NSUInteger _currentIdx;
 }
 
 JWUIKitInitialze {
@@ -27,7 +28,6 @@ JWUIKitInitialze {
 
 - (CGSize)intrinsicContentSize {
     return CGSizeMake([UIScreen mainScreen].bounds.size.width, [self.subviews lastObject].maxY);
-    
 }
 
 - (void)open {
@@ -45,7 +45,12 @@ JWUIKitInitialze {
     if (sectionCount <= 1) {
         return;
     }
-    [self removeSectionAnimated];
+    NSMutableArray *viewsToBeRemoved = @[].mutableCopy;
+    for (int i = 1; i < self.subviews.count; i++) {
+        [viewsToBeRemoved addObject:self.subviews[i]];
+    }
+    [viewsToBeRemoved makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self notifySizeChanged];
 }
 
 - (void)toggle {
@@ -58,15 +63,7 @@ JWUIKitInitialze {
 
 #pragma mark - CAAnimationDelegate
 - (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag {
-    if (_isOpen) {
-        [self appendSectionAnimated];
-    } else {
-        UIView *lastContainer = self.subviews.lastObject;
-        [lastContainer removeFromSuperview];
-        [self notifySizeChanged];
-        
-        [self removeSectionAnimated];
-    }
+    [self appendSectionAnimated];
 }
 
 #pragma mark - Setter & Getter
@@ -112,48 +109,12 @@ JWUIKitInitialze {
     
     CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     transformAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(0, 0, 100), M_PI, 1, 0, 0)];
-    transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(0, 0, 100)];
     transformAnimation.duration = self.duration;
     transformAnimation.delegate = self;
     [nextContainer.layer addAnimation:transformAnimation forKey:nil];
     
-    CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    fadeAnimation.fromValue = @(0);
-    fadeAnimation.toValue = @(1);
-    fadeAnimation.duration = self.duration;
-    [[nextContainer.subviews firstObject].layer addAnimation:fadeAnimation forKey:nil];
-    
     if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:didOpenIndex:)]) {
-        [self.delegate drawer:self didOpenIndex:currentIdx];
-    }
-}
-
-- (void)removeSectionAnimated {
-    NSUInteger currentIdx = self.subviews.count;
-    if (currentIdx <= 1) {
-        return;
-    }
-    
-    UIView *lastContainer = self.subviews.lastObject;
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:willCloseIndex:)]) {
-        [self.delegate drawer:self willCloseIndex:currentIdx];
-    }
-    
-    CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    transformAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-    transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(0, 0, 100), M_PI, 1, 0, 0)];
-    transformAnimation.duration = self.duration;
-    transformAnimation.delegate = self;
-    [lastContainer.layer addAnimation:transformAnimation forKey:nil];
-    
-    CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    fadeAnimation.fromValue = @(1);
-    fadeAnimation.toValue = @(0);
-    fadeAnimation.duration = self.duration;
-    [[lastContainer.subviews firstObject].layer addAnimation:fadeAnimation forKey:nil];
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(drawer:didCloseIndex:)]) {
         [self.delegate drawer:self didOpenIndex:currentIdx];
     }
 }
@@ -173,6 +134,7 @@ JWUIKitInitialze {
         container.h = contentView.h;
     }
     
+    container.opaque = YES;
     container.backgroundColor = _containerBackgroundColor;
     container.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;

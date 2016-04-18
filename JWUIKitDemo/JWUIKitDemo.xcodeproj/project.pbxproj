@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		053808AA1CC1312E008C3364 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053808A91CC1312E008C3364 /* JWUIKit.framework */; };
-		053808AB1CC1312E008C3364 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 053808A91CC1312E008C3364 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		053808B51CC13FE8008C3364 /* FoldawayDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053808B31CC13FE8008C3364 /* FoldawayDrawerViewController.swift */; };
 		053808B61CC13FE8008C3364 /* FoldawayDrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053808B41CC13FE8008C3364 /* FoldawayDrawerViewController.xib */; };
 		05E35D231C9D1D8200264270 /* ImageViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */; };
@@ -32,6 +30,8 @@
 		C45EB5361CB6338000792DF0 /* ToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45EB5351CB6338000792DF0 /* ToastViewController.xib */; };
 		C4CD17F41CA0EFE100187997 /* ProgressViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */; };
 		C4CD4ED91CB3AFE0004DD38A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD4ED81CB3AFE0004DD38A /* Const.swift */; };
+		C4D999A91CC4CC9D00903A85 /* JWUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D999A81CC4CC9D00903A85 /* JWUIKit.framework */; };
+		C4D999AA1CC4CCA300903A85 /* JWUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4D999A81CC4CC9D00903A85 /* JWUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				053808AB1CC1312E008C3364 /* JWUIKit.framework in Embed Frameworks */,
+				C4D999AA1CC4CCA300903A85 /* JWUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +49,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		053808A91CC1312E008C3364 /* JWUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = JWUIKit.framework; path = "/Users/JerryWong/Library/Developer/Xcode/DerivedData/JWUIKit-camodsdqqelogjdvwcxxystygmyi/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<absolute>"; };
 		053808B31CC13FE8008C3364 /* FoldawayDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldawayDrawerViewController.swift; sourceTree = "<group>"; };
 		053808B41CC13FE8008C3364 /* FoldawayDrawerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoldawayDrawerViewController.xib; sourceTree = "<group>"; };
 		05E35D211C9D1D8200264270 /* ImageViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewsViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		C45EB5351CB6338000792DF0 /* ToastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToastViewController.xib; sourceTree = "<group>"; };
 		C4CD17F21CA0EFE100187997 /* ProgressViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewsViewController.swift; sourceTree = "<group>"; };
 		C4CD4ED81CB3AFE0004DD38A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		C4D999A81CC4CC9D00903A85 /* JWUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWUIKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/JWUIKit-cywrddhybiezlnfouxhjwgxuraor/Build/Products/Debug-iphoneos/JWUIKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053808AA1CC1312E008C3364 /* JWUIKit.framework in Frameworks */,
+				C4D999A91CC4CC9D00903A85 /* JWUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +142,7 @@
 		C4446E951C9A65B500FA3176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				053808A91CC1312E008C3364 /* JWUIKit.framework */,
+				C4D999A81CC4CC9D00903A85 /* JWUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
