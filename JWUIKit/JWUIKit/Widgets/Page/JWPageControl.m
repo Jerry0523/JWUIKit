@@ -18,18 +18,6 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Setter & Getter
-- (void)setActiveImage:(UIImage *)activeImage {
-    if (_activeImage != activeImage) {
-        _activeImage = activeImage;
-    }
-}
-
-- (void)setInactiveImage:(UIImage *)inactiveImage {
-    if (_inactiveImage != inactiveImage) {
-        _inactiveImage = inactiveImage;
-    }
-}
-
 - (void)setCurrentPage:(NSInteger)currentPage {
     [super setCurrentPage:currentPage];
     [self setupCustomStyleByImage];

@@ -57,17 +57,19 @@ JWUIKitInitialze {
 - (void)layoutSubviews {
     CGRect emptyRect = [self emptyRect];
     _animatedLayer.frame = CGRectMake(emptyRect.origin.x, emptyRect.origin.y, self.emptyWidth, 4);
+    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    CGContextRef context = UIGraphicsGetCurrentContext();
     
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
     CGContextSetFillColorWithColor(context, [UIColor colorWithWhite:0 alpha:0.4].CGColor);
     CGContextFillRect(context, rect);
     
     CGRect emptyRect = [self emptyRect];
-    
+
     CGContextSetBlendMode(context, kCGBlendModeClear);
     CGContextFillRect(context, emptyRect);
     

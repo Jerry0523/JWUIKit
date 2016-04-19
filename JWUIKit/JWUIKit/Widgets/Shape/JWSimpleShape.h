@@ -17,7 +17,7 @@ IB_DESIGNABLE
 @property (assign, nonatomic) IBInspectable BOOL filled;
 
 @property (strong, nonatomic) IBInspectable NSString *type;
-@property (strong, nonatomic) IBInspectable NSString *subType;
+@property (strong, nonatomic, nullable) IBInspectable NSString *subType;
 
 - (void)beginSimpleAnimation;
 
@@ -27,6 +27,8 @@ CA_EXTERN NSString *const JWSimpleShapeTypeYes;
 CA_EXTERN NSString *const JWSimpleShapeTypeArrow;
 CA_EXTERN NSString *const JWSimpleShapeTypeHeart;
 CA_EXTERN NSString *const JWSimpleShapeTypePentastar;
+CA_EXTERN NSString *const JWSimpleShapeTypeAdd;
+CA_EXTERN NSString *const JWSimpleShapeTypeClose;
 CA_EXTERN NSString *const JWSimpleShapeTypeSmile;
 
 

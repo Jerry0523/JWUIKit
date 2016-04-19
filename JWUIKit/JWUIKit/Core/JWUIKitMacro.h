@@ -37,7 +37,14 @@ return self;\
 
 //Colors
 #define JWColor(r, g, b, a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
-#define JWHexColor(hexValue) JWColor((float)((hexValue & 0xFF0000) >> 16), (float)((hexValue & 0xFF00) >> 8), (float)(hexValue & 0xFF), 1.0f)
-#define JWRandomColor() [UIColor colorWithHue:(arc4random() % 256 / 256.0) saturation:(arc4random() % 128 / 256.0) + 0.5 brightness:(arc4random() % 128 / 256.0) + 0.5 alpha:1]
+
+#define JWHexColor(hexValue) JWColor((float)((hexValue & 0xFF0000) >> 16), \
+                                     (float)((hexValue & 0xFF00) >> 8), \
+                                     (float)(hexValue & 0xFF), 1.0f)
+
+#define JWRandomColor() [UIColor colorWithHue:(arc4random() % 256 / 256.0) \
+                                   saturation:(arc4random() % 128 / 256.0) + 0.5 \
+                                   brightness:(arc4random() % 128 / 256.0) + 0.5 \
+                                        alpha:1]
 
 #endif /* JWUIKitMacro_h */

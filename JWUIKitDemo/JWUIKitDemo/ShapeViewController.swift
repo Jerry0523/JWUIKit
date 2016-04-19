@@ -10,12 +10,19 @@ import UIKit
 
 class ShapesViewController: UIViewController {
 
+    @IBOutlet weak var textShape: JWTextShape!
     @IBOutlet weak var microphoneView: JWMicrophoneView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "JWUIKitShapeViews"
         self.fakeVolume()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        textShape.duration = 3.0
+        textShape.beginSimpleAnimation()
     }
 
     override func didReceiveMemoryWarning() {

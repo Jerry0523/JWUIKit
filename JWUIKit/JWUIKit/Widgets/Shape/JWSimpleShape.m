@@ -16,6 +16,8 @@ NSString *const JWSimpleShapeTypeYes = @"yes";
 NSString *const JWSimpleShapeTypeArrow = @"arrow";
 NSString *const JWSimpleShapeTypeHeart = @"heart";
 NSString *const JWSimpleShapeTypePentastar = @"pentastar";
+NSString *const JWSimpleShapeTypeAdd = @"add";
+NSString *const JWSimpleShapeTypeClose = @"close";
 NSString *const JWSimpleShapeTypeSmile = @"smile";
 
 NSString *const JWSimpleShapeSubTypeArrowTop = @"top";
@@ -133,10 +135,6 @@ JWUIKitInitialze {
         [UIView animateWithDuration:.25 animations:^{
             _shapeLayer.transform = CATransform3DMakeRotation(angle, 0, 0, 1.0);
         }];
-    } else if([self.type isEqualToString:JWSimpleShapeTypePentastar]) {
-        if ([self.subType isEqualToString:JWSimpleShapeSubTypePentastarFilledHalf]) {
-            self.filled = NO;
-        }
     }
 }
 
@@ -150,6 +148,10 @@ JWUIKitInitialze {
         _data = @[@"50,30|1", @"8,26,28,3,10,18|2", @"11,51,5,36,6,45|2", @"50,90,20,65|3", @"89,51,80,65|3",@"92,26,94,45,95,36|2", @"50,30,90,18,72,3|2"];
     } else if([self.type isEqualToString:JWSimpleShapeTypePentastar]) {
         _data = @[@"50,5|1", @"60,39", @"95,39", @"67,60", @"77,93", @"50,73", @"23,93", @"33, 60", @"5,39", @"40,39", @"50,5"];
+    } else if([self.type isEqualToString:JWSimpleShapeTypeAdd]) {
+        _data = @[@"4,50|1", @"96,50", @"50,4|1", @"50,96"];
+    } else if([self.type isEqualToString:JWSimpleShapeTypeClose]) {
+        _data = @[@"16,16|1", @"82,82", @"84,16|1", @"18,82"];
     }
 }
 

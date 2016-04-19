@@ -3,11 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShapesViewController" customModule="JWUIKitDemo" customModuleProvider="target">
             <connections>
                 <outlet property="microphoneView" destination="6Sy-i2-xwy" id="beD-cV-mwH"/>
+                <outlet property="textShape" destination="b8W-LI-rQh" id="xwm-39-NnN"/>
                 <outlet property="view" destination="f6y-YH-kBz" id="7jO-p6-Yb4"/>
             </connections>
         </placeholder>
@@ -19,10 +21,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-Wg-MJ8" userLabel="ContentView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-i2-xwy" customClass="JWMicrophoneView">
-                            <rect key="frame" x="22" y="18" width="80" height="80"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-i2-xwy" customClass="JWMicrophoneView">
+                            <rect key="frame" x="20" y="20" width="91.5" height="91.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="6Sy-i2-xwy" secondAttribute="height" multiplier="1:1" id="YNC-zj-obF"/>
+                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="3"/>
@@ -32,10 +37,13 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-wu-3f1" customClass="JWSimpleShape">
-                            <rect key="frame" x="110" y="23" width="30" height="30"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-wu-3f1" customClass="JWSimpleShape">
+                            <rect key="frame" x="121" y="20" width="43.5" height="43.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="height" multiplier="1:1" id="mJ7-cI-NHv"/>
+                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="2"/>
@@ -44,8 +52,8 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="subType" value="right"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="iyB-WO-Czn" customClass="JWSimpleShape">
-                            <rect key="frame" x="145" y="23" width="30" height="30"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="iyB-WO-Czn" customClass="JWSimpleShape">
+                            <rect key="frame" x="170" y="20" width="43" height="43.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -56,8 +64,8 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="subType" value="top"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="qML-yN-42O" customClass="JWSimpleShape">
-                            <rect key="frame" x="145" y="68" width="30" height="30"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="qML-yN-42O" customClass="JWSimpleShape">
+                            <rect key="frame" x="170" y="68" width="43.5" height="43.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -68,8 +76,8 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="subType" value="left"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="5BX-X8-JpM" customClass="JWSimpleShape">
-                            <rect key="frame" x="110" y="68" width="30" height="30"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="5BX-X8-JpM" customClass="JWSimpleShape">
+                            <rect key="frame" x="121" y="68" width="43" height="43.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -80,10 +88,13 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="subType" value="bottom"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-rk-VHU" customClass="JWSimpleShape">
-                            <rect key="frame" x="42" y="131" width="40" height="40"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-rk-VHU" customClass="JWSimpleShape">
+                            <rect key="frame" x="40" y="131" width="50" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="A4Q-rk-VHU" secondAttribute="height" multiplier="1:1" id="4k6-2c-N2L"/>
+                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="2"/>
@@ -91,10 +102,13 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="type" value="heart"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-PE-7OB" customClass="JWSimpleShape">
-                            <rect key="frame" x="105" y="131" width="40" height="40"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-PE-7OB" customClass="JWSimpleShape">
+                            <rect key="frame" x="110" y="131" width="50" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="IOE-PE-7OB" secondAttribute="height" multiplier="1:1" id="wGl-pk-0L8"/>
+                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="2"/>
@@ -103,8 +117,8 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="filled" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-p2-BVm" customClass="JWSimpleShape">
-                            <rect key="frame" x="188" y="63" width="40" height="40"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-p2-BVm" customClass="JWSimpleShape">
+                            <rect key="frame" x="218" y="68" width="43" height="43.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -115,8 +129,8 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="subType" value="half"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="6ez-Ws-wDi" customClass="JWSimpleShape">
-                            <rect key="frame" x="236" y="18" width="40" height="40"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="6ez-Ws-wDi" customClass="JWSimpleShape">
+                            <rect key="frame" x="266" y="20" width="43.5" height="43"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -127,8 +141,8 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="filled" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-vs-ghZ" customClass="JWSimpleShape">
-                            <rect key="frame" x="188" y="18" width="40" height="40"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-vs-ghZ" customClass="JWSimpleShape">
+                            <rect key="frame" x="218" y="20" width="43" height="43"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -139,8 +153,8 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="subType" value="filledHalf"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="T3n-Kr-jP8" customClass="JWSimpleShape">
-                            <rect key="frame" x="236" y="66" width="40" height="40"/>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="T3n-Kr-jP8" customClass="JWSimpleShape">
+                            <rect key="frame" x="266" y="68" width="43" height="43"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -150,10 +164,98 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="type" value="yes"/>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="deo-qr-LKw" customClass="JWSimpleShape">
+                            <rect key="frame" x="180" y="131" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="deo-qr-LKw" secondAttribute="height" multiplier="1:1" id="Ecf-gE-tPv"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="type" value="add"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="dZD-lr-PT3" customClass="JWSimpleShape">
+                            <rect key="frame" x="250" y="131" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dZD-lr-PT3" secondAttribute="height" multiplier="1:1" id="Va1-Hs-fJr"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="type" value="close"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8W-LI-rQh" customClass="JWTextShape">
+                            <rect key="frame" x="20" y="201" width="219.5" height="24.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="My name is Jerry Wong."/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="5BX-X8-JpM" firstAttribute="leading" secondItem="kU8-wu-3f1" secondAttribute="leading" id="1c3-Rz-ssO"/>
+                        <constraint firstItem="dZD-lr-PT3" firstAttribute="width" secondItem="A4Q-rk-VHU" secondAttribute="width" id="1sO-Gb-aIi"/>
+                        <constraint firstItem="g1x-p2-BVm" firstAttribute="centerY" secondItem="5BX-X8-JpM" secondAttribute="centerY" id="2gY-ij-0Sj"/>
+                        <constraint firstItem="A4Q-rk-VHU" firstAttribute="centerX" secondItem="6Sy-i2-xwy" secondAttribute="centerX" id="2v3-Ts-pb7"/>
+                        <constraint firstItem="dZD-lr-PT3" firstAttribute="centerY" secondItem="A4Q-rk-VHU" secondAttribute="centerY" id="4Z2-3f-XT9"/>
+                        <constraint firstItem="1Ms-vs-ghZ" firstAttribute="leading" secondItem="iyB-WO-Czn" secondAttribute="trailing" constant="5" id="4gL-Xi-6XJ"/>
+                        <constraint firstItem="deo-qr-LKw" firstAttribute="leading" secondItem="IOE-PE-7OB" secondAttribute="trailing" constant="20" id="6aF-cM-Qvh"/>
+                        <constraint firstItem="deo-qr-LKw" firstAttribute="centerY" secondItem="A4Q-rk-VHU" secondAttribute="centerY" id="6xb-ss-j8c"/>
+                        <constraint firstItem="iyB-WO-Czn" firstAttribute="centerY" secondItem="kU8-wu-3f1" secondAttribute="centerY" id="7rd-6K-Hrh"/>
+                        <constraint firstItem="b8W-LI-rQh" firstAttribute="leading" secondItem="6Sy-i2-xwy" secondAttribute="leading" id="8sY-36-Z9N"/>
+                        <constraint firstItem="T3n-Kr-jP8" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="9oa-dN-rj1"/>
+                        <constraint firstItem="IOE-PE-7OB" firstAttribute="width" secondItem="A4Q-rk-VHU" secondAttribute="width" id="Def-IH-89N"/>
+                        <constraint firstItem="T3n-Kr-jP8" firstAttribute="centerY" secondItem="5BX-X8-JpM" secondAttribute="centerY" id="EQs-HD-AMH"/>
+                        <constraint firstItem="deo-qr-LKw" firstAttribute="height" secondItem="A4Q-rk-VHU" secondAttribute="height" id="Fge-IH-N93"/>
+                        <constraint firstItem="IOE-PE-7OB" firstAttribute="height" secondItem="A4Q-rk-VHU" secondAttribute="height" id="Hjv-F9-oJY"/>
+                        <constraint firstItem="5BX-X8-JpM" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="I65-TL-wOo"/>
+                        <constraint firstItem="6ez-Ws-wDi" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="JKU-EG-Gpo"/>
+                        <constraint firstAttribute="trailing" secondItem="dZD-lr-PT3" secondAttribute="trailing" constant="20" id="JZF-zv-0Pv"/>
+                        <constraint firstItem="qML-yN-42O" firstAttribute="centerY" secondItem="5BX-X8-JpM" secondAttribute="centerY" id="Jpy-aQ-wGd"/>
+                        <constraint firstItem="T3n-Kr-jP8" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="Kl0-56-nM0"/>
+                        <constraint firstItem="6Sy-i2-xwy" firstAttribute="top" secondItem="BJ7-Wg-MJ8" secondAttribute="top" constant="20" id="NFN-f6-EQf"/>
                         <constraint firstAttribute="height" constant="568" id="Pl4-s5-UOS"/>
+                        <constraint firstItem="5BX-X8-JpM" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="Sab-q9-fot"/>
+                        <constraint firstItem="1Ms-vs-ghZ" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="Slh-co-4Kl"/>
+                        <constraint firstItem="iyB-WO-Czn" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="T8v-kc-W7w"/>
+                        <constraint firstItem="b8W-LI-rQh" firstAttribute="top" secondItem="deo-qr-LKw" secondAttribute="bottom" constant="20" id="Tcx-ZL-N6O"/>
+                        <constraint firstItem="6Sy-i2-xwy" firstAttribute="leading" secondItem="BJ7-Wg-MJ8" secondAttribute="leading" constant="20" id="Ttq-3j-ibA"/>
+                        <constraint firstAttribute="trailing" secondItem="6ez-Ws-wDi" secondAttribute="trailing" constant="10" id="V8k-kE-nBM"/>
+                        <constraint firstItem="g1x-p2-BVm" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="XLd-v4-oYL"/>
+                        <constraint firstItem="IOE-PE-7OB" firstAttribute="centerY" secondItem="A4Q-rk-VHU" secondAttribute="centerY" id="XeZ-uR-ikN"/>
+                        <constraint firstItem="deo-qr-LKw" firstAttribute="width" secondItem="A4Q-rk-VHU" secondAttribute="width" id="Xyi-Gm-qHz"/>
+                        <constraint firstItem="kU8-wu-3f1" firstAttribute="leading" secondItem="6Sy-i2-xwy" secondAttribute="trailing" constant="10" id="ZK7-4J-NhS"/>
+                        <constraint firstItem="6ez-Ws-wDi" firstAttribute="centerY" secondItem="kU8-wu-3f1" secondAttribute="centerY" id="fUK-FT-KGN"/>
+                        <constraint firstItem="iyB-WO-Czn" firstAttribute="leading" secondItem="kU8-wu-3f1" secondAttribute="trailing" constant="5" id="fgV-xs-5e9"/>
+                        <constraint firstItem="1Ms-vs-ghZ" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="hFi-Nx-lEn"/>
+                        <constraint firstItem="A4Q-rk-VHU" firstAttribute="top" secondItem="6Sy-i2-xwy" secondAttribute="bottom" constant="20" id="hMD-Os-rZL"/>
+                        <constraint firstItem="6ez-Ws-wDi" firstAttribute="leading" secondItem="T3n-Kr-jP8" secondAttribute="leading" id="hse-Du-2uY"/>
+                        <constraint firstItem="6ez-Ws-wDi" firstAttribute="leading" secondItem="1Ms-vs-ghZ" secondAttribute="trailing" constant="5" id="jmJ-2c-kip"/>
+                        <constraint firstItem="dZD-lr-PT3" firstAttribute="leading" secondItem="deo-qr-LKw" secondAttribute="trailing" constant="20" id="kWA-XB-DNM"/>
+                        <constraint firstItem="qML-yN-42O" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="l3U-sj-KWt"/>
+                        <constraint firstItem="iyB-WO-Czn" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="lw9-WA-n72"/>
+                        <constraint firstItem="g1x-p2-BVm" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="mH1-b7-hwH"/>
+                        <constraint firstItem="deo-qr-LKw" firstAttribute="leading" secondItem="IOE-PE-7OB" secondAttribute="trailing" constant="20" id="mOP-uN-RNA"/>
+                        <constraint firstItem="IOE-PE-7OB" firstAttribute="leading" secondItem="A4Q-rk-VHU" secondAttribute="trailing" constant="20" id="o6X-dX-Lsa"/>
+                        <constraint firstItem="1Ms-vs-ghZ" firstAttribute="leading" secondItem="g1x-p2-BVm" secondAttribute="leading" id="oB7-tb-OUs"/>
+                        <constraint firstItem="1Ms-vs-ghZ" firstAttribute="centerY" secondItem="kU8-wu-3f1" secondAttribute="centerY" id="rVN-Wo-gJN"/>
+                        <constraint firstItem="6ez-Ws-wDi" firstAttribute="height" secondItem="kU8-wu-3f1" secondAttribute="height" id="tDW-X2-CkN"/>
+                        <constraint firstItem="iyB-WO-Czn" firstAttribute="leading" secondItem="qML-yN-42O" secondAttribute="leading" id="txS-at-bjv"/>
+                        <constraint firstItem="dZD-lr-PT3" firstAttribute="height" secondItem="A4Q-rk-VHU" secondAttribute="height" id="u6y-vB-bIT"/>
+                        <constraint firstItem="5BX-X8-JpM" firstAttribute="top" secondItem="kU8-wu-3f1" secondAttribute="bottom" constant="5" id="udc-O8-yHm"/>
+                        <constraint firstItem="kU8-wu-3f1" firstAttribute="top" secondItem="6Sy-i2-xwy" secondAttribute="top" id="xND-cs-PhM"/>
+                        <constraint firstItem="5BX-X8-JpM" firstAttribute="bottom" secondItem="6Sy-i2-xwy" secondAttribute="bottom" id="yDn-8t-PMa"/>
+                        <constraint firstItem="qML-yN-42O" firstAttribute="width" secondItem="kU8-wu-3f1" secondAttribute="width" id="yaT-sI-TRp"/>
                     </constraints>
                 </view>
             </subviews>

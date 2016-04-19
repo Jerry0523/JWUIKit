@@ -43,6 +43,7 @@ class MaskViewController: UIViewController {
     
     @IBAction func showCameraMask(sender: AnyObject) {
         self.cameraMask.frame = self.view.bounds
+        self.cameraMask.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.view .addSubview(self.cameraMask)
     }
     
