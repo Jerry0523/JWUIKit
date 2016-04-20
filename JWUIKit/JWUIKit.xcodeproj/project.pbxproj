@@ -56,8 +56,10 @@
 		C4CD4EC51CB37D21004DD38A /* JWBaseLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD4EC31CB37D21004DD38A /* JWBaseLoadingView.m */; };
 		C4CD4F1F1CB4A7AD004DD38A /* JWMaskDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CD4F1D1CB4A7AD004DD38A /* JWMaskDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4CD4F201CB4A7AD004DD38A /* JWMaskDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CD4F1E1CB4A7AD004DD38A /* JWMaskDrawer.m */; };
-		C4D999CD1CC6323300903A85 /* JWTextShape.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D999CB1CC6323300903A85 /* JWTextShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4D999CE1CC6323300903A85 /* JWTextShape.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D999CC1CC6323300903A85 /* JWTextShape.m */; };
+		C4D999D11CC716C900903A85 /* JWAnimatedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D999CF1CC716C900903A85 /* JWAnimatedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4D999D21CC716C900903A85 /* JWAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D999D01CC716C900903A85 /* JWAnimatedLabel.m */; };
+		C4D999D51CC729B800903A85 /* NSString+JWPath.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D999D31CC729B800903A85 /* NSString+JWPath.h */; };
+		C4D999D61CC729B800903A85 /* NSString+JWPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D999D41CC729B800903A85 /* NSString+JWPath.m */; };
 		C4E881301CACF1D2000E1CFF /* JWDotLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E8812E1CACF1D2000E1CFF /* JWDotLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4E881311CACF1D2000E1CFF /* JWDotLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8812F1CACF1D2000E1CFF /* JWDotLoadingView.m */; };
 		C4F9D49F1CA8D9C200F08726 /* JWCircleProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F9D49D1CA8D9C200F08726 /* JWCircleProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,8 +122,10 @@
 		C4CD4EC31CB37D21004DD38A /* JWBaseLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBaseLoadingView.m; sourceTree = "<group>"; };
 		C4CD4F1D1CB4A7AD004DD38A /* JWMaskDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMaskDrawer.h; sourceTree = "<group>"; };
 		C4CD4F1E1CB4A7AD004DD38A /* JWMaskDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMaskDrawer.m; sourceTree = "<group>"; };
-		C4D999CB1CC6323300903A85 /* JWTextShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTextShape.h; sourceTree = "<group>"; };
-		C4D999CC1CC6323300903A85 /* JWTextShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTextShape.m; sourceTree = "<group>"; };
+		C4D999CF1CC716C900903A85 /* JWAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWAnimatedLabel.h; sourceTree = "<group>"; };
+		C4D999D01CC716C900903A85 /* JWAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWAnimatedLabel.m; sourceTree = "<group>"; };
+		C4D999D31CC729B800903A85 /* NSString+JWPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JWPath.h"; sourceTree = "<group>"; };
+		C4D999D41CC729B800903A85 /* NSString+JWPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JWPath.m"; sourceTree = "<group>"; };
 		C4E8812E1CACF1D2000E1CFF /* JWDotLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDotLoadingView.h; sourceTree = "<group>"; };
 		C4E8812F1CACF1D2000E1CFF /* JWDotLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDotLoadingView.m; sourceTree = "<group>"; };
 		C4F9D49D1CA8D9C200F08726 /* JWCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCircleProgressView.h; sourceTree = "<group>"; };
@@ -159,8 +163,6 @@
 				C427D9231CBCB513005AE31A /* JWSimpleShape.m */,
 				C4176E291CA8ED7200770F24 /* JWMicrophoneView.h */,
 				C4176E2A1CA8ED7200770F24 /* JWMicrophoneView.m */,
-				C4D999CB1CC6323300903A85 /* JWTextShape.h */,
-				C4D999CC1CC6323300903A85 /* JWTextShape.m */,
 			);
 			path = Shape;
 			sourceTree = "<group>";
@@ -246,6 +248,8 @@
 				C4CD17C61C9FEE2400187997 /* UIImage+JWTransform.m */,
 				C4446E621C99431100FA3176 /* UIView+JWFrame.h */,
 				C4446E631C99431100FA3176 /* UIView+JWFrame.m */,
+				C4D999D31CC729B800903A85 /* NSString+JWPath.h */,
+				C4D999D41CC729B800903A85 /* NSString+JWPath.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -275,6 +279,8 @@
 				C4CD17FB1CA0F1B800187997 /* JWFPSLabel.m */,
 				C4CD17FC1CA0F1B800187997 /* JWTickNumberLabel.h */,
 				C4CD17FD1CA0F1B800187997 /* JWTickNumberLabel.m */,
+				C4D999CF1CC716C900903A85 /* JWAnimatedLabel.h */,
+				C4D999D01CC716C900903A85 /* JWAnimatedLabel.m */,
 				C427D93B1CBCF47C005AE31A /* JWRollNumberLabel.h */,
 				C427D93C1CBCF47C005AE31A /* JWRollNumberLabel.m */,
 			);
@@ -349,6 +355,7 @@
 				C4176E301CA8EED500770F24 /* JWAlgorithm.h in Headers */,
 				C4CD18041CA0F1B800187997 /* JWAnimatedImageView.h in Headers */,
 				C4CD180A1CA0F1B800187997 /* JWPageView.h in Headers */,
+				C4D999D51CC729B800903A85 /* NSString+JWPath.h in Headers */,
 				C427D93D1CBCF47C005AE31A /* JWRollNumberLabel.h in Headers */,
 				C4CD18061CA0F1B800187997 /* JWFPSLabel.h in Headers */,
 				C4CD180C1CA0F1B800187997 /* JWTextField.h in Headers */,
@@ -370,8 +377,8 @@
 				C427D9051CB7A176005AE31A /* JWPageControl.h in Headers */,
 				C427D9211CBBA9CF005AE31A /* JWRefreshContentViewProtocol.h in Headers */,
 				053808BA1CC1EA27008C3364 /* JWCamaraMaskView.h in Headers */,
+				C4D999D11CC716C900903A85 /* JWAnimatedLabel.h in Headers */,
 				C427D9241CBCB513005AE31A /* JWSimpleShape.h in Headers */,
-				C4D999CD1CC6323300903A85 /* JWTextShape.h in Headers */,
 				05072B701CB908F900234EC8 /* JWRefreshHeaderContentView.h in Headers */,
 				C4CD178C1C9BCABC00187997 /* JWUIKitMacro.h in Headers */,
 				C4CD17C71C9FEE2400187997 /* UIImage+JWTransform.h in Headers */,
@@ -449,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D999D21CC716C900903A85 /* JWAnimatedLabel.m in Sources */,
 				C4CD17C81C9FEE2400187997 /* UIImage+JWTransform.m in Sources */,
 				C4176E541CAA1F6200770F24 /* JWCircleLoadingView.m in Sources */,
 				C4176E2F1CA8EED500770F24 /* JWAlgorithm.m in Sources */,
@@ -465,11 +473,11 @@
 				C4CD18071CA0F1B800187997 /* JWFPSLabel.m in Sources */,
 				C427D9251CBCB513005AE31A /* JWSimpleShape.m in Sources */,
 				05072B711CB908F900234EC8 /* JWRefreshHeaderContentView.m in Sources */,
+				C4D999D61CC729B800903A85 /* NSString+JWPath.m in Sources */,
 				053808BB1CC1EA27008C3364 /* JWCamaraMaskView.m in Sources */,
 				C4F9D4A91CA8D9DE00F08726 /* JWBarLoadingView.m in Sources */,
 				C427D93E1CBCF47C005AE31A /* JWRollNumberLabel.m in Sources */,
 				C4F9D4A71CA8D9DE00F08726 /* JWRadarLoadingView.m in Sources */,
-				C4D999CE1CC6323300903A85 /* JWTextShape.m in Sources */,
 				C4176E671CAA61A400770F24 /* JWButton.m in Sources */,
 				C45EB42B1CB50EBC00792DF0 /* JWToast.m in Sources */,
 				C427D9061CB7A176005AE31A /* JWPageControl.m in Sources */,

@@ -19,9 +19,7 @@ IB_DESIGNABLE
 @property (copy, nonatomic, nullable) IBInspectable NSString *prefixString;
 @property (copy, nonatomic, nullable) IBInspectable NSString *suffixString;
 
-
-
-- (void)reloadData;
+- (void)startAnimating;
 
 @end
 

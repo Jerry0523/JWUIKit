@@ -23,6 +23,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 //Labels
 #import <JWUIKit/JWFPSLabel.h>
 #import <JWUIKit/JWTickNumberLabel.h>
+#import <JWUIKit/JWAnimatedLabel.h>
 //Buttons
 #import <JWUIKit/JWButton.h>
 //Images
@@ -43,7 +44,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 //Shapes
 #import <JWUIKit/JWSimpleShape.h>
 #import <JWUIKit/JWMicrophoneView.h>
-#import <JWUIKit/JWTextShape.h>
+
 //Drawer
 #import <JWUIKit/JWMaskDrawer.h>
 #import <JWUIKit/JWFoldawayDrawer.h>

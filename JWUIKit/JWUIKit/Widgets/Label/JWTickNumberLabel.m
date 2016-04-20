@@ -27,7 +27,7 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Public
-- (void)reloadData {
+- (void)startAnimating {
     if (self.animating) {
         return;
     }
@@ -54,7 +54,7 @@ JWUIKitInitialze {
 - (void)setTextValue:(CGFloat)textValue {
     _textValue = textValue;
     self.text = [self stringForValue:self.textValue];
-    [self reloadData];
+    [self startAnimating];
 }
 
 - (void)setDuration:(NSTimeInterval)duration {
