@@ -29,7 +29,6 @@ CA_EXTERN NSString *const JWSimpleShapeTypeHeart;
 CA_EXTERN NSString *const JWSimpleShapeTypePentastar;
 CA_EXTERN NSString *const JWSimpleShapeTypeAdd;
 CA_EXTERN NSString *const JWSimpleShapeTypeClose;
-CA_EXTERN NSString *const JWSimpleShapeTypeSmile;
 
 
 CA_EXTERN NSString *const JWSimpleShapeSubTypeArrowTop;

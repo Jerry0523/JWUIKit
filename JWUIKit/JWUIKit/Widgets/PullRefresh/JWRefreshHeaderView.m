@@ -48,6 +48,7 @@ JWUIKitInitialze {
     }
     [self removeKVO];
     if (newSuperview) {
+        self.contentView.tintColor = self.tintColor;
         self.scrollView = (id)newSuperview;
         self.scrollViewOriginalInset = self.scrollView.contentInset;
         self.panGestureRecognizer = self.scrollView.panGestureRecognizer;

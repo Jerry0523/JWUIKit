@@ -57,7 +57,6 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
             if cell.contentView.subviews.count == 0 {
                 cell.contentView.addSubview(self.drawerView)
                 cell.selectionStyle = .None
-                cell.backgroundColor = UIColor.blackColor()
                 
                 let leftConstraint = NSLayoutConstraint(item: drawerView, attribute: .Leading, relatedBy: .Equal, toItem: cell.contentView, attribute: .Leading, multiplier: 1.0, constant: 0)
                 

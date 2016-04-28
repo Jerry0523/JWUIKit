@@ -18,7 +18,6 @@ NSString *const JWSimpleShapeTypeHeart = @"heart";
 NSString *const JWSimpleShapeTypePentastar = @"pentastar";
 NSString *const JWSimpleShapeTypeAdd = @"add";
 NSString *const JWSimpleShapeTypeClose = @"close";
-NSString *const JWSimpleShapeTypeSmile = @"smile";
 
 NSString *const JWSimpleShapeSubTypeArrowTop = @"top";
 NSString *const JWSimpleShapeSubTypeArrowBottom = @"bottom";

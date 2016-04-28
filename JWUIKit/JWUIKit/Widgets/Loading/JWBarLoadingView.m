@@ -82,10 +82,8 @@
 }
 
 - (void)stopAnimating {
-    if (self.isAnimating) {
-        [_layers makeObjectsPerformSelector:@selector(removeAllAnimations)];
-        self.isAnimating = NO;
-    }
+    [_layers makeObjectsPerformSelector:@selector(removeAllAnimations)];
+    self.isAnimating = NO;
 }
 
 #pragma mark - Setter & Getter

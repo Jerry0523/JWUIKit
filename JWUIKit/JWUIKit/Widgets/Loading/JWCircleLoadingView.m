@@ -154,10 +154,8 @@
 }
 
 - (void)stopAnimating {
-    if (self.isAnimating) {
-        [_circleLayer removeAllAnimations];
-        self.isAnimating = NO;
-    }
+    [_circleLayer removeAllAnimations];
+    self.isAnimating = NO;
 }
 
 #pragma mark - Private

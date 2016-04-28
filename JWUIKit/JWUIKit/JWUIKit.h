@@ -41,6 +41,7 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 //Page
 #import <JWUIKit/JWPageView.h>
 #import <JWUIKit/JWPageControl.h>
+#import <JWUIKit/JWTextPageControl.h>
 //Shapes
 #import <JWUIKit/JWSimpleShape.h>
 #import <JWUIKit/JWMicrophoneView.h>

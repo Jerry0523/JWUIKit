@@ -84,12 +84,10 @@
 }
 
 - (void)stopAnimating {
-    if (self.isAnimating) {
-        [_centerCirclelLayer removeAllAnimations];
-        _centerCirclelLayer.opacity = 0.0f;
-        [_ringLayersArray makeObjectsPerformSelector:@selector(removeAllAnimations)];
-        self.isAnimating = NO;
-    }
+    [_centerCirclelLayer removeAllAnimations];
+    _centerCirclelLayer.opacity = 0.0f;
+    [_ringLayersArray makeObjectsPerformSelector:@selector(removeAllAnimations)];
+    self.isAnimating = NO;
 }
 
 #pragma mark - Setter & Getter

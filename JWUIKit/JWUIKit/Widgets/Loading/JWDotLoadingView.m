@@ -59,10 +59,8 @@
 }
 
 - (void)stopAnimating {
-    if (self.isAnimating) {
-        [_dotViews makeObjectsPerformSelector:@selector(removeAllAnimations)];
-        self.isAnimating = NO;
-    }
+    [_dotViews makeObjectsPerformSelector:@selector(removeAllAnimations)];
+    self.isAnimating = NO;
 }
 
 - (void)tintColorDidChange {

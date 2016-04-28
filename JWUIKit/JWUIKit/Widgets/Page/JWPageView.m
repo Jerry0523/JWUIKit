@@ -74,7 +74,7 @@ JWUIKitInitialze {
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.delegate respondsToSelector:@selector(pageView:didSelectedPageAtIndex:)]) {
-        [self.delegate pageView:self didSelectedPageAtIndex:indexPath.row];
+        [self.delegate pageView:self didSelectedPageAtIndex:[self parseRowIndex:indexPath.row]];
     }
 }
 
@@ -88,11 +88,10 @@ JWUIKitInitialze {
     self.pageControl.currentPage = [self parseRowIndex:idx];
     
     if ([self.delegate respondsToSelector:@selector(pageView:didScrollToIndex:)]) {
-        [self.delegate pageView:self didScrollToIndex:idx];
+        [self.delegate pageView:self didScrollToIndex:self.pageControl.currentPage];
     }
     
     if (self.cycled) {
-        
         NSUInteger totalCount = [self collectionView:self.collectionView numberOfItemsInSection:0];
         if (indexPath.item == 0) {
             [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:[self rawCellCount] inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];

@@ -27,6 +27,7 @@ class ToastViewController: UIViewController {
                 }
             });
         }
+        refreshView?.tintColor = JWConst.themeColor
         self.view.addSubview(refreshView!)
     }
     

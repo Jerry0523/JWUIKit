@@ -24,17 +24,8 @@ class PagesViewController: UIViewController, JWPageViewDataSource, JWPageViewDel
         self.view.backgroundColor = JWConst.backgroundColor
         self.title = "JWUIKitPage"
         
-        let pageView = JWPageView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 160))
-        
-        pageView.autoresizingMask = .FlexibleWidth
-        pageView.delegate = self
-        pageView.dataSource = self
-        pageView.backgroundColor = UIColor.whiteColor()
-        pageView.autoPlayInterval = 3.0;
-        
-        pageView.pageControl.activeImage = UIImage(named: "diamond")
-        
-        self.view.addSubview(pageView)
+        self.view.addSubview(self.pageView)
+        self.view.addSubview(self.textPageControl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +34,7 @@ class PagesViewController: UIViewController, JWPageViewDataSource, JWPageViewDel
     
 //MARK: - JWPageViewDataSource & JWPageViewDelegate
     func numberOfPagesInPageView(aPageView: JWPageView) -> UInt {
-        return 4
+        return 16
     }
     
     func pageView(aPageView: JWPageView, viewAt aIndex: UInt, reusableView: UIView?) -> UIView{
@@ -61,5 +52,34 @@ class PagesViewController: UIViewController, JWPageViewDataSource, JWPageViewDel
         label.text = "Page \(aIndex)"
         return mReusableView!
     }
+    
+    func pageView(pageView: JWPageView, didScrollToIndex aIndex: UInt) {
+        self.textPageControl.selectedIdx = Int(aIndex);
+    }
+    
+//MARK: - Lazy Initialize
+    lazy var pageView: JWPageView = {
+        let pageView = JWPageView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 160))
+        
+        pageView.autoresizingMask = .FlexibleWidth
+        pageView.delegate = self
+        pageView.dataSource = self
+        pageView.backgroundColor = UIColor.whiteColor()
+        pageView.autoPlayInterval = 3.0;
+        
+        pageView.pageControl.activeImage = UIImage(named: "diamond")
+        return pageView
+    }()
+    
+    lazy var textPageControl: JWTextPageControl = {
+        let textPageControl = JWTextPageControl(frame: CGRectMake(0, 160, CGRectGetWidth(self.view.frame), 44))
+        textPageControl.autoresizingMask = .FlexibleWidth
+        textPageControl.selectionStyle = .Zoom
+        textPageControl.contents = ["首页", "分类", "购物车", "账户","首页", "分类", "购物车", "账户", "首页", "分类", "购物车", "账户", "首页", "分类", "购物车", "账户"]
+        textPageControl.tintColor = JWConst.themeColor
+        textPageControl.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+        
+        return textPageControl
+    }()
 }
 

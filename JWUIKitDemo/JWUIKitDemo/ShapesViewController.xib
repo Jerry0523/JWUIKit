@@ -21,7 +21,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-i2-xwy" customClass="JWMicrophoneView">
-                            <rect key="frame" x="0.0" y="20" width="98" height="98"/>
+                            <rect key="frame" x="0.0" y="20" width="98.5" height="98.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -37,7 +37,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-wu-3f1" customClass="JWSimpleShape">
-                            <rect key="frame" x="107.5" y="20" width="47" height="47"/>
+                            <rect key="frame" x="108" y="20" width="47" height="47"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -64,7 +64,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="qML-yN-42O" customClass="JWSimpleShape">
-                            <rect key="frame" x="160" y="71.5" width="47" height="46.5"/>
+                            <rect key="frame" x="160" y="72" width="47" height="47"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -76,7 +76,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="5BX-X8-JpM" customClass="JWSimpleShape">
-                            <rect key="frame" x="107.5" y="71.5" width="46.5" height="46.5"/>
+                            <rect key="frame" x="108" y="72" width="46.5" height="47"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -88,7 +88,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-rk-VHU" customClass="JWSimpleShape">
-                            <rect key="frame" x="21" y="137.5" width="54.5" height="55"/>
+                            <rect key="frame" x="21.5" y="138" width="54.5" height="55"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -102,12 +102,9 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-PE-7OB" customClass="JWSimpleShape">
-                            <rect key="frame" x="95.5" y="137.5" width="55" height="55"/>
+                            <rect key="frame" x="95.5" y="138" width="54.5" height="55"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="IOE-PE-7OB" secondAttribute="height" multiplier="1:1" id="wGl-pk-0L8"/>
-                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="2"/>
@@ -117,7 +114,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-p2-BVm" customClass="JWSimpleShape">
-                            <rect key="frame" x="211.5" y="71.5" width="46" height="46.5"/>
+                            <rect key="frame" x="211" y="72" width="46.5" height="47"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -129,7 +126,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="6ez-Ws-wDi" customClass="JWSimpleShape">
-                            <rect key="frame" x="262.5" y="20" width="47" height="46.5"/>
+                            <rect key="frame" x="263" y="20" width="47" height="46.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -141,7 +138,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-vs-ghZ" customClass="JWSimpleShape">
-                            <rect key="frame" x="211.5" y="20" width="46" height="46.5"/>
+                            <rect key="frame" x="211.5" y="20" width="46.5" height="47"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -153,7 +150,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="T3n-Kr-jP8" customClass="JWSimpleShape">
-                            <rect key="frame" x="262.5" y="71.5" width="46.5" height="46"/>
+                            <rect key="frame" x="263" y="71.5" width="46.5" height="46.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <userDefinedRuntimeAttributes>
@@ -164,12 +161,9 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="deo-qr-LKw" customClass="JWSimpleShape">
-                            <rect key="frame" x="170.5" y="137.5" width="54.5" height="55"/>
+                            <rect key="frame" x="170.5" y="138" width="54" height="55"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="deo-qr-LKw" secondAttribute="height" multiplier="1:1" id="Ecf-gE-tPv"/>
-                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="2"/>
@@ -178,7 +172,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="dZD-lr-PT3" customClass="JWSimpleShape">
-                            <rect key="frame" x="245" y="137.5" width="55" height="55"/>
+                            <rect key="frame" x="245" y="138" width="55" height="55"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.97647058819999999" green="0.57647058819999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>

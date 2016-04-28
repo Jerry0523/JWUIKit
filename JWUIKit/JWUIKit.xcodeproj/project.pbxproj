@@ -25,6 +25,8 @@
 		C4176E671CAA61A400770F24 /* JWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E651CAA61A400770F24 /* JWButton.m */; };
 		C4176E6A1CAA80FA00770F24 /* UIImage+JWColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C4176E681CAA80FA00770F24 /* UIImage+JWColor.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4176E6B1CAA80FA00770F24 /* UIImage+JWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4176E691CAA80FA00770F24 /* UIImage+JWColor.m */; };
+		C4220AB41CCF0D3900100E43 /* JWTextPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C4220AB21CCF0D3900100E43 /* JWTextPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4220AB51CCF0D3900100E43 /* JWTextPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C4220AB31CCF0D3900100E43 /* JWTextPageControl.m */; };
 		C427D9051CB7A176005AE31A /* JWPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C427D9031CB7A176005AE31A /* JWPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C427D9061CB7A176005AE31A /* JWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C427D9041CB7A176005AE31A /* JWPageControl.m */; };
 		C427D90E1CB7ACBE005AE31A /* JWRefreshHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = C427D90C1CB7ACBE005AE31A /* JWRefreshHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,6 +91,8 @@
 		C4176E651CAA61A400770F24 /* JWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButton.m; sourceTree = "<group>"; };
 		C4176E681CAA80FA00770F24 /* UIImage+JWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWColor.h"; sourceTree = "<group>"; };
 		C4176E691CAA80FA00770F24 /* UIImage+JWColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JWColor.m"; sourceTree = "<group>"; };
+		C4220AB21CCF0D3900100E43 /* JWTextPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTextPageControl.h; sourceTree = "<group>"; };
+		C4220AB31CCF0D3900100E43 /* JWTextPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTextPageControl.m; sourceTree = "<group>"; };
 		C427D9031CB7A176005AE31A /* JWPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPageControl.h; sourceTree = "<group>"; };
 		C427D9041CB7A176005AE31A /* JWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPageControl.m; sourceTree = "<group>"; };
 		C427D90C1CB7ACBE005AE31A /* JWRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRefreshHeaderView.h; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 				C4CD18001CA0F1B800187997 /* JWPageView.m */,
 				C427D9031CB7A176005AE31A /* JWPageControl.h */,
 				C427D9041CB7A176005AE31A /* JWPageControl.m */,
+				C4220AB21CCF0D3900100E43 /* JWTextPageControl.h */,
+				C4220AB31CCF0D3900100E43 /* JWTextPageControl.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				C427D9051CB7A176005AE31A /* JWPageControl.h in Headers */,
 				C427D9211CBBA9CF005AE31A /* JWRefreshContentViewProtocol.h in Headers */,
 				053808BA1CC1EA27008C3364 /* JWCamaraMaskView.h in Headers */,
+				C4220AB41CCF0D3900100E43 /* JWTextPageControl.h in Headers */,
 				C4D999D11CC716C900903A85 /* JWAnimatedLabel.h in Headers */,
 				C427D9241CBCB513005AE31A /* JWSimpleShape.h in Headers */,
 				05072B701CB908F900234EC8 /* JWRefreshHeaderContentView.h in Headers */,
@@ -468,6 +475,7 @@
 				C4176E2C1CA8ED7200770F24 /* JWMicrophoneView.m in Sources */,
 				C4CD4EC51CB37D21004DD38A /* JWBaseLoadingView.m in Sources */,
 				C427D90F1CB7ACBE005AE31A /* JWRefreshHeaderView.m in Sources */,
+				C4220AB51CCF0D3900100E43 /* JWTextPageControl.m in Sources */,
 				C4176E6B1CAA80FA00770F24 /* UIImage+JWColor.m in Sources */,
 				C4446E651C99431100FA3176 /* UIView+JWFrame.m in Sources */,
 				C4CD18071CA0F1B800187997 /* JWFPSLabel.m in Sources */,
@@ -591,6 +599,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -611,6 +620,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerry.JWUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
