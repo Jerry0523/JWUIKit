@@ -106,6 +106,27 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Setter & Getter
+- (NSInteger)selectedIdx {
+    return self.pageControl.currentPage;
+}
+
+- (void)setSelectedIdx:(NSInteger)selectedIdx {
+    
+    NSInteger idx = selectedIdx;
+    if (self.cycled) {
+        idx += 1;
+    }
+    
+    NSInteger totalCount = [self collectionView:self.collectionView numberOfItemsInSection:0];
+    if (idx < 0 || idx >= totalCount) {
+        return;
+    }
+    
+    [self resetAutoPlayTimer];
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:idx inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+    
+}
+
 - (void)setAutoPlayInterval:(NSTimeInterval)autoPlayInterval {
     if (autoPlayInterval >= 0 && _autoPlayInterval != autoPlayInterval) {
         _autoPlayInterval = autoPlayInterval;

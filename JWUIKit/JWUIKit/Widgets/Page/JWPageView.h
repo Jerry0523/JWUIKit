@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (assign, nonatomic) NSTimeInterval autoPlayInterval;
 
+@property (assign, nonatomic) NSInteger selectedIdx;
+
 
 - (void)reloadData;
 

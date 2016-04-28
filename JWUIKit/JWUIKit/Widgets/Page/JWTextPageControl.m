@@ -128,8 +128,6 @@ JWUIKitInitialze {
                 _selectionView.w = selectedButton.w - ((self.selectedIdx == 0 || self.selectedIdx == _buttonsArray.count - 1) ? self.textMargin * .5f : 0);
             }];
         }
-        
-        [self sendActionsForControlEvents:UIControlEventValueChanged];
         [self fixScrollViewContentOffset];
     }
 }
@@ -184,6 +182,7 @@ JWUIKitInitialze {
             break;
         }
     }
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)refreshButtonsByFontChange {

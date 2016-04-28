@@ -32,6 +32,10 @@ class PagesViewController: UIViewController, JWPageViewDataSource, JWPageViewDel
         super.didReceiveMemoryWarning()
     }
     
+    func textPageControlValueDidChanged() {
+        self.pageView.selectedIdx = self.textPageControl.selectedIdx
+    }
+    
 //MARK: - JWPageViewDataSource & JWPageViewDelegate
     func numberOfPagesInPageView(aPageView: JWPageView) -> UInt {
         return 16
@@ -78,6 +82,8 @@ class PagesViewController: UIViewController, JWPageViewDataSource, JWPageViewDel
         textPageControl.contents = ["首页", "分类", "购物车", "账户","首页", "分类", "购物车", "账户", "首页", "分类", "购物车", "账户", "首页", "分类", "购物车", "账户"]
         textPageControl.tintColor = JWConst.themeColor
         textPageControl.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+        
+        textPageControl.addTarget(self, action: #selector(PagesViewController.textPageControlValueDidChanged), forControlEvents:.ValueChanged)
         
         return textPageControl
     }()
