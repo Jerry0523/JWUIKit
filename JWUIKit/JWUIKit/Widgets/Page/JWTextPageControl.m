@@ -35,6 +35,22 @@ JWUIKitInitialze {
     [self addSubview:_scrollView];
 }
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    return [self intrinsicContentSize];
+}
+
+- (CGSize)intrinsicContentSize {
+    CGFloat width = 0.0, height = 0;
+    for (UIButton *button in _buttonsArray) {
+        [button layoutIfNeeded];
+        if (height == 0) {
+            height = button.h;
+        }
+        width += button.w;
+    }
+    return CGSizeMake(width, height);
+}
+
 - (void)layoutSubviews {
     if (_buttonsArray.count == 0) {
         return;
@@ -65,6 +81,7 @@ JWUIKitInitialze {
         }
         _scrollView.contentSize = CGSizeMake(self.w, 0);
     }
+    [self layoutSelectedView];
 }
 
 - (void)tintColorDidChange {
@@ -120,14 +137,7 @@ JWUIKitInitialze {
             }
         }
         
-        if(self.selectionStyle == JWTextPageControlSelectionStyleLine || self.selectionStyle == JWTextPageControlSelectionStyleRoundRect) {
-            [self layoutIfNeeded];
-            UIButton *selectedButton = _buttonsArray[selectedIdx];
-            [UIView animateWithDuration:self.duration animations:^{
-                _selectionView.x = selectedButton.x + (selectedIdx == 0 ? self.textMargin * .5 : 0);
-                _selectionView.w = selectedButton.w - ((self.selectedIdx == 0 || self.selectedIdx == _buttonsArray.count - 1) ? self.textMargin * .5f : 0);
-            }];
-        }
+        [self layoutSelectedView];
         [self fixScrollViewContentOffset];
     }
 }
@@ -174,6 +184,16 @@ JWUIKitInitialze {
 }
 
 #pragma mark - Private
+- (void)layoutSelectedView {
+    if(self.selectionStyle == JWTextPageControlSelectionStyleLine || self.selectionStyle == JWTextPageControlSelectionStyleRoundRect) {
+        UIButton *selectedButton = _buttonsArray[self.selectedIdx];
+        [UIView animateWithDuration:self.duration animations:^{
+            _selectionView.x = selectedButton.x + (self.selectedIdx == 0 ? self.textMargin * .5 : 0);
+            _selectionView.w = selectedButton.w - ((self.selectedIdx == 0 || self.selectedIdx == _buttonsArray.count - 1) ? self.textMargin * .5f : 0);
+        }];
+    }
+}
+
 - (void)buttonDidClicked:(UIButton*)sender {
     for (int i = 0; i < _buttonsArray.count; i++) {
         UIButton *button = _buttonsArray[i];
@@ -207,6 +227,7 @@ JWUIKitInitialze {
         CGFloat right = i == _buttonsArray.count - 1 ? self.textMargin : self.textMargin * .5f;
         button.contentEdgeInsets = UIEdgeInsetsMake(0, left, 0, right);
     }
+    [self invalidateIntrinsicContentSize];
 }
 
 - (void)fixScrollViewContentOffset {

@@ -26,8 +26,6 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWAnimatedLabel.h>
 //Buttons
 #import <JWUIKit/JWButton.h>
-//Images
-#import <JWUIKit/JWAnimatedImageView.h>
 //TextFields
 #import <JWUIKit/JWTextField.h>
 //Progress
@@ -51,9 +49,6 @@ FOUNDATION_EXPORT const unsigned char JWUIKitVersionString[];
 #import <JWUIKit/JWFoldawayDrawer.h>
 //Toast
 #import <JWUIKit/JWToast.h>
-//Refresh
-#import <JWUIKit/JWRefreshHeaderView.h>
-#import <JWUIKit/JWRefreshHeaderContentView.h>
 //Mask
 #import <JWUIKit/JWCamaraMaskView.h>
 

@@ -12,34 +12,34 @@ class ProgressViewsViewController: UIViewController, UICollectionViewDataSource 
     
     let cellIdentifier = "cellIdentifier"
     
-    let circleProgressView0 = JWCircleProgressView(frame:CGRectMake(0, 0, 30, 30))
-    let circleProgressView1 = JWCircleProgressView(frame:CGRectMake(0, 0, 30, 30))
+    let circleProgressView0 = JWCircleProgressView(frame:CGRect(x: 0, y: 0, width: 30, height: 30))
+    let circleProgressView1 = JWCircleProgressView(frame:CGRect(x: 0, y: 0, width: 30, height: 30))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "JWUIKitProgressViews"
         
         let collectionViewFlowlayout = UICollectionViewFlowLayout()
-        collectionViewFlowlayout.scrollDirection = .Vertical
+        collectionViewFlowlayout.scrollDirection = .vertical
         collectionViewFlowlayout.minimumLineSpacing = 10
         collectionViewFlowlayout.minimumInteritemSpacing = 10
         collectionViewFlowlayout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10)
-        collectionViewFlowlayout.itemSize = CGSizeMake(80, 80)
+        collectionViewFlowlayout.itemSize = CGSize(width: 80, height: 80)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: collectionViewFlowlayout)
         collectionView.alwaysBounceVertical = true
-        collectionView.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.backgroundColor = UIColor(white: 240.0 / 255.0, alpha: 1.0)
         self.view.addSubview(collectionView)
-        collectionView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.dataSource = self
         
-        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(ProgressViewsViewController.reloadProgress))
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(ProgressViewsViewController.reloadProgress))
         self.navigationItem.rightBarButtonItem = refreshBarButtonItem
         
         circleProgressView0.progress = 0
         circleProgressView1.progress = 0
-        circleProgressView1.style = .Pie
+        circleProgressView1.style = .pie
         
         self.fakeProgress()
     }
@@ -54,14 +54,14 @@ class ProgressViewsViewController: UIViewController, UICollectionViewDataSource 
         circleProgressView1.progress += randomValue;
         
         if circleProgressView0.progress < 1.0 {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1 * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
                 [weak self] in
                 self?.fakeProgress()
             });
         }
     }
     
-    func reloadProgress() {
+    @objc func reloadProgress() {
         if circleProgressView0.progress != 1.0 {
             return;
         }
@@ -71,12 +71,12 @@ class ProgressViewsViewController: UIViewController, UICollectionViewDataSource 
     }
     
     //MARK: - UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         cell.backgroundColor = UIColor(white: 220.0 / 255.0, alpha: 1.0)
         
         for subView in cell.contentView.subviews {
@@ -84,16 +84,16 @@ class ProgressViewsViewController: UIViewController, UICollectionViewDataSource 
         }
         var cellView :UIView?
         
-        if indexPath.row == 0 {
+        if (indexPath as NSIndexPath).row == 0 {
             cellView = self.circleProgressView0
-        } else if indexPath.row == 1 {
+        } else if (indexPath as NSIndexPath).row == 1 {
             cellView = self.circleProgressView1
         }
         
         let tintColor = UIColor(red: 249.0 / 255.0, green: 147.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
         cell.tintColor = tintColor
         cell.contentView.addSubview(cellView!)
-        cellView!.center = CGPointMake(CGRectGetWidth(cell.frame) * 0.5, CGRectGetHeight(cell.frame) * 0.5)
+        cellView!.center = CGPoint(x: cell.frame.width * 0.5, y: cell.frame.height * 0.5)
         
         return cell
     }

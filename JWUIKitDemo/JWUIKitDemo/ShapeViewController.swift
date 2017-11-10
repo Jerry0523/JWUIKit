@@ -24,7 +24,7 @@ class ShapesViewController: UIViewController {
     
     func fakeVolume() {
         let randomValue = CGFloat(JWRandom(1, 100)) / 100.0
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
             [weak self] in
             self?.microphoneView.volumn = randomValue
             if self != nil {

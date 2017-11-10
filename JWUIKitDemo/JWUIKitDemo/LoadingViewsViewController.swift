@@ -17,19 +17,27 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
         self.title = "JWUIKitLoadingViews"
         
         let collectionViewFlowlayout = UICollectionViewFlowLayout()
-        collectionViewFlowlayout.scrollDirection = .Vertical
+        collectionViewFlowlayout.scrollDirection = .vertical
         collectionViewFlowlayout.minimumLineSpacing = 10
         collectionViewFlowlayout.minimumInteritemSpacing = 10
         collectionViewFlowlayout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10)
-        collectionViewFlowlayout.itemSize = CGSizeMake(80, 80)
+        collectionViewFlowlayout.itemSize = CGSize(width: 80, height: 80)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: collectionViewFlowlayout)
         collectionView.alwaysBounceVertical = true
-        collectionView.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.backgroundColor = UIColor(white: 240.0 / 255.0, alpha: 1.0)
         self.view.addSubview(collectionView)
-        collectionView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.dataSource = self
+        
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(LoadingViewsViewController.reloadProgress))
+        self.navigationItem.rightBarButtonItem = refreshBarButtonItem
+    }
+    
+    @objc func reloadProgress() {
+        let vc = UIViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,12 +45,12 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
     }
     
     //MARK: - UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         cell.backgroundColor = UIColor(white: 220.0 / 255.0, alpha: 1.0)
         
         for subView in cell.contentView.subviews {
@@ -51,30 +59,30 @@ class LoadingViewsViewController: UIViewController, UICollectionViewDataSource {
         
         var cellView :UIView?
         
-        if indexPath.row == 0 {
-            let radarLoadingView = JWRadarLoadingView(frame: CGRectMake(0, 0, 40, 40))
+        if (indexPath as NSIndexPath).row == 0 {
+            let radarLoadingView = JWRadarLoadingView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
             cellView = radarLoadingView;
-        } else if indexPath.row == 1 || indexPath.row == 2 {
-            let soundLikeLoadingView = JWBarLoadingView(frame: CGRectMake(0, 0, 25, 20))
-            if indexPath.row == 2 {
-                soundLikeLoadingView.style = .Wave
+        } else if (indexPath as NSIndexPath).row == 1 || (indexPath as NSIndexPath).row == 2 {
+            let soundLikeLoadingView = JWBarLoadingView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
+            if (indexPath as NSIndexPath).row == 2 {
+                soundLikeLoadingView.style = .wave
                 soundLikeLoadingView.duration = 0.2
             }
             cellView = soundLikeLoadingView
-        } else if indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5 {
-            let circleLoadingView = JWCircleLoadingView(frame: CGRectMake(0, 0, 25, 25))
-            circleLoadingView.style = JWCircleLoadingStyle(rawValue: indexPath.row - 3)!
+        } else if (indexPath as NSIndexPath).row == 3 || (indexPath as NSIndexPath).row == 4 || (indexPath as NSIndexPath).row == 5 {
+            let circleLoadingView = JWCircleLoadingView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+            circleLoadingView.style = JWCircleLoadingStyle(rawValue: (indexPath as NSIndexPath).row - 3)!
             cellView = circleLoadingView
-        } else if indexPath.row == 6 || indexPath.row == 7 {
-            let lineStyle = indexPath.row == 7
-            let dotCircleLoadingView = JWDotLoadingView(frame: CGRectMake(0, 0, lineStyle ? 80 : 30, 30))
-            dotCircleLoadingView.style = lineStyle ? .Line : .Circle;
+        } else if (indexPath as NSIndexPath).row == 6 || (indexPath as NSIndexPath).row == 7 {
+            let lineStyle = (indexPath as NSIndexPath).row == 7
+            let dotCircleLoadingView = JWDotLoadingView(frame: CGRect(x: 0, y: 0, width: lineStyle ? 80 : 30, height: 30))
+            dotCircleLoadingView.style = lineStyle ? .line : .circle;
             cellView = dotCircleLoadingView
         }
         
         cell.tintColor = JWConst.themeColor
         cell.contentView.addSubview(cellView!)
-        cellView!.center = CGPointMake(CGRectGetWidth(cell.frame) * 0.5, CGRectGetHeight(cell.frame) * 0.5)
+        cellView!.center = CGPoint(x: cell.frame.width * 0.5, y: cell.frame.height * 0.5)
         
         (cellView as! JWLoadingProtocol).startAnimating()
         

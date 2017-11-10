@@ -17,7 +17,7 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
     
     lazy var drawerView :JWFoldawayDrawer = {
         let drawerView = JWFoldawayDrawer()
-        drawerView.backgroundColor = UIColor.blackColor()
+        drawerView.backgroundColor = UIColor.black
         drawerView.dataSource = self
         drawerView.delegate = self
         return drawerView
@@ -30,7 +30,7 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
         self.title = "JWUIKitFoldawayDrawer"
         
         let tableView :UITableView = self.view as! UITableView
-        tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 225
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -40,37 +40,37 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
     }
     
     //MARK: - UITableViewDataSource & UITableViewDelegate
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        if indexPath.section == 0 {
+        if (indexPath as NSIndexPath).section == 0 {
             cell.textLabel?.text = "section0"
-        } else if indexPath.section == 1 {
+        } else if (indexPath as NSIndexPath).section == 1 {
             if cell.contentView.subviews.count == 0 {
                 cell.contentView.addSubview(self.drawerView)
-                cell.selectionStyle = .None
+                cell.selectionStyle = .none
                 
-                let leftConstraint = NSLayoutConstraint(item: drawerView, attribute: .Leading, relatedBy: .Equal, toItem: cell.contentView, attribute: .Leading, multiplier: 1.0, constant: 0)
+                let leftConstraint = NSLayoutConstraint(item: drawerView, attribute: .leading, relatedBy: .equal, toItem: cell.contentView, attribute: .leading, multiplier: 1.0, constant: 0)
                 
-                let rightConstraint = NSLayoutConstraint(item: drawerView, attribute: .Trailing, relatedBy: .Equal, toItem: cell.contentView, attribute: .Trailing, multiplier: 1.0, constant: 0)
+                let rightConstraint = NSLayoutConstraint(item: drawerView, attribute: .trailing, relatedBy: .equal, toItem: cell.contentView, attribute: .trailing, multiplier: 1.0, constant: 0)
                 
                 
-                let topConstraint = NSLayoutConstraint(item: drawerView, attribute: .Top, relatedBy: .Equal, toItem: cell.contentView, attribute: .Top, multiplier: 1.0, constant: 0)
+                let topConstraint = NSLayoutConstraint(item: drawerView, attribute: .top, relatedBy: .equal, toItem: cell.contentView, attribute: .top, multiplier: 1.0, constant: 0)
                 
-                let bottomConstraint = NSLayoutConstraint(item: drawerView, attribute: .Bottom, relatedBy: .Equal, toItem: cell.contentView, attribute: .Bottom, multiplier: 1.0, constant: 0)
+                let bottomConstraint = NSLayoutConstraint(item: drawerView, attribute: .bottom, relatedBy: .equal, toItem: cell.contentView, attribute: .bottom, multiplier: 1.0, constant: 0)
                 
-                leftConstraint.active = true
-                rightConstraint.active = true
-                topConstraint.active = true
-                bottomConstraint.active = true
+                leftConstraint.isActive = true
+                rightConstraint.isActive = true
+                topConstraint.isActive = true
+                bottomConstraint.isActive = true
                 
                 drawerView.translatesAutoresizingMaskIntoConstraints = false
                 
@@ -83,17 +83,17 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15.0
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1.0
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if indexPath.section == 1 {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if (indexPath as NSIndexPath).section == 1 {
             drawerView.toggle()
         }
     }
@@ -104,7 +104,7 @@ class FoldawayDrawerViewController: UIViewController, JWFoldawayDrawerDataSource
         return 3
     }
     
-    func viewAtIndex(index: UInt) -> UIView! {
+    func view(at index: UInt) -> UIView! {
         if index == 0 {
             return self.section0View
         } else if index == 1 {

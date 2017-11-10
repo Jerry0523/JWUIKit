@@ -16,7 +16,7 @@ class LabelsViewController: UIViewController {
         super.viewDidLoad()
         self.title = "JWUIKitLabels"
         
-        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(LabelsViewController.didRefreshAnimation(_:)))
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(LabelsViewController.didRefreshAnimation(_:)))
         self.navigationItem.rightBarButtonItem = refreshBarButtonItem
     }
 
@@ -25,10 +25,10 @@ class LabelsViewController: UIViewController {
     }
     
     // MARK: - Actions
-    func didRefreshAnimation(sender: UIBarButtonItem) {
+    @objc func didRefreshAnimation(_ sender: UIBarButtonItem) {
         for subView in self.contentView.subviews {
-            if subView.respondsToSelector(#selector(JWTickNumberLabel.startAnimating)) {
-                subView.performSelector(#selector(JWTickNumberLabel.startAnimating))
+            if subView.responds(to: #selector(JWTickNumberLabel.startAnimating)) {
+                subView.perform(#selector(JWTickNumberLabel.startAnimating))
             }
         }
     }

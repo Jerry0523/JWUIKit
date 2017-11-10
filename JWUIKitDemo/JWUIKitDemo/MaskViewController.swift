@@ -37,17 +37,17 @@ class MaskViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func submitButtonClicked(sender: AnyObject) {
-        drawer.dismissOnCompletion(nil)
+    @IBAction func submitButtonClicked(_ sender: AnyObject) {
+        drawer.dismiss(onCompletion: nil)
     }
     
-    @IBAction func showCameraMask(sender: AnyObject) {
+    @IBAction func showCameraMask(_ sender: AnyObject) {
         self.cameraMask.frame = self.view.bounds
-        self.cameraMask.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        self.cameraMask.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view .addSubview(self.cameraMask)
     }
     
-    @IBAction func actionButtonClicked(sender: AnyObject) {
+    @IBAction func actionButtonClicked(_ sender: AnyObject) {
         switch directionSegment.selectedSegmentIndex {
         case 0:
             drawer.contentView = self.bottomView
@@ -60,7 +60,7 @@ class MaskViewController: UIViewController {
             break
         case 2:
             var rect = self.topView.frame
-            if onWindowSwitch.on {
+            if onWindowSwitch.isOn {
                 rect.size.height = 155
             } else {
                 rect.size.height = 200
@@ -73,9 +73,9 @@ class MaskViewController: UIViewController {
         }
         
         drawer.direction = JWMaskDrawerDirection(rawValue:directionSegment.selectedSegmentIndex)!
-        drawer.modal = modalSwitch.on
-        drawer.drawShadow = drawShadowSwitch.on
+        drawer.modal = modalSwitch.isOn
+        drawer.drawShadow = drawShadowSwitch.isOn
         
-        drawer.showInView(self.view, onWindow: onWindowSwitch.on, completion: nil)
+        drawer.show(in: self.view, onWindow: onWindowSwitch.isOn, completion: nil)
     }
 }

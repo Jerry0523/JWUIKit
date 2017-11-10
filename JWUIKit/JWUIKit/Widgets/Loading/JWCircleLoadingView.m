@@ -37,6 +37,12 @@
     [self layoutLayers];
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (newSuperview) {
+        
+    }
+}
+
 - (void)tintColorDidChange {
     _circleLayer.strokeColor = self.tintColor.CGColor;
     if (_gradientLayer) {

@@ -29,16 +29,16 @@ class TextFieldsViewController: UIViewController {
         let imageView = UIImageView(image: UIImage(named: "account"))
         
         let button = JWButton()
-        button.titleLabel?.font = UIFont.systemFontOfSize(14)
-        button.setTitle("Male", forState: .Normal)
-        button.setTitleColor(UIColor(white: 0.5, alpha: 1.0), forState: .Normal)
-        button.setImage(UIImage(named: "arrowDown"), forState: .Normal)
-        button.imagePosition = .Right
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.setTitle("Male", for: UIControlState())
+        button.setTitleColor(UIColor(white: 0.5, alpha: 1.0), for: UIControlState())
+        button.setImage(UIImage(named: "arrowDown"), for: UIControlState())
+        button.imagePosition = .right
         button.offset = 5.0;
         button.contentEdgeInsets = UIEdgeInsetsMake(0, 2, 0, 2)
         button.sizeToFit()
         
-        imageView.bounds = CGRectMake(0, 0, CGRectGetHeight(button.frame), CGRectGetHeight(button.frame))
+        imageView.bounds = CGRect(x: 0, y: 0, width: button.frame.height, height: button.frame.height)
         
         self.complexTextField.leftViews = [JWTextFieldSpaceView(), imageView, button]
     }
